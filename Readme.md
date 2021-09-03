@@ -73,7 +73,7 @@
    - WeFit으로 가기로 함 
 ### 2. 로고 작성
    - 여러 로고들 중 아래 로고로 결정 <br>
-   ![로고](https://user-images.githubusercontent.com/87509186/131853218-bb241336-bfac-41a4-9db9-54cf845c9196.png)
+   ![로고](https://user-images.githubusercontent.com/87509186/131949657-10b0ea2c-57b3-44e7-b502-75d8cfe59f75.png)
 
 ### 3. 전체적인 디자인 및 기능 설명 및 수정사항
    1. 메인화면
