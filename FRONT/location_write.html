@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <!--상세설명-->
+    <form>
+        <div id="location_write">
+            <h4>장소 등록</h4>
+            <select id="sports" name="sports">
+                <option value="">종목(select)</option>
+                <option value="">수영</option>
+                <option value="">자전거</option>
+                <option value="">달리기</option>
+                <option value="">등산</option>
+                <option value="">홈트</option>
+                <option value="">필라테스/요가</option>
+                <option value="">골프</option>
+                <option value="">스케이트(빙상)</option>
+            </select>
+                <div id="write_area">
+                    <form enctype="multipart/form-data" action="" method="post">
+                        <div id="in_title">
+                            <textarea name="title" id="utitle" rows="1" cols="60" placeholder="장소명" maxlength="100" required></textarea>
+                        </div>
+     
+                        <div class="wi_line"></div>
+                        <div id="in_content">
+                            <textarea name="content" id="ucontent" rows="8" cols="60"  placeholder="상세 설명" required></textarea>
+                        </div>
+
+                        <!--주소검색 api-->
+                        <script scr="https://ss.daumcdn.net/dmaps/map_js_init/postcode.v2.js?autoload=false"></script>
+                        <!--시설사진-->
+     
+                          <input type="file" name="SelectFile" />
+     
+     
+                        <div class="">
+                            <button type="submit">장소 등록</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </form>
+
+
+
+
+
+</body>
+</html>
