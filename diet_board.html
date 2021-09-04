@@ -22,21 +22,35 @@
         .row {
             text-align: center;
             width: 100%;
+            
+            margin: auto;
+        }
+        .row > h2 {
+            display: block;
+            font-size: 24px;
+            padding-bottom: 8px;
+            padding-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #5d5d5d;
+            line-height: 1.3em;
+            color: #2e2e2e;
+            font-weight: 600;
         }
 
         .container {
             width:960px; 
+            height: 1100px;
             margin:0 auto;
 	        text-align:center;
         }
         .container ul li {
             float: left;
-            width: 220px;
+            width: 250px;
             padding: 5px;
             position: relative;
         }
         .container ul li .foods {
-            width: 150px;
+            width: 200px;
         }
         .container ul li h2 {
             font-size: 18px;
@@ -45,19 +59,46 @@
         .container ul li h3 {
             font-size: 12px;
         }
+        ul {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+        }
         ul li{
+            position: absolute;
+            left: 100px;
             list-style: none;
+            height: 260px;
+            border: 1px solid #e8e8e8;
         }
         img {
-            width: 150px;
-            height: 100px;
+            height: 150px;
         }
+        .clfix {
+            font-size: 13px;
+            height: 800px;
+            color: #383838;
+        }
+        .paging
         .paging > a {
             text-decoration: none;
             color: black;
+            
         }
         .banner {
-            float: right;
+            position: absolute;
+            top: 500px;
+            right: 50px;
+        }
+
+        .dataArea {
+            width: 100%;
+            display: block;
+            height: 500px;
+            
+        }
+        .tools {
+            padding-top: 50px;
         }
 
         .title {
@@ -76,7 +117,7 @@
         <h2>헤더 부분</h2>
     </header>
 
-    <hr class="hr">
+
 
     <!-- 가로 바 -->
     <aside class="banner">
@@ -86,112 +127,96 @@
     <!-- 메인 -->
     <div class="container">
         <div class="row">
-            <ul>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
+            <h2>다이어트 식단</h2>
+                <ul class="clfix">
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                </ul>
             
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-                <li>
-                    <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                    <h2>제목</h2>
-                    <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                </li>
-            </ul>
         </div>
         
 
-        
-        <!-- 페이징 버튼-->
-        <div class="paging">
-            <a href="#">이전</a>
-            <a href="#">1</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">7</a>
-            <a href="#">8</a>
-            <a href="#">9</a>
-            <a href="#">10</a>
-            <a href="#">다음</a>
+        <div class="tools">
+            <!-- 페이징 버튼-->
+            <div class="paging">
+                <a href="#">이전</a>
+                <a href="#">1</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">8</a>
+                <a href="#">9</a>
+                <a href="#">10</a>
+                <a href="#">다음</a>
+            </div>
+
+            <!--검색 조건-->
+            <select class="search-condition">
+                <option>제목</option>
+                <option>작성자</option>
+            </select>
+            
+            <!--검색창, 버튼-->
+            <input type="text" id="search" placeholder="검색어를 입력하세요">
+            <button>검색</button>
+            
+
+            <!--글쓰기 버튼-->
+            <button  id="write">
+                글쓰기
+            </button>
         </div>
-
-        <!--검색 조건-->
-        <select class="search-condition">
-            <option>제목</option>
-            <option>작성자</option>
-        </select>
-        
-        <!--검색창, 버튼-->
-        <input type="text" id="search" placeholder="검색어를 입력하세요">
-        <button>검색</button>
-        
-
-        <!--글쓰기 버튼-->
-        <button class="write">
-            글쓰기
-        </button>
-        
 
     </div>
 
-
-
-
       
-    <hr class="hr">
+
       
 
     <footer>
@@ -205,4 +230,20 @@
 
 <script>
 
+    $(function(){
+        $('#write').click(function() {
+            
+        });
+
+        
+
+        
+
+        
+
+
+    }); //제이쿼리 끝
 </script>
+
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
