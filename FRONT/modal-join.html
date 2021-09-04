@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap-theme.css">
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-join">회원가입</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal-join" class="modal fade">
+        <div class="modal-dialog">
+
+            <!-- Modal Content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">회원가입</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" id="form-join">
+                        <table>
+                            <tr>
+                                <td>이메일</td>
+                                <td>
+                                    <input type="text" name="" id="" size="15"> @
+                                    <input type="text" name="" id="" size="15">
+                                    <select name="" id="">
+                                        <option value="naver.com" selected>naver.com</option>
+                                        <option value="daum.net">daum.net</option>
+                                        <option value="nate.com">nate.com</option>
+                                        <option value="google.com">google.com</option>
+                                        <option value="">기타</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>닉네임</td>
+                                <td>
+                                    <input type="text" name="" id="" size="15">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호</td>
+                                <td>
+                                    <input type="password" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호확인</td>
+                                <td>
+                                    <input type="password" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>핸드폰(-제외)</td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-info" data-dismiss="modal">가입하기</button>
+                        <button class="btn btn-default" data-dismiss="modal">취소</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="./js/bootstrap.js"></script>
+</body>
+
+</html>
