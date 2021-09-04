@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,44 +9,104 @@
 </head>
 
 <style>
-* {
-  
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+    * {
 
-body, html {
-    width: 100%;
-    min-width: 320px;
-    font-family: "Nanum Gothic", sans-serif;
-}
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+    body,
+    html {
+        width: 100%;
+        min-width: 320px;
+        font-family: "Nanum Gothic", sans-serif;
+    }
 
-input, textarea, button, select {
-    -webkit-appearance: none; /*크롬, 사파리*/
-    -moz-appearance: none; /*파이어폭스*/
-    appearance: none; /*ie, edge*/
-    border: none;
-}
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 
-ul, ol, dl, li {
-    list-style: none; 
-}
+    input,
+    textarea,
+    button,
+    select {
+        -webkit-appearance: none;
+        /*크롬, 사파리*/
+        -moz-appearance: none;
+        /*파이어폭스*/
+        appearance: none;
+        /*ie, edge*/
+        border: none;
+    }
 
-.btn {
-    border-radius: 0px;
-}
+    ul,ol,dl,li {
+        list-style: none;
+    }
 
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
+    .btn {
+        border-radius: 0px;
+    }
+
+    .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .container {
+        width: 960px;
+        height: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .row {
+        height: 600px;
+        border-bottom: 1px solid #5d5d5d;
+    }
+
+    .banner {
+        position: absolute;
+        top: 500px;
+        right: 50px;
+    }
+
+    .menu-info{
+        text-align: left;
+        border-bottom: 2px solid #5d5d5d;
+        margin: 50px 10px 30px 10px;
+        padding: 5px;
+    }
+
+    .title {
+        display: block;
+        width: 100px;
+               
+        padding: 10px 10px 10px 0px;
+    }
+
+    .title-info {
+        margin: 10px;
+        padding: 5px;
+        text-align: left;
+        border-bottom: 1px solid #5d5d5d;
+    }
+
+    .detail {
+        text-align: right;
+        float: right;
+        
+    }
+
+    img {
+        float: left;
+        width: 220px;
+        margin: 20px 20px 20px 30px;
+        padding: 5px;
+    }
+
 </style>
 
 <body>
@@ -56,16 +117,49 @@ ul, ol, dl, li {
     <hr class="hr">
 
 
+    <aside class="banner">
+        공지사항 <br>
+        날씨정보
+    </aside>
+
+
+
     <div class="container">
         <div class="row">
-            <h4 class="title">제목</h4>
-            
-            <div class="detail">
+            <h2 class="menu-info">식단 / 영양정보</h2>
+                <div class="title-info">
+                    <span class="title">제목</span>
+                    <span class="detail">작성일&nbsp;|&nbsp;조회수&nbsp;|&nbsp;좋아요&nbsp;</span> 
+                    <h4>글쓴이</h4>
+                </div>
+                
+            <div class="content">
+                <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="">
+                <span>영양성분</span>
+                <div class="nutri-info">
+
+                </div>
+                <p class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen book. It has survived not only five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                    Ipsum.</p>
+
+
 
             </div>
 
         </div>
+        <button type="button" class="like">좋아요</button>
+        <button type="button" class="hate">싫어요</button>
+        <button type="button" class="modify">수정</button>
+        <button type="button" class="delete">삭제</button>
+        <button type="button" class="list">목록</button>
     </div>
+
+
 
 
     <hr class="hr">
@@ -74,4 +168,5 @@ ul, ol, dl, li {
         <h2>푸터 부분</h2>
     </footer>
 </body>
+
 </html>
