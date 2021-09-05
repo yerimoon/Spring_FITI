@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>diet_write</title>
 </head>
 
 <style>
-
-
     .banner {
         position: absolute;
         top: 500px;
@@ -22,23 +21,83 @@
         margin: 0 auto;
         text-align: center;
     }
+
     .contents {
         min-height: 615px;
         height: 100%;
         text-align: center;
-
     }
 
-    #write_form {
-        border: 1px solid #aaa8a8;
-        background: #f9f9f9;
-        height: 800px;
+    .content_wrap {
+        width: 100%;
     }
 
-    .regist_button {
-        display: block;
+    .titlebox {
+        width: 250px;
         text-align: center;
+        height: 40px;
+        line-height: 40px;
+        margin: 70px auto;
+        border-top: 1px solid #b6b6b6;
+        border-bottom: 1px solid #b6b6b6;
+}
+    
+    .titlebox > p {
+        text-align: center;
+        margin: 0px;
     }
+
+    #registForm {
+        text-align: center;
+        border-bottom: 1px solid #b6b6b6;
+    }
+
+    .t-control .t-title {
+        width: 100px;
+        min-width: 100px; /*화면줄었을때 최소크기*/
+        vertical-align: middle; /*테이블에서 세로 가운대정렬*/
+    }
+
+    .t-control input {
+        width: 200px;
+        display: inline; /*인라인요소로 변경한다*/
+    }
+
+    .t-control td {
+        border-top: 1px solid #b6b6b6;
+    }
+
+    .titlefoot {
+        text-align: center;
+        margin: 30px auto; /*박스의 가운데정렬*/
+        width: 50%; /*크기 50%*/
+    }
+
+    .form-control {
+        width: 500px;
+        margin: 15px;
+    }
+
+    .t-title {
+        font-size: 14px;
+        padding-left: 40px;
+    }
+
+    .t-control tr td .input-sm {
+        margin-right: 315px;
+    }
+
+    .table {
+        width: 960px;
+    }
+
+    #photo_regist {
+        margin-bottom: 15px;
+        margin-left: 550px;
+    }
+
+
+
 </style>
 
 <body>
@@ -52,8 +111,7 @@
     </aside>
 
     <hr class="hr">
-
-
+    <!--
     <div class="container">
         <div class="contents">
             <h2 class="board_title">글쓰기</h2>
@@ -61,7 +119,7 @@
                 <table class="tbl_write">
                     <tr>
                         <td>제목</td>
-                        <td><textarea name="" id=""></textarea></td>
+                        <td><textarea name="" id="write_title"></textarea></td>
                     </tr>
                     <tr>
                         <td>글쓴이</td>
@@ -69,7 +127,7 @@
                     </tr>
                     <tr>
                         <td>내용</td>
-                        <td><textarea name="" id=""></textarea></td>
+                        <td><textarea name="" id="write_content"></textarea></td>
                     </tr>
                 </table>
                 <div class="regist_button">
@@ -79,8 +137,65 @@
             </form>
         </div>
     </div>
+-->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="content-wrap">
+                    <div class="titlebox">
+                        <p>글 작성하기</p>
+                    </div>
 
-    
+                    <form action="#" name="registForm" method="post" id="registForm">
+                        <table class="table">
+                            <tbody class="t-control">
+                                <tr>
+                                    <td class="t-title">작성자</td>
+                                    <td><input class="form-control input-sm" name="writer" value=""></td>
+                                </tr>
+                                <tr>
+                                    <td class="t-title">제목</td>
+                                    <td><input class="form-control input-sm" name="title"></td>
+                                </tr>
+                                <tr>
+                                    <td class="t-title">첫번째 음식</td>
+                                    <td>
+                                        <textarea class="form-control " name="first_food"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t-title">두번째 음식</td>
+                                    <td>
+                                        <textarea class="form-control" name="second_food"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t-title">세번째 음식</td>
+                                    <td>
+                                        <textarea class="form-control" name="third_food"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="t-title">글 내용</td>
+                                    <td>
+                                        <textarea class="form-control" cols="300" rows="7" name="content"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" id="photo_regist">사진 등록하기</button>
+                    </form>
+
+                    <div class="titlefoot">
+                        <button class="btn" id="registBtn">등록</button>
+                        <button class="btn" id="listBtn">목록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <hr class="hr">
 
@@ -88,4 +203,5 @@
         <h2>푸터 부분</h2>
     </footer>
 </body>
+
 </html>
