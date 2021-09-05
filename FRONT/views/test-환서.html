@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
+    <script src="/FRONT/resource/js/jquery.min.js"></script>
+    <script src="/FRONT/resource/js/bootstrap.min.js"></script>
+    <style>
+        
+        .footer{
+            background-color: red;
+            height: 50px;
+        }
+        .section{
+            background-color: yellowgreen;
+            height: 500px;
+
+        }
+        .sidebar{
+            background-color: yellow;
+            height: 500px;
+
+        }
+        .row:nth-child(2){
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="header"></div>
+        </div>
+        <div class="row">
+            
+            <div class="section col-sm-10"></div>
+            
+            
+            <div class="sidebar col-sm-2"></div>
+            
+        </div>
+        <div class="row">
+            <div class="footer"></div>
+        </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $('.header').load("/FRONT/views/include/header.html");
+            $('.footer').load("/FRONT/views/include/footer.html");
+            $('.section').load("/FRONT/views/board/user/mypage.html")
+        })
+        
+    </script>
+</body>
+</html>
