@@ -198,3 +198,21 @@ HTML, CSS 작업하기 <br>
 <br>
 
 [▲맨위로](#wefit)
+
+# 21.09.05
+- include
+  - modal
+- board
+  - free
+  - diet
+  - location
+  - market
+  - notice
+  - qna
+  - tip
+  - user
+ ※ jquery 다른 html 파일 포함시키기
+$(document).ready(function(){
+    $(#header).load("/header.html");
+    $(#footer).load("/footer.html");
+});
