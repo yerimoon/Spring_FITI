@@ -9,7 +9,6 @@
 </head>
 
 <style>
-    
     /* 사이드바 */
     .banner {
         position: absolute;
@@ -59,21 +58,23 @@
         text-align: left;
         padding: 0;
     }
+
     .gall-view .tit p {
         display: block;
         width: 88%;
         margin-top: 100px;
         margin-bottom: 5px;
-        
+
     }
 
     .bbs-info3 {
-        
+
         position: relative;
         width: 100%;
         padding: 6px 0;
         border-bottom: 2px solid #aaa8a8;
         margin-bottom: 20px;
+        margin-top: 50px;
         height: 40px;
     }
 
@@ -86,14 +87,14 @@
         text-align: left;
     }
 
-    
+
     .bbs-info3 .inner_nick_box {
         position: relative;
         top: -20px;
         width: 110px;
         margin-left: 5px;
     }
-    
+
     .bbs-info3 .inner_nick_box .inner_nick {
         overflow: hidden;
         width: 88%;
@@ -116,7 +117,7 @@
         overflow: hidden;
         display: inline-block;
         margin-top: -35px;
-    }       
+    }
 
     .date_c li {
         float: left;
@@ -137,7 +138,7 @@
         line-height: 1.6em;
         color: #585858;
         font-size: 15px;
-        height: 1200px;
+        height: 1300px;
         border-bottom: 2px solid #5d5d5d;
     }
 
@@ -148,7 +149,7 @@
     .click_contents {
         margin-top: 30px;
         position: absolute;
-        top: 1300px;
+        top: 1400px;
         right: -280px;
         width: 100%;
 
@@ -156,7 +157,7 @@
 
     .replyList {
         padding-top: 0px;
-        margin-top: 100px;
+        margin-top: 150px;
         text-align: left;
 
         background: #f9f9f9;
@@ -169,12 +170,18 @@
         position: absolute;
         top: 1360px;
         left: 20px;
-        
+
+    }
+
+    .replyList .write_comment {
+        position: absolute;
+        top: 1500px;
     }
 
     .comment_write {
         text-align: center;
     }
+
     #comment {
         width: 80%;
         height: 80px;
@@ -192,15 +199,58 @@
         border-top: 1px solid #5d5d5d;
     }
 
-    .prev-next > dt {
+    .prev-next>dt {
         float: left;
         height: 50px;
         width: 8%;
     }
 
+    .h_graph ul {
+        text-align: left;
+        margin:50px 50px 50px 50px;
+        padding:1px 0 0 0;
+        border:1px solid #ddd;
+        border-top:0;
+        border-right:0;
+        font-size:11px;
+        font-family:Tahoma, Geneva, sans-serif;
+        list-style:none
+    }
+    
+    .h_graph li {
+        position:relative;
+        margin:10px 0;
+        vertical-align:top;
+        white-space:nowrap
+    }
 
+    .h_graph .g_term {
+        position:absolute;
+        top:0;
+        left:-50px;
+        width:40px;
+        font-weight:bold;
+        color:#767676;
+        line-height:20px;
+        text-align:right
+    }
 
-  
+    .h_graph .g_bar {
+        display:inline-block;
+        position:relative;
+        height:20px;
+        border:1px solid #ccc;
+        border-left:0;
+        background:#e9e9e9
+    }
+
+    .h_graph .g_bar span {
+        position:absolute;
+        top:0;
+        right:-50px;
+        width:40px;color:#767676;
+        line-height:20px
+        }
 </style>
 
 <body>
@@ -246,11 +296,23 @@
                             </ul>
                         </div>
                     </span>
-                </div>  <!--bbs-info3-->
+                </div>
+                <!--bbs-info3-->
                 <div class="txt">
                     <p>
-                    <img src="FRONT/food_img/계란말이+고구마.jpg" alt="">
+                        <img src="FRONT/food_img/계란말이+고구마.jpg" alt="">
                     </p>
+
+                    <div class="h_graph">
+                        <ul>
+                            <li><span class="g_term">1번음식</span><span class="g_bar" style="width:0%"><span>0kcal</span></span></li>
+                            <li><span class="g_term">2번음식</span><span class="g_bar" style="width:20%"><span>20kcal</span></span></li>
+                            <li><span class="g_term">3번음식</span><span class="g_bar" style="width:30%"><span>30kcal</span></span></li>
+                            <li><span class="g_term">총 칼로리</span><span class="g_bar" style="width:30%"><span>30kcal</span></span></li>
+
+                        </ul>
+                    </div>
+
                     <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
                         took a galley of type and scrambled it to make a type specimen book. It has survived not only
@@ -267,7 +329,8 @@
                         versions of Lorem Ipsum.</p>
 
 
-                </div> <!--txt-->
+                </div>
+                <!--txt-->
                 <div class="click_contents">
                     <button>좋아요</button>
                     <button>글쓰기</button>
@@ -298,10 +361,13 @@
                         </a>
                     </dd>
                 </div>
-                
-            </div>  <!--gall-view-->
-        </div>  <!--contents-->
-    </div>  <!--container-->
+
+            </div>
+            <!--gall-view-->
+        </div>
+        <!--contents-->
+    </div>
+    <!--container-->
 
 
 
@@ -315,9 +381,34 @@
 
 </html>
 
-
 <script>
+    (function ($) {
+        "use strict";
+        $(function () {
+            function animated_contents() {
+                $(".zt-skill-bar > div ").each(function (i) {
+                    var $this = $(this),
+                        skills = $this.data('width');
 
+                    $this.css({
+                        'width': skills + '%'
+                    });
+
+                });
+            }
+
+            if (jQuery().appear) {
+                $('.zt-skill-bar').appear().on('appear', function () {
+                    animated_contents();
+                });
+            } else {
+                animated_contents();
+            }
+        });
+    });
 </script>
+
+
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
