@@ -15,49 +15,99 @@
         box-sizing: border-box;
         }
 
-        html, body {
+        body {
             width: 100%;
-            height: 1000px;
         }
 
         .row {
             text-align: center;
-            width: 80%;
-            height: 100%;
+            width: 100%;
+            
+            margin: auto;
+        }
+        .row > h2 {
+            position: absolute;
+            left: 470px;
+            top: 80px;
+            width: 960px;
+            font-size: 24px;
+            padding-bottom: 8px;
+            padding-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #5d5d5d;
+            line-height: 1.3em;
+            color: #2e2e2e;
+            font-weight: 600;
+            text-align: left;
         }
 
         .container {
-            width: 80%;
-            height: 80%;
+            width:960px; 
+            height: 1100px;
+            margin:0 auto;
+	        text-align:center;
+        }
+        .container ul li {
+            float: left;
+            width: 250px;
+            padding: 5px;
+            position: relative;
+        }
+        .container ul li .foods {
+            width: 200px;
+        }
+        .container ul li h2 {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+        .container ul li h3 {
+            font-size: 12px;
         }
         ul {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+        }
+        ul li{
+            position: absolute;
+            left: 100px;
             list-style: none;
+            height: 260px;
+            border: 1px solid #e8e8e8;
         }
-
         img {
-            width: 250px;
-            height: 200px;
+            height: 150px;
         }
-
-        .food_menu {
-            float: left;
+        .clfix {
+            font-size: 13px;
+            height: 800px;
+            color: #383838;
+            border: 1px solid #8a8585;
             padding: 10px;
+            margin-top: 200px;
         }
-        .food_menu > h4, h6 {
-            margin: 5px;
-        }
-
+        
         .paging > a {
             text-decoration: none;
             color: black;
+            
         }
-        
         .banner {
-            float: right;
+            position: absolute;
+            top: 500px;
+            right: 50px;
+        }
+
+        .dataArea {
+            width: 100%;
+            display: block;
+            height: 500px;
+            
         }
         .tools {
-           text-align: center;
+            padding-top: 50px;
         }
+
         .title {
             padding: 0px, 5px;
             margin: 0px;
@@ -76,96 +126,67 @@
 
     <hr class="hr">
 
+    <!-- 가로 바 -->
+    <aside class="banner">
+        공지사항 <br>
+        날씨정보
+    </aside>
     <!-- 메인 -->
     <div class="container">
         <div class="row">
-                <div class="content">
-                    <div class="row">
-                        <ul>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/계란 치즈 오픈샌드위치.jpg">
-                                <h4><a href="#" >제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/계란말이+고구마.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/닭가슴살 두부유부초밥.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                        
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/두부유부초밥.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/딸기사과 오픈 샌드위치.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/소고기 야채볶음.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                        
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/수제요거트,바나나.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/아보카도 치즈 오픈 토스트.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/양상추 닭가슴살 샌드위치.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                        
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/연어아보카도 덮밥.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/계란 치즈 오픈샌드위치.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                            <li class="food_menu">
-                                <img src="/FRONT/food_img/계란말이+고구마.jpg">
-                                <h4><a href="#" class="title">제목</a></h4>
-                                <h4>글쓴이</h4>
-                                <h6>작성일 | 조회수 | 좋아요 수</h6>
-                            </li>
-                        </ul>
-                    </div><!-- row -->
-                </div>
-        </div>  
-        <!-- 가로 바 -->
-        <div class="banner">
-            공지사항 <br>
-            날씨정보
+            <h2>식단 / 영양정보</h2>
+            <ul class="clfix">
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                    <li>
+                        <img src="FRONT/food_img/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
+                        <h2>제목</h2>
+                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
+                    </li>
+                </ul>
+            
         </div>
+        
+
         <div class="tools">
             <!-- 페이징 버튼-->
             <div class="paging">
@@ -181,7 +202,7 @@
                 <a href="#">10</a>
                 <a href="#">다음</a>
             </div>
-    
+
             <!--검색 조건-->
             <select class="search-condition">
                 <option>제목</option>
@@ -192,20 +213,17 @@
             <input type="text" id="search" placeholder="검색어를 입력하세요">
             <button>검색</button>
             
-    
+
             <!--글쓰기 버튼-->
-            <button class="write">
+            <button  id="write">
                 글쓰기
             </button>
-        </div>  <!--tools-->
+        </div>
 
     </div>
 
-
-
-
-      
     <hr class="hr">
+
       
 
     <footer>
@@ -219,4 +237,20 @@
 
 <script>
 
+    $(function(){
+        $('#write').click(function() {
+            
+        });
+
+        
+
+        
+
+        
+
+
+    }); //제이쿼리 끝
 </script>
+
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
