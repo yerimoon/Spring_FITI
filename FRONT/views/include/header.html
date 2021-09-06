@@ -22,7 +22,10 @@
 
         h1 {
             float: left; /*float해제 어찌...?*/
-            margin: 33px 0 0;
+        }
+
+        h1 img {
+            margin-top: 18px; /*로고 이미지 위치*/
         }
 
         li {
@@ -34,10 +37,11 @@
             margin: 0 auto;
         }
 
+
         .top_menu {
             width: 100%;
             margin-bottom: 20px;     
-            height: 40px;
+            height: 170px; /*body쪽 경계*/
             position: relative;
         }
 
@@ -49,8 +53,9 @@
 
         .menu01 {
             position: relative;
-            top: 48px;
-            left: 90px;  
+            top: 33px; /*메뉴바 위치*/
+            left: 50px; /*메뉴바 위치*/
+
         }
 
         .menu01 > li {
@@ -60,6 +65,16 @@
             /*margin-right: 50px;*/
         }
 
+
+        .menu {
+            height: 500px;
+            background-color: #fff;
+        }
+
+        .span {
+            padding: 0 5px 0 25px /*좀 떨어지게..*/
+        }
+
         .menu01 span {
             font-size: 20px;
             font-weight: bold;
@@ -67,37 +82,42 @@
             cursor: pointer;
         }
 
-        .menu01 a:link, a:visited, a:active {
+        .menu01 .dept01 a:link, a:visited, a:active {
             color: #5A5A5A;
             text-decoration: none;
         }
 
-        .menu01 a:hover {
+        .menu01 .dept01 a:hover {
             color: #656565; 
             font-weight: bold;
         }
 
-        .menu_li {
+        /* .menu_li {
             border-bottom: 1px solid #ccc;
-        }
+        } */
 
         .dept01 {
             display: none;
-            padding: 20px 0;
-            width: 13%;
-            border-bottom: 1px solid #ccc;
+            padding: 20px 5px 20px 25px; /*좀 떨어지게..*/
+            width: 15%;
+            /* border-top: 1px solid #ccc; */
+            /* border-bottom: 1px solid #ccc; */
 
             position: absolute;
             top: 40px;
             z-index: 999;
 
-            background-color: #fff;
+            background-color: rgb(253, 253, 253);
+
+           
+            /* box-shadow: 0.7px 0 0 #ccc; */
         }
 
         .sub {
             float: none;
             color: #818181;
             font-size: 15px;
+            margin-left: 2px;
         }
 
         .none::after {
@@ -105,6 +125,52 @@
             display: block;
             clear: both;
         }
+
+
+        /* sub_menu*/
+
+        .sub_menu {
+            display: none;
+            
+            width: 642px;
+            height: 50px;
+            background-color: rgb(0, 173, 181);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+        }
+
+
+        .sub2 {
+            display: inline-block;
+
+        }
+
+        .sub2 a:link, a:visited, a:active {
+            margin: 5px 35px;
+            font-size: 15px;
+            line-height: 50px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .sub2 a:hover { 
+            color: #fff;
+            font-weight: 600;
+        }
+
+        #sub_menu3 {
+            padding-left: 170px;
+            box-sizing: border-box; /*중요*/
+        }
+
+        #sub_menu4 {
+            /* padding-left: 170px; */
+            text-align: right;
+            padding-right: 75px;
+            box-sizing: border-box; /*중요*/
+        }
+
+
+
 
     </style>
 
@@ -119,7 +185,37 @@
             <div class="menu">
                 <ul class="menu01">
                     <li id="li01" class="menu_li">
-                        <span id="span01">함께 운동해요</span>
+                        <span id="span01" class="span">함께 운동해요</span>
+
+                        <!-- sub_menu 시작 -->
+                        <ul id="sub_menu1" class="sub_menu">
+                            <li class="sub2"><a href="#">친구찾기</a></li>
+                            <li class="sub2"><a href="#">장소찾기</a></li>
+                        </ul>
+
+                        <ul id="sub_menu2" class="sub_menu">
+                            <li class="sub2"><a href="#">운동 강의</a></li>
+                            <li class="sub2"><a href="#">식단 / 영양 정보</a></li>
+                            <li class="sub2"><a href="#">나만의 운동 꿀팁</a></li>
+                            <li class="sub2"><a href="#">제품 후기</a></li>
+                            <!-- <li class="sub2"><a href="#">칼로리 계산기</a></li> -->
+                        </ul>
+                        
+                        <ul id="sub_menu3" class="sub_menu">
+                            <li class="sub2"><a href="#">공지사항</a></li>
+                            <li class="sub2"><a href="#">자유게시판</a></li>
+                            <li class="sub2"><a href="#">질문게시판</a></li>
+                        </ul>
+
+                        <ul id="sub_menu4" class="sub_menu">
+                            <li class="sub2"><a href="#">사요</a></li>
+                            <li class="sub2"><a href="#">팔아요</a></li>
+                            <li class="sub2"><a href="#">나눠요</a></li>
+                        </ul>
+                        <!-- sub_menu 끝 -->
+
+
+
                         <ul class="dept01">
                             <li class="sub"><a href="#">친구찾기</a></li>
                             <li class="sub"><a href="#">장소찾기</a></li>
@@ -128,18 +224,20 @@
                             <!-- <li class="sub">ㅤ</li> -->
                         </ul>
                     </li>
+
                     <li id="li02" class="menu_li">
-                        <span id="span02">운동 Tips</span>
+                        <span id="span02" class="span">운동 Tips</span>
                         <ul class="dept01">
                             <li class="sub"><a href="#">운동 강의</a></li>
                             <li class="sub"><a href="#">식단 / 영양 정보</a></li>
                             <li class="sub"><a href="#">나만의 운동 꿀팁</a></li>
                             <li class="sub"><a href="#">제품 후기</a></li>
-                            <!-- <li class="sub"><a href="">칼로리 계산기</a></li> -->
+                            <!-- <li class="sub"><a href="#">칼로리 계산기</a></li> -->
                         </ul>
                     </li>
+
                     <li id="li03" class="menu_li">
-                        <span id="span03">게시판</span>
+                        <span id="span03" class="span">게시판</span>
                         <ul class="dept01">
                             <li class="sub"><a href="#">공지사항</a></li>
                             <li class="sub"><a href="#">자유게시판</a></li>
@@ -149,7 +247,7 @@
                         </ul>
                     </li>
                     <li id="li04" class="menu_li">
-                        <span id="span04">장터</span>
+                        <span id="span04" class="span">장터</span>
                         <ul class="dept01">
                             <li class="sub"><a href="#">사요</a></li>
                             <li class="sub"><a href="#">팔아요</a></li>
@@ -158,6 +256,9 @@
                             <!-- <li class="sub">ㅤ</li> -->
                         </ul>
                     </li>
+
+
+
                 </ul>
             </div>
         </div>
@@ -165,44 +266,153 @@
         <script>
             $(document).ready(function() {
                 
+                // 메뉴바 1번 방법 (문제점: 메뉴바 펼치고 난 후 어떻게 접어야 될지...)
+                // $(document).on('mouseover', '.menu01', function() {
+                //     $('.dept01').slideDown(300);
+                //     $('.menu01').addClass('active');
+                // });
 
-                $(document).on('mouseover', '.menu01', function() {
-                    $('.dept01').slideDown(300);
-                });
-                $(document).on('mouseover', 'div', function() {
-                    if (!$(this).hasClass('top_menu')) {
-                        $('.dept01').slideUp(300);
-                    }
-                });
                 
+                // 메뉴바 2번 방법 (이 방법도 브라우저에서 해보면..뭔가 석연치않은부분들이 많습니다..ㅜㅜ)
+                // $('.menu01').hover(
+                //     function() {
+                //         $('.dept01').stop().slideDown(400);
+                //     },
+                //     function() {
+                //         $('.dept01').stop().slideUp(600);
+                //     }
+                // );
+
+                // $('.dept01').hover(
+                //     function() {
+                //         $('.dept01').stop().slideDown(400);
+                //     },
+                //     function() {
+                //         $('.dept01').stop().slideUp(600);
+                //     }
+                // );
+
+                ///////////////
                 
-                
-                $("#li01").hover(function() {
-                    $("#span01").css("color", "rgb(0, 173, 181)");
-                    $("#span02").css("color", "#656565");
-                    $("#span03").css("color", "#656565");
-                    $("#span04").css("color", "#656565");
+                $('#li01').hover(function() {
+                    $('#span01').css('color', 'rgb(0, 173, 181)');
+                    $('#span02').css('color', "#656565");
+                    $('#span03').css('color', "#656565");
+                    $('#span04').css('color', "#656565");
                 });
         
                 $("#li02").hover(function() {
-                    $("#span01").css("color", "#656565");
-                    $("#span02").css("color", "rgb(0, 173, 181)");
-                    $("#span03").css("color", "#656565");
-                    $("#span04").css("color", "#656565");
+                    $('#span01').css('color', "#656565");
+                    $('#span02').css('color', 'rgb(0, 173, 181)');
+                    $('#span03').css('color', "#656565");
+                    $('#span04').css('color', "#656565");
                 });
         
                 $("#li03").hover(function() {
-                    $("#span01").css("color", "#656565");
-                    $("#span02").css("color", "#656565");
-                    $("#span03").css("color", "rgb(0, 173, 181)");
-                    $("#span04").css("color", "#656565");
+                    $('#span01').css('color', "#656565");
+                    $('#span02').css('color', "#656565");
+                    $('#span03').css('color', 'rgb(0, 173, 181)');
+                    $('#span04').css('color', "#656565");
                 });
                 $("#li04").hover(function() {
-                    $("#span01").css("color", "#656565");
-                    $("#span02").css("color", "#656565");
-                    $("#span03").css("color", "#656565");
-                    $("#span04").css("color", "rgb(0, 173, 181)");
+                    $('#span01').css('color', "#656565");
+                    $('#span02').css('color', "#656565");
+                    $('#span03').css('color', "#656565");
+                    $('#span04').css('color', 'rgb(0, 173, 181)');
                 });
+
+
+                ///////////////
+
+
+                $('#span01').click(function() {
+                    $('.dept01').css('display', 'none'); 
+
+                    $('#sub_menu1').slideDown(100);
+                    $('#sub_menu2').css('display', 'none'); 
+                    $('#sub_menu3').css('display', 'none'); 
+                    $('#sub_menu4').css('display', 'none');
+
+                    // $('.sub_menu').addClass('inactive'); /*클래스이름에 inactive를 부여. */            
+                });
+
+                $('#li01 > .dept01 > .sub').click(function() {
+                    $('.dept01').css('display', 'none'); 
+
+                    $('#sub_menu1').slideDown(100);
+                    $('#sub_menu2').css('display', 'none'); 
+                    $('#sub_menu3').css('display', 'none'); 
+                    $('#sub_menu4').css('display', 'none');
+                });
+
+                
+
+
+                $('#span02').click(function() {
+                    $('.dept01').css('display', 'none'); 
+
+                    $('#sub_menu1').css('display', 'none');
+                    $('#sub_menu2').slideDown(100); 
+                    $('#sub_menu3').css('display', 'none'); 
+                    $('#sub_menu4').css('display', 'none');  
+                    
+                });
+
+                $('#li02 > .dept01 > .sub').click(function() {
+                    $('.dept01').css('display', 'none'); 
+
+                    $('#sub_menu1').css('display', 'none');
+                    $('#sub_menu2').slideDown(100);  
+                    $('#sub_menu3').css('display', 'none'); 
+                    $('#sub_menu4').css('display', 'none');
+                });
+
+
+
+                $('#span03').click(function() {
+                    $('.dept01').css('display', 'none'); 
+                    
+                    $('#sub_menu1').css('display', 'none');
+                    $('#sub_menu2').css('display', 'none'); 
+                    $('#sub_menu3').slideDown(100); 
+                    $('#sub_menu4').css('display', 'none');  
+
+                });
+
+                $('#li03 > .dept01 > .sub').click(function() {
+                    $('.dept01').css('display', 'none'); 
+
+                    $('#sub_menu1').css('display', 'none');
+                    $('#sub_menu2').css('display', 'none'); 
+                    $('#sub_menu3').slideDown(100); 
+                    $('#sub_menu4').css('display', 'none');
+                });
+
+
+
+                $('#span04').click(function() {
+                    $('.dept01').css('display', 'none'); 
+                    
+                    $('#sub_menu1').css('display', 'none');
+                    $('#sub_menu2').css('display', 'none');  
+                    $('#sub_menu3').css('display', 'none'); 
+                    $('#sub_menu4').slideDown(100); 
+
+                });
+
+                $('#li04 > .dept01 > .sub').click(function() {
+                    $('.dept01').css('display', 'none'); 
+
+                    $('#sub_menu1').css('display', 'none');
+                    $('#sub_menu2').css('display', 'none');  
+                    $('#sub_menu3').css('display', 'none'); 
+                    $('#sub_menu4').slideDown(100);
+                });
+
+
+                /*클래스이름이 inactive니? --> hover기능 중단. (hover했을때...css(display,none)되게)*/
+
+
             });
         </script>
     </header>
