@@ -6,47 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>diet-detail</title>
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/FRONT/resource/js/bootstrap.min.js"></script>
 </head>
 
 <style>
     
-    /* 사이드바 */
-    .banner {
+    
+    .footer-sec .footer {
         position: absolute;
-        top: 500px;
-        right: 50px;
-    }
-
-    .container {
-        width: 960px;
-        height: 2200px;
-        margin: 0 auto;
+        width: 1140px;
         text-align: center;
+
     }
 
-    .contents {
-        min-height: 615px;
-        height: 100%;
-        float: left;
-        width: 732px;
-        position: relative;
+    .header-sec {
+        height: 140px;
     }
+
 
     .contents h2 {
-        display: block;
-        font-size: 24px;
-        padding-bottom: 10px;
-        margin-bottom: 25px;
-        border-bottom: 2px solid #5d5d5d;
-        line-height: 1.3em;
-        color: #2e2e2e;
-        font-weight: 600;
-        text-align: left;
+            border-bottom: 1px solid rgb(0, 173, 181);
+            margin-top: 90px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(0,173,181);
     }
 
     .gall-view {
         position: relative;
-        height: 2200px;
+        height: 2000px;
     }
 
     .gall-view .tit {
@@ -59,21 +51,23 @@
         text-align: left;
         padding: 0;
     }
+
     .gall-view .tit p {
         display: block;
         width: 88%;
         margin-top: 100px;
         margin-bottom: 5px;
-        
+
     }
 
     .bbs-info3 {
-        
+
         position: relative;
         width: 100%;
         padding: 6px 0;
         border-bottom: 2px solid #aaa8a8;
         margin-bottom: 20px;
+        margin-top: 70px;
         height: 40px;
     }
 
@@ -86,14 +80,14 @@
         text-align: left;
     }
 
-    
+
     .bbs-info3 .inner_nick_box {
         position: relative;
         top: -20px;
         width: 110px;
         margin-left: 5px;
     }
-    
+
     .bbs-info3 .inner_nick_box .inner_nick {
         overflow: hidden;
         width: 88%;
@@ -115,8 +109,8 @@
         right: 0;
         overflow: hidden;
         display: inline-block;
-        margin-top: -35px;
-    }       
+        margin-top: -20px;
+    }
 
     .date_c li {
         float: left;
@@ -137,26 +131,31 @@
         line-height: 1.6em;
         color: #585858;
         font-size: 15px;
-        height: 1200px;
+        height: 1300px;
         border-bottom: 2px solid #5d5d5d;
     }
 
-    .txt img {
+    .txt p {
+        text-align: center;
+
+    }
+
+    .txt p img {
         margin-top: 20px;
     }
 
     .click_contents {
         margin-top: 30px;
         position: absolute;
-        top: 1300px;
-        right: -280px;
+        top: 1360px;
+        left: 930px;
         width: 100%;
 
     }
 
     .replyList {
         padding-top: 0px;
-        margin-top: 100px;
+        margin-top: 150px;
         text-align: left;
 
         background: #f9f9f9;
@@ -169,12 +168,19 @@
         position: absolute;
         top: 1360px;
         left: 20px;
-        
+
+    }
+
+    .replyList .write_comment {
+        position: absolute;
+        top: 1550px;
+        font-weight: bold;
     }
 
     .comment_write {
         text-align: center;
     }
+
     #comment {
         width: 80%;
         height: 80px;
@@ -187,38 +193,87 @@
     }
 
     .prev-next {
+        width: 800px;
+        margin-left: 120px;
         margin-top: 50px;
         line-height: 50px;
         border-top: 1px solid #5d5d5d;
     }
 
-    .prev-next > dt {
-        float: left;
-        height: 50px;
-        width: 8%;
+    .prev-next .prev {
+        border-bottom: 1px solid #5d5d5d;
+        padding-left: 20px;
+    }
+    
+    .prev-next .next {
+        border-bottom: 1px solid #5d5d5d;
+        padding-left: 20px;
+
     }
 
+    .prev h3 span {
+        margin-left: 100px;
+    }
+    .next h3 span {
+        margin-left: 100px;
+    }
 
+    .h_graph ul {
+        text-align: left;
+        margin:50px 50px 50px 50px;
+        padding:1px 0 0 0;
+        border:1px solid #ddd;
+        border-top:0;
+        border-right:0;
+        font-size:11px;
+        font-family:Tahoma, Geneva, sans-serif;
+        list-style:none
+    }
+    
+    .h_graph li {
+        position:relative;
+        margin:10px 0;
+        vertical-align:top;
+        white-space:nowrap
+    }
 
-  
+    .h_graph .g_term {
+        position:absolute;
+        top:0;
+        left:-50px;
+        width:40px;
+        font-weight:bold;
+        color:#767676;
+        line-height:20px;
+        text-align:right
+    }
+
+    .h_graph .g_bar {
+        display:inline-block;
+        position:relative;
+        height:20px;
+        border:1px solid #ccc;
+        border-left:0;
+        background:#e9e9e9
+    }
+
+    .h_graph .g_bar span {
+        position:absolute;
+        top:0;
+        right:-50px;
+        width:40px;color:#767676;
+        line-height:20px
+        }
 </style>
 
 <body>
-    <header>
-        <h2>헤더 부분</h2>
-    </header>
-
-    <hr class="hr">
-
-
-    <aside class="banner">
-        공지사항 <br>
-        날씨정보
-    </aside>
-
-
-
+    
+    
+    
     <div class="container">
+        <div class="header-sec">
+            <div class="header"></div>
+        </div>
         <div class="contents">
             <h2>식단 / 영양정보</h2>
             <div class="gall-view">
@@ -228,7 +283,7 @@
                 <div class="bbs-info3">
                     <span class="inner">
                         <div class="inner_nick_box">
-                            <p class="inner_nick">6조</p>
+                            <p class="inner_nick">6조 </p>
                         </div>
                     </span>
                     <span class="group_bbs_con">
@@ -246,11 +301,23 @@
                             </ul>
                         </div>
                     </span>
-                </div>  <!--bbs-info3-->
+                </div>
+                <!--bbs-info3-->
                 <div class="txt">
                     <p>
-                    <img src="/FRONT/resource/img/food/계란말이+고구마.jpg" alt="">
+                         <img src="/FRONT/resource/img/food/계란말이+고구마.jpg" alt="">
                     </p>
+
+                    <div class="h_graph">
+                        <ul>
+                            <li><span class="g_term">1번음식</span><span class="g_bar" style="width:0%"><span>0kcal</span></span></li>
+                            <li><span class="g_term">2번음식</span><span class="g_bar" style="width:20%"><span>20kcal</span></span></li>
+                            <li><span class="g_term">3번음식</span><span class="g_bar" style="width:30%"><span>30kcal</span></span></li>
+                            <li><span class="g_term">총 칼로리</span><span class="g_bar" style="width:30%"><span>30kcal</span></span></li>
+
+                        </ul>
+                    </div>
+
                     <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
                         took a galley of type and scrambled it to make a type specimen book. It has survived not only
@@ -267,57 +334,81 @@
                         versions of Lorem Ipsum.</p>
 
 
-                </div> <!--txt-->
+                </div>
+                <!--txt-->
                 <div class="click_contents">
-                    <button>좋아요</button>
-                    <button>글쓰기</button>
-                    <button>목록</button>
+                    <button  class="btn btn-info">좋아요</button >
+                    <button class="btn btn-info">글쓰기</button >
+                    <button class="btn btn-info">목록</button >
                 </div>
                 <div class="replyList">
                     <p class="write_comment">댓글쓰기</p>
                     <div class="comment_write">
                         <textarea class="" id="comment"></textarea>
-                        <button type="button" id="put_comment">입력</button>
+                        <button  type="button" class="btn btn-info" id="put_comment">입력</button >
                     </div>
                 </div>
                 <div class="prev-next">
-                    <dt>이전</dt>
-                    <dd>
-                        <a href="#" class="prev-link">
-                            <p>09월 04일 저녁식사</p>
-                            <em class="date">19:19</em>
-                            <em>조회수: 20</em>
-                        </a>
-                    </dd>
-                    <dt>다음</dt>
-                    <dd>
-                        <a href="#" class="next-link">
-                            <p>09월 04일 저녁식사</p>
-                            <em class="date">19:19</em>
-                            <em>조회수: 20</em>
-                        </a>
-                    </dd>
+                    <div class="prev">
+                        <h3>이전 글 <span><a href="#">이전 글 제목</a></span></h3>
+                    </div>
+                    <div class="next">
+                        <h3>다음 글 <span><a href="#">다음 글 제목</a></span></h3>
+                    </div>
                 </div>
-                
-            </div>  <!--gall-view-->
-        </div>  <!--contents-->
-    </div>  <!--container-->
+
+            </div>
+            <!--gall-view-->
+        </div>
+        <!--contents-->
+        <div class="footer-sec">
+            <div class="footer"></div>
+        </div>
+    </div>
+    <!--container-->
 
 
 
 
     <hr class="hr">
 
-    <footer>
-        <h2>푸터 부분</h2>
-    </footer>
 </body>
 
 </html>
 
-
 <script>
+        $(document).ready(function(){
+        $('.header').load("/FRONT/views/include/header.html");
+        $('.footer').load("/FRONT/views/include/footer.html");
+        $('.section').load("/FRONT/views/board/user/mypage.html")
+    });
 
+    (function ($) {
+        "use strict";
+        $(function () {
+            function animated_contents() {
+                $(".zt-skill-bar > div ").each(function (i) {
+                    var $this = $(this),
+                        skills = $this.data('width');
+
+                    $this.css({
+                        'width': skills + '%'
+                    });
+
+                });
+            }
+
+            if (jQuery().appear) {
+                $('.zt-skill-bar').appear().on('appear', function () {
+                    animated_contents();
+                });
+            } else {
+                animated_contents();
+            }
+        });
+    });
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+
