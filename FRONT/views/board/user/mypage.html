@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.css">
-    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap-theme.css">
+    
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
     <style>
+        body{
+            margin:10px
+        }
         .subtitle{
             text-align: center;
             background-color: rgba(0, 173, 181, 1);
+        }
+        table {
+            border: #000000 solid 1px; 
+            box-shadow: rgba(0, 173, 181, 1);
         }
         
     </style>
@@ -32,23 +39,25 @@
 
         </div>
         <div class="col-sm-2">
-            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal-infochange">회원정보변경</button>
+            <button type="button" id="btn-infochange" class="btn btn-info" data-toggle="modal" data-target="#modal-infochange">회원정보변경</button>
 
         </div>
 
     </div>
-
+    <br>
     
     
     <!--  -->
     <div class="row">
         <div class="col-sm-6">
             <div>
-                <div class="subtitle">공지사항</div>
                 
 
 
                 <table class="table">
+                    <th class="title-primary">
+                        공지사항
+                    </th>
                     <tr>
                         <td class="col-sm-9">3번째 공지사항입니다.</td>
                         <td class="col-sm-3">21.08.31</td>
@@ -72,7 +81,7 @@
         <div class="col-sm-6">
             <div>
                 <div class="subtitle">다녀갔던 장소</div>
-                <table class=>
+                <table class="table">
                     <tr>
                         <td class="col-sm-1">★4.5</td>
                         <td class="col-sm-9">3개월 안에 20kg감량!!</td>
@@ -211,7 +220,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">회원정보변경</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="btn-close" data-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <form action="" method="post" id="form-join">
@@ -250,8 +259,8 @@
                         </table>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-info" data-bs-dismiss="modal" id="btn-infochange">정보변경</button>
-                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal" id="btn-infochange">정보변경</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
                     </div>
 
                 </form>
@@ -270,6 +279,9 @@
             }
 
         });
+        $('#btn-infochange').click(function(){
+            $('#modal-infochange').modal('show')
+        })
     </script>
 </body>
 </html>
