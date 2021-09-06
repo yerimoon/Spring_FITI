@@ -1,91 +1,104 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>diet_write</title>
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/FRONT/resource/js/bootstrap.min.js"></script>
 </head>
 
 <style>
 
 
-    .banner {
-        position: absolute;
-        top: 500px;
-        right: 50px;
-    }
-
     .container {
-        width: 960px;
-        height: 1000px;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .contents {
-        min-height: 615px;
-        height: 100%;
-        text-align: center;
-
+        width: 1160px;
+        height: 1500px;
     }
 
-    #write_form {
-        border: 1px solid #aaa8a8;
-        background: #f9f9f9;
-        height: 800px;
+    .titlebox h2 {
+        border-bottom: 1px solid rgb(0, 173, 181);
+        margin-top: 90px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        color: rgb(0,173,181);
     }
 
-    .regist_button {
-        display: block;
-        text-align: center;
+    #write_table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table {
+
     }
 </style>
 
+
+
 <body>
-    <header>
-        <h2>헤더 부분</h2>
-    </header>
 
-    <aside class="banner">
-        공지사항 <br>
-        날씨정보
-    </aside>
+    <section>
+        <div class="container">
+            <div class="">
+                <div class="header"></div>
+            </div>
+            <div class="row">
+                <div class="content-wrap">
+                    <div class="titlebox">
+                        <h2>글 작성하기</h2>
+                    </div>
+                    <!-- 
+                        첫번째,두번째,세번째 음식 이름 입력창과, 칼로리 창 따로 추가하기 
+                        근데 칼로리를 미리 준비한 DB데이터로 산출할까?
+                        아니면 직접 입력을 받을까?
+                    -->
+                    <form action="#" id="boardWrite" method="POST">
+                        <table id="write_table">
+                            <tbody>
+                                <tr>
+                                    <td>제목</td>
+                                    <td><input type="text" id="title"></td>
+                                </tr>
+                                <tr>
+                                    <td>작성자</td>
+                                    <td><input type="text" id="writer"></td>
+                                </tr>
+                                <tr>
+                                    <td>내용</td>
+                                    <td><textarea name="" id="content" cols="30" rows="10" placeholder="글 내용을 입력하세요"></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
 
-    <hr class="hr">
-
-
-    <div class="container">
-        <div class="contents">
-            <h2 class="board_title">글쓰기</h2>
-            <form action="#" method="POST" id="write_form">
-                <table class="tbl_write">
-                    <tr>
-                        <td>제목</td>
-                        <td><textarea name="" id=""></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>글쓴이</td>
-                        <td>6조</td>
-                    </tr>
-                    <tr>
-                        <td>내용</td>
-                        <td><textarea name="" id=""></textarea></td>
-                    </tr>
-                </table>
-                <div class="regist_button">
-                    <button type="submit" id="write_register">등록</button>
-                    <button type="button" id="write_cancel">취소</button>
+                    <div class="titlefoot">
+                        <button class="btn btn-info" id="registBtn">등록</button>
+                        <button class="btn btn-info" id="listBtn">목록</button>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
-    </div>
+        <div class="">
+            <div class="footer"></div>
+        </div>
+    </section>
 
-    
+
 
     <hr class="hr">
-
-    <footer>
-        <h2>푸터 부분</h2>
-    </footer>
 </body>
+
 </html>
+<script>
+    $(document).ready(function () {
+        $('.header').load("/FRONT/views/include/header.html");
+        $('.footer').load("/FRONT/views/include/footer.html");
+        $('.section').load("/FRONT/views/board/user/mypage.html")
+    });
+</script>
