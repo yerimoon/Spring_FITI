@@ -19,15 +19,13 @@
             background-color: yellow;
             height: 600px;
         }
-        .table td tr tbody{
-            border-top-width: 0px;
-        }
+       
        
 
     </style>
 </head>
 
-<body
+<body>
     
     <div class="container-fluid h-100">
         <div class="row">
@@ -35,10 +33,10 @@
         </div>
         <div class="row">
             
-            <div class="section col-lg-10"></div>
+            <div class="section col-xs-10"></div>
             
             
-            <div class="sidebar col-lg-2"></div>
+            <div class="sidebar col-xs-2"></div>
             
         </div>
         <div class="row">
@@ -50,8 +48,7 @@
         $(document).ready(function(){
             $('.header').load("/FRONT/views/include/header.html");
             $('.footer').load("/FRONT/views/include/footer.html");
-            $('.sidebar').load("/FRONT/views/include/side_bar.html")
-            $('.section').load("/FRONT/views/board/user/mypage.html");
+            $('.sidebar').load("/FRONT/views/include/side_bar.html");
         });
         
     </script>

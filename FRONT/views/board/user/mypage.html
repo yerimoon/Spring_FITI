@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="/FRONT/resource/js/bootstrap.js"></script>
     <style>
-        body{
-            margin:10px;
-            padding:10px;
-        }
+        
         .subtitle{
             text-align: center;
             background-color: rgba(0, 173, 181, 1);
@@ -21,6 +21,13 @@
         .table tr td tbody {
             text-align: center;
             border-top-width: 0px;
+        }
+        .section{
+            height: 700px;
+            overflow: auto;
+        }
+        .sidebar{
+            height: 700px;
         }
     </style>
 </head>
@@ -36,193 +43,221 @@
         본인이 쓴 질문 검색창 목록
         회원정보 변경 페이지 - 모달창
     -->
-    <div class="row">
-        <div class="col-sm-10">
-            <b>닉네임</b>님 환영합니다 
 
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="header"></div>
         </div>
-        <div class="col-sm-2">
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-infochange">회원정보변경</button>
-
+        <div class="row">
+            
+            <div class="section col-xs-10">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <b>닉네임</b>님 환영합니다 
+            
+                    </div>
+                    <div class="col-sm-2">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-infochange">회원정보변경</button>
+            
+                    </div>
+            
+                </div>
+                <br>
+                
+                
+                <!--  -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div>
+                            
+                            <table class="table">
+                                <th class="title-primary" colspan="2">
+                                    공지사항
+                                </th>
+                                <tr>
+                                    <td class="col-sm-9">3번째 공지사항입니다.</td>
+                                    <td class="col-sm-3">21.08.31</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">2번째 공지사항입니다.</td>
+                                    <td class="col-sm-3">21.08.20</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">1번째 공지사항입니다.</td>
+                                    <td class="col-sm-3">21.07.10</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">안녕하세요 반갑습니다.</td>
+                                    <td class="col-sm-3">21.06.20</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                            
+                            <table class="table">
+                                <th class="title-primary" colspan="3">
+                                    다녀갔던 장소
+                                </th>
+                                <tr>
+                                    <td class="col-sm-1">★4.5</td>
+                                    <td class="col-sm-9">3개월 안에 20kg감량!!</td>
+                                    <td class="col-sm-2">21.08.31</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1">★3.0</td>
+                                    <td class="col-sm-8">어서오세요 ★휘트니스</td>
+                                    <td class="col-sm-3">21.08.20</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1">★5.0</td>
+                                    <td class="col-sm-8">장소2입니다.</td>
+                                    <td class="col-sm-3">21.07.10</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-1">★4.5</td>
+                                    <td class="col-sm-8">장소1</td>
+                                    <td class="col-sm-3">21.06.20</td>
+                                </tr>
+                    
+                            </table>
+                        </div>
+            
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div>
+                            
+                            <table class="table">
+                                <th class="title-primary">
+                                    내가 본 강의
+                                </th>
+                                <tr>
+                                    <td class="col-sm-9">3개월 안에 20kg감량!!</td>
+                                    <td class="col-sm-3">21.08.31</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">어서오세요 ★휘트니스</td>
+                                    <td class="col-sm-3">21.08.20</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">장소2입니다.</td>
+                                    <td class="col-sm-3">21.07.10</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">장소1</td>
+                                    <td class="col-sm-3">21.06.20</td>
+                                </tr>
+                            </table>
+                        </div>
+            
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                          
+                            <table class="table">
+                                <th class="title-primary">
+                                    내가 먹었던 식단
+                                </th>
+                                <tr>
+                                    <td class="col-sm-9">3개월 안에 20kg감량!!</td>
+                                    <td class="col-sm-3">21.08.31</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">어서오세요 ★휘트니스</td>
+                                    <td class="col-sm-3">21.08.20</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">장소2입니다.</td>
+                                    <td class="col-sm-3">21.07.10</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">장소1</td>
+                                    <td class="col-sm-3">21.06.20</td>
+                                </tr>
+                    
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+            
+                        <div>
+                            
+                            <table class="table">
+                                <th class="title-primary">
+                                    자유 게시판
+                                </th>
+                                <tr>
+                                    <td class="col-sm-9">길가다가 고양이 봄</td>
+                                    <td class="col-sm-3">21.08.31</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">여러분도 할 수 있다!</td>
+                                    <td class="col-sm-3">21.08.20</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">장소2입니다.</td>
+                                    <td class="col-sm-3">21.07.10</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">장소1</td>
+                                    <td class="col-sm-3">21.06.20</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                            
+                            <table class="table">
+                                <th class="title-primary">
+                                    내가 한 질문들
+                                </th>
+                                <tr>
+                                    <td class="col-sm-9">3개월 안에 20kg감량!???</td>
+                                    <td class="col-sm-3">21.08.31</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">왜 살이 안빠질까요?</td>
+                                    <td class="col-sm-3">21.08.20</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">사이트 이용방법이....</td>
+                                    <td class="col-sm-3">21.07.10</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-9">장소1</td>
+                                    <td class="col-sm-3">21.06.20</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="sidebar col-xs-2"></div>
+            
         </div>
-
+        <div class="row">
+            <div class="footer"></div>
+        </div>
     </div>
-    <br>
     
-    
-    <!--  -->
-    <div class="row">
-        <div class="col-sm-6">
-            <div>
-                
-                <table class="table">
-                    <th class="title-primary" colspan="2">
-                        공지사항
-                    </th>
-                    <tr>
-                        <td class="col-sm-9">3번째 공지사항입니다.</td>
-                        <td class="col-sm-3">21.08.31</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">2번째 공지사항입니다.</td>
-                        <td class="col-sm-3">21.08.20</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">1번째 공지사항입니다.</td>
-                        <td class="col-sm-3">21.07.10</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">안녕하세요 반갑습니다.</td>
-                        <td class="col-sm-3">21.06.20</td>
-                    </tr>
-                </table>
-            </div>
-
-        </div>
-        <div class="col-sm-6">
-            <div>
-                
-                <table class="table">
-                    <th class="title-primary" colspan="3">
-                        다녀갔던 장소
-                    </th>
-                    <tr>
-                        <td class="col-sm-1">★4.5</td>
-                        <td class="col-sm-9">3개월 안에 20kg감량!!</td>
-                        <td class="col-sm-2">21.08.31</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-1">★3.0</td>
-                        <td class="col-sm-8">어서오세요 ★휘트니스</td>
-                        <td class="col-sm-3">21.08.20</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-1">★5.0</td>
-                        <td class="col-sm-8">장소2입니다.</td>
-                        <td class="col-sm-3">21.07.10</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-1">★4.5</td>
-                        <td class="col-sm-8">장소1</td>
-                        <td class="col-sm-3">21.06.20</td>
-                    </tr>
+    <script defer>
+        $(document).ready(function(){
+            $('.header').load("/FRONT/views/include/header.html");
+            $('.footer').load("/FRONT/views/include/footer.html");
+            $('.sidebar').load("/FRONT/views/include/side_bar.html");
+        });
         
-                </table>
-            </div>
+    </script>
 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div>
-                
-                <table class="table">
-                    <th class="title-primary">
-                        내가 본 강의
-                    </th>
-                    <tr>
-                        <td class="col-sm-9">3개월 안에 20kg감량!!</td>
-                        <td class="col-sm-3">21.08.31</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">어서오세요 ★휘트니스</td>
-                        <td class="col-sm-3">21.08.20</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">장소2입니다.</td>
-                        <td class="col-sm-3">21.07.10</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">장소1</td>
-                        <td class="col-sm-3">21.06.20</td>
-                    </tr>
-                </table>
-            </div>
-
-        </div>
-        <div class="col-sm-6">
-            <div>
-              
-                <table class="table">
-                    <th class="title-primary">
-                        내가 먹었던 식단
-                    </th>
-                    <tr>
-                        <td class="col-sm-9">3개월 안에 20kg감량!!</td>
-                        <td class="col-sm-3">21.08.31</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">어서오세요 ★휘트니스</td>
-                        <td class="col-sm-3">21.08.20</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">장소2입니다.</td>
-                        <td class="col-sm-3">21.07.10</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">장소1</td>
-                        <td class="col-sm-3">21.06.20</td>
-                    </tr>
-        
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-6">
-
-            <div>
-                
-                <table class="table">
-                    <th class="title-primary">
-                        자유 게시판
-                    </th>
-                    <tr>
-                        <td class="col-sm-9">길가다가 고양이 봄</td>
-                        <td class="col-sm-3">21.08.31</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">여러분도 할 수 있다!</td>
-                        <td class="col-sm-3">21.08.20</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">장소2입니다.</td>
-                        <td class="col-sm-3">21.07.10</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">장소1</td>
-                        <td class="col-sm-3">21.06.20</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div>
-                
-                <table class="table">
-                    <th class="title-primary">
-                        내가 한 질문들
-                    </th>
-                    <tr>
-                        <td class="col-sm-9">3개월 안에 20kg감량!???</td>
-                        <td class="col-sm-3">21.08.31</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">왜 살이 안빠질까요?</td>
-                        <td class="col-sm-3">21.08.20</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">사이트 이용방법이....</td>
-                        <td class="col-sm-3">21.07.10</td>
-                    </tr>
-                    <tr>
-                        <td class="col-sm-9">장소1</td>
-                        <td class="col-sm-3">21.06.20</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
 
     
     
@@ -287,9 +322,7 @@
     </div>
    
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <script src="/FRONT/resource/js/bootstrap.js"></script>
+    
     <script>
         $('#btn-infochange').click(function(){
             if(confirm('회원정보를 정말로 수정하시겠습니까?') === true){
