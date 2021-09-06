@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
-    <script src="/FRONT/resource/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/FRONT/resource/js/bootstrap.min.js"></script>
     <style>
         
@@ -37,10 +37,10 @@
         </div>
         <div class="row">
             
-            <div class="section col-sm-10"></div>
+            <div class="section col-lg-10"></div>
             
             
-            <div class="sidebar col-sm-2"></div>
+            <div class="sidebar col-lg-2"></div>
             
         </div>
         <div class="row">
@@ -48,11 +48,11 @@
         </div>
     </div>
     
-    <script>
+    <script defer>
         $(document).ready(function(){
             $('.header').load("/FRONT/views/include/header.html");
             $('.footer').load("/FRONT/views/include/footer.html");
-            $('.section').load("/FRONT/views/board/user/mypage.html")
+            $('.section').load("/FRONT/views/board/user/mypage.html");
         })
         
     </script>
