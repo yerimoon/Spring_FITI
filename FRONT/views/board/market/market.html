@@ -6,73 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
+        .container{
+            text-align: center;
+            padding: auto;
+            margin: auto;
+
+        }
+        .menu{
+            text-align: center;
+            margin-top: 20px;
+            display: block;
+
+        }
         #menus{
             background-color: rgb(0, 173, 181);
+            text-align: center;
+            display: block;
+        }
+        #regist{
+            text-align: right;
+            display: block;
         }
         #product{
             display: inline;
+            margin: 5px;
+            border: 1px solid rgb(0, 173, 181);
+            display: block;
         }
         #img img{
             width: 100px;
             height: 100px;
+            
+            display: block;
+        }
+        #comment{
+            width: 100px;
+            height: 100px;
+            
+        }
+       .search-wrap{
+           margin: 10px;
+           text-align: right;
+       }
+        .search-box{
+            width: 300px;
+            margin: 10px;
+            display: inline;
+        }
+        .search-btn{
+            text-align: right;
+            display: inline;
+        }
+        .pagination{
+            display: block;
+            margin: auto;
+           
+        }
+        .paging{
+            text-align: center;
+            margin: 5px;
+
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <section>
+        
         <div class="row">
-            <div id="menu">
-                <div class="col-md-1"><button id="menus" class="btn">삽니다</button></div>
-                <div class="col-md-1"><button id="menus" class="btn">팝니다</button></div>
-                <div class="col-md-1"><button id="menus" class="btn">나눠요</button></div>
-            </div><br>
-            <div id="regist">
-                <button class="btn">등록하기</button>
-            </div>
+            <div class="header"></div>
         </div>
-        <div id="products">
-            <div id="product" class="col-md-6">               
-                <div id="img">
-                    <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
-                </div>
-                <div id="coment">
-                    <a href="">제품명</a>
-                    <p>제품 설명</p>
-                </div>
-            </div>
-            <div id="product" class="col-md-6">               
-                <div id="img">
-                    <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
-                </div>
-                <div id="coment">
-                    <a href="">제품명</a>
-                    <p>제품 설명</p>
-                </div>
-            </div>
-            <div id="product" class="col-md-6">               
-                <div id="img">
-                    <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
-                </div>
-                <div id="coment">
-                    <a href="/FRONT/resource/img/product/슈펜 테크 운동화.jpg">제품명</a>
-                    <p>제품 설명</p>
-                </div>
-            </div>
-            <div id="product" class="col-md-6">               
-                <div id="img">
-                    <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
-                </div>
-                <div id="coment">
-                    <a href="/FRONT/resource/img/product/슈펜 테크 운동화.jpg">제품명</a>
-                    <p>제품 설명</p>
+        
+        <div class="container">
+            
+            <div class="row">
+                <div id="menu" class="col-md-12 menu">
+                    <div class="col-md-1"><button id="menus" class="btn">삽니다</button></div>
+                    <div class="col-md-1"><button id="menus" class="btn">팝니다</button></div>
+                    <div class="col-md-1"><button id="menus" class="btn">나눠요</button></div>
+                </div><br>
+                <div id="regist">
+                    <button class="btn">등록하기</button>
                 </div>
             </div>
             
+            <div id="products">
+                <div id="product" class="col-md-5">
+                    <div id="img">
+                        <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
+                    </div>
+                    <div id="coment">
+                        <a href="">제품명</a>
+                        <p>제품 설명</p>
+                    </div>
+                </div>
+                <div id="product" class="col-md-5">
+                    <div id="img">
+                        <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
+                    </div>
+                    <div id="coment">
+                        <a href="">제품명</a>
+                        <p>제품 설명</p>
+                    </div>
+                </div>
+                <div id="product" class="col-md-5">
+                    <div id="img">
+                        <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
+                    </div>
+                    <div id="coment">
+                        <a href="/FRONT/resource/img/product/슈펜 테크 운동화.jpg">제품명</a>
+                        <p>제품 설명</p>
+                    </div>
+                </div>
+                <div id="product" class="col-md-5">
+                    <div id="img">
+                        <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
+                    </div>
+                    <div id="coment">
+                        <a href="/FRONT/resource/img/product/슈펜 테크 운동화.jpg">제품명</a>
+                        <p>제품 설명</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="search-wrap">
+                <input type="text" class="form-control search-box" placeholder="검색어를 입력하세요">
+                <button class="btn search-btn">검색</button>
+            </div>
+
+           
+
         </div>
-    </div>
-    
+            
+        <div class="row">
+            <div class="footer"></div>
+        </div>
+
+    </section>
+    <script>
+        $(document).ready(function(){
+            $('.header').load("/FRONT/views/include/header.html");
+            $('.footer').load("/FRONT/views/include/footer.html");
+        })
+        
+    </script>
     
 </body>
 </html>
