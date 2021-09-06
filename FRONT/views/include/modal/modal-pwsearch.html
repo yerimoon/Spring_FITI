@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.css">
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap-theme.css">
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                    data-bs-target="#modal-pwsearch">비밀번호찾기</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal-pwsearch" class="modal fade">
+        <div class="modal-dialog">
+
+            <!-- Modal Content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">로그인</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" id="form-login">
+                        <table>
+                            <tr>
+                                <td>이메일</td>
+                                <td>
+                                    <input type="text" name="" id="" size="15"> @
+                                    <input type="text" name="" id="" size="15">
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-bs-dismiss="modal">인증메일 발송</button>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">취소</button>
+                </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/FRONT/resource/js/jquery.min.js"></script>
+
+    <script src="/FRONT/resource/js/bootstrap.js"></script>
+</body>
+
+</html>
