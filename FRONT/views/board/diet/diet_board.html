@@ -5,184 +5,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>diet-board</title>
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/FRONT/resource/js/bootstrap.min.js"></script>
     
    
     <style>
-
-        * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        }
-
-        body {
-            width: 100%;
-        }
-
-        .row {
-            text-align: center;
-            width: 100%;
-            
-            margin: auto;
-        }
-        .row > h2 {
-            position: absolute;
-            left: 470px;
-            top: 80px;
-            width: 960px;
-            font-size: 24px;
-            padding-bottom: 8px;
-            padding-top: 50px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #5d5d5d;
-            line-height: 1.3em;
-            color: #2e2e2e;
-            font-weight: 600;
-            text-align: left;
-        }
-
         .container {
-            width:960px; 
-            height: 1100px;
-            margin:0 auto;
-	        text-align:center;
+            height: 2000px;
         }
-        .container ul li {
-            float: left;
-            width: 250px;
+
+        .footer {
+            margin-top: 180px;
+        }
+
+        .row > h2 {
+            border-bottom: 1px solid rgb(0, 173, 181);
+            margin-top: 90px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(0,173,181);
+        }
+
+        .table {
+            border-collapse: collapse;
+            margin-top: 50px;
+        }
+
+        .table a img {
+            width: 250px; 
+            height: 260px;   
             padding: 5px;
-            position: relative;
-        }
-        .container ul li .foods {
-            width: 200px;
-        }
-        .container ul li h2 {
-            font-size: 18px;
-            margin-top: 5px;
-        }
-        .container ul li h3 {
-            font-size: 12px;
-        }
-        ul {
-            display: block;
-            margin: 0px;
-            padding: 0px;
-        }
-        ul li{
-            position: absolute;
-            left: 100px;
-            list-style: none;
-            height: 260px;
-            border: 1px solid #e8e8e8;
-        }
-        img {
-            height: 150px;
-        }
-        .clfix {
-            font-size: 13px;
-            height: 800px;
-            color: #383838;
-            border: 1px solid #8a8585;
-            padding: 10px;
-            margin-top: 200px;
-        }
         
-        .paging > a {
+        }
+
+        .table tbody tr td {
+            text-align: center;
+            border-top-width: 0px;
+        }
+
+        .table tr td a {
             text-decoration: none;
+            color: darkgrey;
+            
+        }
+
+        .table tr td a h2 {
+            font-size: 25px;
             color: black;
-            
         }
-        .banner {
-            position: absolute;
-            top: 500px;
-            right: 50px;
+        .table tr td a h3 {
+            font-size: 18px;
+            
         }
 
-        .dataArea {
-            width: 100%;
-            display: block;
-            height: 500px;
-            
-        }
         .tools {
-            padding-top: 50px;
+            text-align: center;
         }
 
-        .title {
-            padding: 0px, 5px;
-            margin: 0px;
+        .paging {
+            padding: 40px 0px 20px 0px;
         }
 
+
+        #search {
+            padding: 3px;
+        }
+
+        .search-condition {
+            padding: 3px;
+        }
+
+        .search-sec {
+            padding: 20px 0px 20px 0px;
+            background: rgb(191, 230, 240);
+        }
+
+        .header-sec {
+            height: 140px;
+        }
         
+        #write {
+            position: absolute;
+            top: 1520px;
+            left: 1480px;
+            width: 90px;
+            height: 50px;
+        }
+
+
     </style>
 
 </head>
 
 <body>
     
-    <header>
-        <h2>헤더 부분</h2>
-    </header>
-
-    <hr class="hr">
-
-    <!-- 가로 바 -->
-    <aside class="banner">
-        공지사항 <br>
-        날씨정보
-    </aside>
     <!-- 메인 -->
     <div class="container">
+        <!--헤더-->
+        <div class="header-sec">
+            <div class="header"></div>
+        </div>
+        
         <div class="row">
             <h2>식단 / 영양정보</h2>
-            <ul class="clfix">
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
+            <table class="table">
+                <tr>
+                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>                    <td>
+                        <a href="">
+                            <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="">
+                            <h2>제목</h2>
+                            <h3>작성일 | 조회: 10 | 좋아요: 10 <br>아이디</h3>
+                        </a>
+                    </td>
+
+                </tr>
+               
                 
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
-                    <li>
-                        <img src="/FRONT/resource/img/food/계란 치즈 오픈샌드위치.jpg" alt="" class="foods">
-                        <h2>제목</h2>
-                        <h3>글쓴이 <span class="red">작성일 | 조회수 | 좋아요 수</span></h3>
-                    </li>
-                </ul>
+            </table>
+              
+                
             
         </div>
         
@@ -190,45 +193,60 @@
         <div class="tools">
             <!-- 페이징 버튼-->
             <div class="paging">
-                <a href="#">이전</a>
-                <a href="#">1</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">7</a>
-                <a href="#">8</a>
-                <a href="#">9</a>
-                <a href="#">10</a>
-                <a href="#">다음</a>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                      <li>
+                        <a href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                        </a>
+                      </li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">6</a></li>
+                      <li><a href="#">7</a></li>
+                      <li><a href="#">8</a></li>
+                      <li><a href="#">9</a></li>
+                      <li><a href="#">10</a></li>
+                      <li>
+                        <a href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
             </div>
 
-            <!--검색 조건-->
-            <select class="search-condition">
-                <option>제목</option>
-                <option>작성자</option>
-            </select>
-            
-            <!--검색창, 버튼-->
-            <input type="text" id="search" placeholder="검색어를 입력하세요">
-            <button>검색</button>
-            
+            <div class="search-sec">
+                <!--검색 조건-->
+                <select class="search-condition">
+                    <option>제목</option>
+                    <option>작성자</option>
+                </select>
+                
+                <!--검색창, 버튼-->
+                <input type="text" id="search" placeholder="검색어를 입력하세요">
+                <button type="button" class="btn btn-info">검색</button>
+                
 
-            <!--글쓰기 버튼-->
-            <button  id="write">
-                글쓰기
-            </button>
+                <!--글쓰기 버튼-->
+                <button type="button" id="write" class="btn btn-info">
+                    글쓰기
+                </button>
+            </div>
         </div>
 
+        
+            <div class="footer-sec">
+                <div class="footer"></div>
+            </div>
     </div>
 
-    <hr class="hr">
+
 
       
-
-    <footer>
-        <h2>푸터 부분</h2>
-     </footer>
     
 
 </body>
@@ -236,21 +254,12 @@
 </html>
 
 <script>
-
-    $(function(){
-        $('#write').click(function() {
-            
-        });
-
-        
-
-        
-
-        
-
-
-    }); //제이쿼리 끝
+    $(document).ready(function(){
+        $('.header').load("/FRONT/views/include/header.html");
+        $('.footer').load("/FRONT/views/include/footer.html");
+        $('.section').load("/FRONT/views/board/user/mypage.html")
+    })
+    
 </script>
 
 
-<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
