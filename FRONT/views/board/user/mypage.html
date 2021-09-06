@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
     <style>
         body{
-            margin:10px
+            margin:10px;
+            padding:10px;
         }
         .subtitle{
             text-align: center;
             background-color: rgba(0, 173, 181, 1);
         }
-        table {
-            border: #000000 solid 1px; 
-            box-shadow: rgba(0, 173, 181, 1);
+        table{
+            box-shadow: 5px 5px 5px 5px gray;
+            border-radius: 15px;
         }
-        
+        .table tr td tbody {
+            text-align: center;
+            border-top-width: 0px;
+        }
     </style>
 </head>
 <body>
@@ -39,7 +42,7 @@
 
         </div>
         <div class="col-sm-2">
-            <button type="button" id="btn-infochange" class="btn btn-info" data-toggle="modal" data-target="#modal-infochange">회원정보변경</button>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-infochange">회원정보변경</button>
 
         </div>
 
@@ -52,10 +55,8 @@
         <div class="col-sm-6">
             <div>
                 
-
-
                 <table class="table">
-                    <th class="title-primary">
+                    <th class="title-primary" colspan="2">
                         공지사항
                     </th>
                     <tr>
@@ -80,8 +81,11 @@
         </div>
         <div class="col-sm-6">
             <div>
-                <div class="subtitle">다녀갔던 장소</div>
+                
                 <table class="table">
+                    <th class="title-primary" colspan="3">
+                        다녀갔던 장소
+                    </th>
                     <tr>
                         <td class="col-sm-1">★4.5</td>
                         <td class="col-sm-9">3개월 안에 20kg감량!!</td>
@@ -111,8 +115,11 @@
     <div class="row">
         <div class="col-sm-6">
             <div>
-                <div class="subtitle">내가 본 강의</div>
-                <table>
+                
+                <table class="table">
+                    <th class="title-primary">
+                        내가 본 강의
+                    </th>
                     <tr>
                         <td class="col-sm-9">3개월 안에 20kg감량!!</td>
                         <td class="col-sm-3">21.08.31</td>
@@ -135,8 +142,11 @@
         </div>
         <div class="col-sm-6">
             <div>
-                <div class="subtitle">내가 먹었던 식단</div>
-                <table>
+              
+                <table class="table">
+                    <th class="title-primary">
+                        내가 먹었던 식단
+                    </th>
                     <tr>
                         <td class="col-sm-9">3개월 안에 20kg감량!!</td>
                         <td class="col-sm-3">21.08.31</td>
@@ -162,8 +172,11 @@
         <div class="col-sm-6">
 
             <div>
-                <div class="subtitle">자유 게시판</div>
-                <table>
+                
+                <table class="table">
+                    <th class="title-primary">
+                        자유 게시판
+                    </th>
                     <tr>
                         <td class="col-sm-9">길가다가 고양이 봄</td>
                         <td class="col-sm-3">21.08.31</td>
@@ -185,8 +198,11 @@
         </div>
         <div class="col-sm-6">
             <div>
-                <div class="subtitle">내가 한 질문들</div>
-                <table>
+                
+                <table class="table">
+                    <th class="title-primary">
+                        내가 한 질문들
+                    </th>
                     <tr>
                         <td class="col-sm-9">3개월 안에 20kg감량!???</td>
                         <td class="col-sm-3">21.08.31</td>
@@ -219,17 +235,18 @@
             <!-- Modal Content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">회원정보변경</h4>
-                    <button type="button" class="btn-close" data-dismiss="modal"></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">회원정보변경</h4>
                 </div>
                 <div class="modal-body">
                     <form action="" method="post" id="form-join">
-                        <table>
+
+                        <table class="table">
                             <tr>
                                 <td>이메일</td>
                                 <td>
-                                    <input type="text" name="" id="" size="15" readonly> @
-                                    <input type="text" name="" id="" size="15" readonly>
+                                    <input type="text" value="test" name="" id="" size="15" readonly> @
+                                    <input type="text" value="test.com" name="" id="" size="15" readonly>
                                 </td>
                             </tr>
                             <tr>
@@ -257,19 +274,20 @@
                                 </td>
                             </tr>
                         </table>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-info" data-dismiss="modal" id="btn-infochange">정보변경</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
-                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn-infochange">정보변경</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                </div>
 
-                </form>
 
             </div>
         </div>
     </div>
+   
 
-    <script src="/FRONT/resource/js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script src="/FRONT/resource/js/bootstrap.js"></script>
     <script>
@@ -279,9 +297,7 @@
             }
 
         });
-        $('#btn-infochange').click(function(){
-            $('#modal-infochange').modal('show')
-        })
+        
     </script>
 </body>
 </html>
