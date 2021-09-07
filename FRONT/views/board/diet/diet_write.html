@@ -12,68 +12,79 @@
 </head>
 
 <style>
-
-
     .container {
         width: 1160px;
-        height: 1500px;
+        height: 1200px;
     }
 
     .titlebox h2 {
         border-bottom: 1px solid rgb(0, 173, 181);
         margin-top: 90px;
-        margin-bottom: 20px;
+        margin-bottom: 80px;
         padding-bottom: 20px;
         font-size: 40px;
         font-weight: bold;
-        color: rgb(0,173,181);
-    }
-
-    #write_table {
-        border-collapse: collapse;
-        width: 100%;
+        color: rgb(0, 173, 181);
     }
 
     table {
 
     }
+
+    table tr:first-child {
+        border-top: 1px solid rgb(180, 180, 180);
+    }
+
+    table tr td {
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .titlefoot {
+        float: right;
+        margin: 20px;
+    }
+
+    .side_bar {
+        position: fixed;
+    }
 </style>
-
-
 
 <body>
 
     <section>
         <div class="container">
-            <div class="">
+            <div class="header-sec">
                 <div class="header"></div>
             </div>
             <div class="row">
-                <div class="content-wrap">
+                <div class="col-sm-10">
                     <div class="titlebox">
                         <h2>글 작성하기</h2>
                     </div>
-                    <!-- 
-                        첫번째,두번째,세번째 음식 이름 입력창과, 칼로리 창 따로 추가하기 
-                        근데 칼로리를 미리 준비한 DB데이터로 산출할까?
-                        아니면 직접 입력을 받을까?
-                    -->
-                    <form action="#" id="boardWrite" method="POST">
-                        <table id="write_table">
-                            <tbody>
-                                <tr>
-                                    <td>제목</td>
-                                    <td><input type="text" id="title"></td>
-                                </tr>
-                                <tr>
-                                    <td>작성자</td>
-                                    <td><input type="text" id="writer"></td>
-                                </tr>
-                                <tr>
-                                    <td>내용</td>
-                                    <td><textarea name="" id="content" cols="30" rows="10" placeholder="글 내용을 입력하세요"></textarea></td>
-                                </tr>
-                            </tbody>
+
+                    <form action="#" id="boardWrite" method="POST" enctype="multipart/form-data">
+                        <table>
+                            <tr>
+                                <td>작성자</td>
+                                <td><input type=text name=name size=20> </td>
+                            </tr>
+
+                            <tr>
+                                <td>제목</td>
+                                <td><input type=text name=title size="60"></td>
+                            </tr>
+
+                            <tr>
+                                <td>내용</td>
+                                <td><textarea name="content" cols="75" rows="15"></textarea></td>
+                            </tr>
+
+                            <tr>
+                                <td>사진올리기 </td>
+                                <td><input type="file" name="fileName" size="10" maxlength="10"></td>
+                            </tr>
+
                         </table>
                     </form>
 
@@ -82,16 +93,19 @@
                         <button class="btn btn-info" id="listBtn">목록</button>
                     </div>
                 </div>
+                <div class="col-sm-2">
+                    <div class="side_bar"></div>
+                </div>
             </div>
-        </div>
-        <div class="">
-            <div class="footer"></div>
+            <div class="footer-sec">
+                <div class="footer"></div>
+            </div>
         </div>
     </section>
 
 
 
-    <hr class="hr">
+
 </body>
 
 </html>
@@ -99,6 +113,77 @@
     $(document).ready(function () {
         $('.header').load("/FRONT/views/include/header.html");
         $('.footer').load("/FRONT/views/include/footer.html");
+        $('.side_bar').load("/FRONT/views/include/side_bar.html");
         $('.section').load("/FRONT/views/board/user/mypage.html")
+    });
+
+
+
+    var fileList = []; //파일 정보를 담아 둘 배열
+    $(function () {
+
+        //드래그앤드랍
+        $("#fileDrop").on("dragenter", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }).on("dragover", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).css("background-color", "#FFD8D8");
+        }).on("dragleave", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).css("background-color", "#FFF");
+        }).on("drop", function (e) {
+            e.preventDefault();
+
+            var files = e.originalEvent.dataTransfer.files;
+            if (files != null && files != undefined) {
+                var tag = "";
+                for (i = 0; i < files.length; i++) {
+                    var f = files[i];
+                    fileList.push(f);
+                    var fileName = f.name;
+                    var fileSize = f.size / 1024 / 1024;
+                    fileSize = fileSize < 1 ? fileSize.toFixed(3) : fileSize.toFixed(1);
+                    tag +=
+                        "<div class='fileList'>" +
+                        "<span class='fileName'>" + fileName + "</span>" +
+                        "<span class='fileSize'>" + fileSize + " MB</span>" +
+                        "<span class='clear'></span>" +
+                        "</div>";
+                }
+                $(this).append(tag);
+            }
+
+            $(this).css("background-color", "#FFF");
+        });
+
+        //저장
+        $(document).on("click", "#save", function () {
+            var formData = new FormData($("#fileForm")[0]);
+            if (fileList.length > 0) {
+                fileList.forEach(function (f) {
+                    formData.append("fileList", f);
+                });
+            }
+
+            $.ajax({
+                url: "서버 맵핑 URL",
+                data: formData,
+                type: 'POST',
+                enctype: 'multipart/form-data',
+                processData: false,
+                contentType: false,
+                dataType: 'json',
+                cache: false,
+                success: function (res) {
+                    alert("저장에 성공하셨습니다.");
+                },
+                error: function (res) {
+                    alert("오류 발생.\n관리자에게 문의해주세요.");
+                }
+            });
+        });
     });
 </script>
