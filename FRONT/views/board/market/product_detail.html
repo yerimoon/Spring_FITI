@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <secstion>
+        <div class="container">
+            <!-- <div class="row">
+                <div class="header"></div>
+            </div> -->
+            <!-- <div class="row">
+        
+                <div class="section col-xs-10"></div>
+        
+        
+                <div class="sidebar col-xs-2"></div>
+        
+            </div> -->
+
+            <div id="product_detail">
+                <div class="img">
+                    <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                </div>
+                <div class="price">
+                    <p>
+                        가격 : 5000원
+                    </p>
+                </div>
+                <div class="content">
+                    <p>
+                        제품 상세설명
+                    </p>
+                </div>
+            </div>
+
+            <!-- <div class="row">
+                <div class="footer"></div>
+            </div> -->
+        </div>
+    </secstion>
+    
+    <script defer>
+        $(document).ready(function(){
+            $('.header').load("/FRONT/views/include/header.html");
+            $('.footer').load("/FRONT/views/include/footer.html");
+            $('.sidebar').load("/FRONT/views/include/side_bar.html");
+        });
+        
+    </script>
+    
+</body>
+</html>
