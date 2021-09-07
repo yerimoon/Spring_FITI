@@ -28,6 +28,10 @@
             font-weight: bold;
             font-size: 30px;
         }
+
+        .nav-link {
+            color:rgb(0, 173, 181);
+        }
       
     </style>
 </head>
@@ -38,19 +42,24 @@
             <div class="header"></div>
         </div>
 
+        <div class="row">
+
 
         <nav id="navbar-example2" class="navbar navbar-light bg-info">
-            <a class="navbar-brand text-center" href="#">꿀팁 게시글 제목</a>
-            <ul class="nav nav-pills">
-              <li class="nav-item float-right">
-                <a class="nav-link" href="#fat">사진</a>
+            <span class="navbar-brand text-center text-info">김종국's 상체 운동 루틴</span>
+            <ul class="nav nav-pills text-info" align="right">
+              <li class="nav-item text-info">
+                <a class="nav-link" href="#">목록으로</a>
               </li>
-              <li class="nav-item float-right">
-                <a class="nav-link" href="#mdo">설명</a>
+              <li class="nav-item text-info">
+                <a class="nav-link " href="#">수정</a>
+              </li>
+              <li class="nav-item text-info">
+                <a class="nav-link" href="#">삭제</a>
               </li>
             </ul>
-          </nav>
-
+        </nav>
+<form>
           <div class="row">
           <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
             <div class="col-sm-4" id="pic">
@@ -87,6 +96,9 @@
             </div>
           </div>
           
+    </div>  
+        
+</form>
 
     <script>
         $(document).ready(function(){

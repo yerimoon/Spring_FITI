@@ -1,115 +1,213 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/FRONT/resource/js/bootstrap.min.js"></script>
 
-    <!-- Bootstrap CSS -->
-    <link href="/FRONT/resource/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+        .footer{
+            background-color: red;
+            height: 50px;
+        }
+        .section{
+            background-color: yellowgreen;
+            height: 500px;
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div class="contaner">
+        }
+        .sidebar{
+            background-color: yellow;
+            height: 500px;
+        }
+       
+        .container {
+          font-family: "NanumGothic";
+        }
+
+        h2 {
+          color: rgb(0, 173, 181);
+          font-size: 35px;
+          font-weight: bold;
+        }
+
+        input {
+          padding: 5px;
+          border: 1px solid lightgray;
+          border-radius: 10px;
+          width: 200px;
+        }
+
+        .page-link {
+          color:rgb(0, 173, 181);
+        }
+        #btn-list {
+          margin-top: 15px;
+          margin-bottom: 25px;
+        }
+        .panel-heading > a {
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="container-fluid h-100">
         <div class="row">
-            <h1 class="text-center">질문 게시판</h1>
+            <div class="header"></div>
         </div>
-        <div class="row">
-            질문 검색창
-        </div>
-        <div class="row">
-            태그별 조회 #
-        </div>
-        <div class="row">
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">번호</th>
-                    <th scope="col">제목</th>
-                    <th scope="col">글쓴이</th>
-                    <th scope="col">날짜</th>
-                    <th scope="col">조회</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="col">745</th>
-                        <th scope="col">다들 운동 어디서 하시나요?</th>
-                        <th scope="col">김땡땡</th>
-                        <th scope="col">2021-09-02</th>
-                        <th scope="col">153</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">745</th>
-                        <th scope="col">다들 운동 어디서 하시나요?</th>
-                        <th scope="col">김땡땡</th>
-                        <th scope="col">2021-09-02</th>
-                        <th scope="col">153</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">745</th>
-                        <th scope="col">다들 운동 어디서 하시나요?</th>
-                        <th scope="col">김땡땡</th>
-                        <th scope="col">2021-09-02</th>
-                        <th scope="col">153</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">745</th>
-                        <th scope="col">다들 운동 어디서 하시나요?</th>
-                        <th scope="col">김땡땡</th>
-                        <th scope="col">2021-09-02</th>
-                        <th scope="col">153</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">745</th>
-                        <th scope="col">다들 운동 어디서 하시나요?</th>
-                        <th scope="col">김땡땡</th>
-                        <th scope="col">2021-09-02</th>
-                        <th scope="col">153</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">745</th>
-                        <th scope="col">다들 운동 어디서 하시나요?</th>
-                        <th scope="col">김땡땡</th>
-                        <th scope="col">2021-09-02</th>
-                        <th scope="col">153</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">745</th>
-                        <th scope="col">다들 운동 어디서 하시나요?</th>
-                        <th scope="col">김땡땡</th>
-                        <th scope="col">2021-09-02</th>
-                        <th scope="col">153</th>
-                    </tr>
-                    <tr>
-                        <th scope="col">745</th>
-                        <th scope="col">다들 운동 어디서 하시나요?</th>
-                        <th scope="col">김땡땡</th>
-                        <th scope="col">2021-09-02</th>
-                        <th scope="col">153</th>
-                    </tr>
+        
+        <div class="container">
+
+            <div class="row">
+                <h2 class="font-weight-bold text-center"><b>질문게시판</b></h2>
+            </div>
+
+            <br>
+           
+            <div class="row input-group margin-top-5">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">검색</button>
+                </span>
+            </div>
+            
+            <br>
+
+            <div class="row panel panel-info margin-top-5">
+                <div class="panel-heading text-center">
+                    <a href="#">#운동</a>&nbsp;&nbsp;
+                    <a href="#">#인바디측정</a>&nbsp;&nbsp;
+                    <a href="#">#골프</a>&nbsp;&nbsp;
+                    <a href="#">#배드민턴</a>&nbsp;&nbsp;
+                    <a href="#">#테니스</a>&nbsp;&nbsp;
+                    <a href="#">#크로스핏</a>&nbsp;&nbsp;
+                    <a href="#">#다이어트</a>&nbsp;&nbsp;
+                    <a href="#">#영양</a>&nbsp;&nbsp;
+                    <a href="#">#필라테스</a>&nbsp;&nbsp;
+                    <a href="#">#홈트</a>&nbsp;&nbsp;
+                </div>
+                
+            </div>
+
+          
+
+            <div class="row margin-top-5">
+                <table class="table table-hover table-responsive">
+                    <thead class="bg-info">
+                      <tr>
+                        <th scope="col" class="text-center">번호</th>
+                        <th scope="col" class="text-center">제목</th>
+                        <th scope="col" class="text-center">글쓴이</th>
+                        <th scope="col" class="text-center">날짜</th>
+                        <th scope="col" class="text-center">조회</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="col" class="text-center">23</th>
+                        <th scope="col">상체 키우고 싶은데 몇 분할이 좋을까요?</th>
+                        <th scope="col" class="text-center">헬린이</th>
+                        <th scope="col" class="text-center">2021-09-02</th>
+                        <th scope="col" class="text-center">153</th>
+                      </tr>
                     
-                </tbody>
-              </table>
-            
-        </div>
+                        <tr>
+                          <th scope="col" class="text-center">23</th>
+                          <th scope="col">근육이 정말 안느네요. 단백질 더 먹어야 할까요?</th>
+                          <th scope="col" class="text-center">며르치</th>
+                          <th scope="col" class="text-center">2021-09-02</th>
+                          <th scope="col" class="text-center">153</th>
+                        </tr>
+                      
+                        <tr>
+                          <th scope="col" class="text-center">23</th>
+                          <th scope="col">근육이 정말 안느네요. 단백질 더 먹어야 할까요?</th>
+                          <th scope="col" class="text-center">며르치</th>
+                          <th scope="col" class="text-center">2021-09-02</th>
+                          <th scope="col" class="text-center">153</th>
+                        </tr>
+                      
+                        <tr>
+                          <th scope="col" class="text-center">23</th>
+                          <th scope="col">근육이 정말 안느네요. 단백질 더 먹어야 할까요?</th>
+                          <th scope="col" class="text-center">며르치</th>
+                          <th scope="col" class="text-center">2021-09-02</th>
+                          <th scope="col" class="text-center">153</th>
+                        </tr>
+                      
+                        <tr>
+                          <th scope="col" class="text-center">23</th>
+                          <th scope="col">근육이 정말 안느네요. 단백질 더 먹어야 할까요?</th>
+                          <th scope="col" class="text-center">며르치</th>
+                          <th scope="col" class="text-center">2021-09-02</th>
+                          <th scope="col" class="text-center">153</th>
+                        </tr>
+                      
+                        <tr>
+                          <th scope="col" class="text-center">23</th>
+                          <th scope="col">근육이 정말 안느네요. 단백질 더 먹어야 할까요?</th>
+                          <th scope="col" class="text-center">며르치</th>
+                          <th scope="col" class="text-center">2021-09-02</th>
+                          <th scope="col" class="text-center">153</th>
+                        </tr>
+                      
+                        <tr>
+                          <th scope="col" class="text-center">23</th>
+                          <th scope="col">근육이 정말 안느네요. 단백질 더 먹어야 할까요?</th>
+                          <th scope="col" class="text-center">며르치</th>
+                          <th scope="col" class="text-center">2021-09-02</th>
+                          <th scope="col" class="text-center">153</th>
+                        </tr>
+                      
+                        <tr>
+                          <th scope="col" class="text-center">23</th>
+                          <th scope="col">근육이 정말 안느네요. 단백질 더 먹어야 할까요?</th>
+                          <th scope="col" class="text-center">며르치</th>
+                          <th scope="col" class="text-center">2021-09-02</th>
+                          <th scope="col" class="text-center">153</th>
+                        </tr>
+                        
+                    </tbody>
+                  </table>
+            </div>
+
+            <div class="row" align="right">
+              <button type="button" id="write" class="btn btn-outline-primary float-right"><b>질문하기</b></button>
+             </div>
+
+
+            <div class="row text-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+            </div> 
+
         <div class="row">
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
-                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">4</a></li>
-                  <li class="page-item"><a class="page-link" href="#">5</a></li>
-                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-              </nav>
-            
+            <div class="footer"></div>
         </div>
     </div>
-    <script src="/FRONT/resource/js/bootstrap.bundle.min.js"></script>
-
-  </body>
+    
+    <script>
+        $(document).ready(function(){
+            $('.header').load("/FRONT/views/include/header.html");
+            $('.footer').load("/FRONT/views/include/footer.html");
+            $('.section').load("/FRONT/views/board/user/mypage.html")
+        })
+        
+    </script>
+</body>
 </html>
