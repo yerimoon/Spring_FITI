@@ -7,23 +7,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <style>
         .container{
             text-align: center;
             padding: auto;
             margin: auto;
+            
 
         }
-        .menu{
-            text-align: center;
-            margin-top: 20px;
-            display: block;
-
+      
+      
+        #products{
+            position: relative;
         }
-        #menus{
-            background-color: rgb(0, 173, 181);
-            text-align: center;
-            display: block;
+        .tiem_list{
+            padding-top: 15px;
+        }
+        .item_view{
+            float: left;
+            width: 200px;
+            height: 300px;
+            margin: 10px;
+            padding: 0 0 13px 0;
+            border: 1px solid rgb(0, 173, 181);
+        }
+        .item_img img{
+            width: 190px;
         }
         #regist{
             text-align: right;
@@ -38,12 +48,11 @@
         #img img{
             width: 100px;
             height: 100px;
-            
-            display: block;
         }
         #comment{
             width: 100px;
             height: 100px;
+            color: black;
             
         }
        .search-wrap{
@@ -59,97 +68,245 @@
             text-align: right;
             display: inline;
         }
-        .pagination{
-            display: block;
-            margin: auto;
-           
-        }
+       
         .paging{
-            text-align: center;
-            margin: 5px;
+            
+            position: relative;
+            padding: 20px 0 0 0;
 
         }
     </style>
 </head>
 <body>
 
+    <div class="row">
+        <div class="header"></div>
+    </div>
+    <div class="row">
+        
+        <div class="section col-xs-10"></div>
+        
+        
+        <div class="sidebar col-xs-2"></div>
+        
+    </div>
+
     <section>
         
-        <div class="row">
-            <div class="header"></div>
-        </div>
+       
+            
+     
         
         <div class="container">
             
             <div class="row">
-                <div id="menu" class="col-md-12 menu">
-                    <div class="col-md-1"><button id="menus" class="btn">삽니다</button></div>
-                    <div class="col-md-1"><button id="menus" class="btn">팝니다</button></div>
-                    <div class="col-md-1"><button id="menus" class="btn">나눠요</button></div>
-                </div><br>
+              
                 <div id="regist">
                     <button class="btn">등록하기</button>
                 </div>
             </div>
+       
             
-            <div id="products">
-                <div id="product" class="col-md-5">
-                    <div id="img">
-                        <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
-                    </div>
-                    <div id="coment">
-                        <a href="">제품명</a>
-                        <p>제품 설명</p>
-                    </div>
-                </div>
-                <div id="product" class="col-md-5">
-                    <div id="img">
-                        <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
-                    </div>
-                    <div id="coment">
-                        <a href="">제품명</a>
-                        <p>제품 설명</p>
-                    </div>
-                </div>
-                <div id="product" class="col-md-5">
-                    <div id="img">
-                        <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
-                    </div>
-                    <div id="coment">
-                        <a href="/FRONT/resource/img/product/슈펜 테크 운동화.jpg">제품명</a>
-                        <p>제품 설명</p>
-                    </div>
-                </div>
-                <div id="product" class="col-md-5">
-                    <div id="img">
-                        <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="제품사진">
-                    </div>
-                    <div id="coment">
-                        <a href="/FRONT/resource/img/product/슈펜 테크 운동화.jpg">제품명</a>
-                        <p>제품 설명</p>
-                    </div>
-                </div>
+            <div id="products" class="col-md-10">
+               <ul class="item_list">
+                   <li class="item_view">
+                       <div class="item_img">
+                           <a href=""></a>
+                           <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                       </div>
+                       <div class="item_ex">
+                           <a href="">슈펜 테크 운동화 275</a>
+                       </div>
+                       <div class="item_price">
+                           <div class="item_sell">
+                               <span class="cost">
+                                   <strong>30,000</strong>원
+                               </span>
+                           </div>
+                       </div>
+                       <div class="seller">
+                           <span>판매자</span>
+                       </div>
+                   </li>
+                   <li class="item_view">
+                       <div class="item_img">
+                           <a href=""></a>
+                           <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                       </div>
+                       <div class="item_ex">
+                           <a href="">슈펜 테크 운동화 275</a>
+                       </div>
+                       <div class="item_price">
+                           <div class="item_sell">
+                               <span class="cost">
+                                   <strong>30,000</strong>원
+                               </span>
+                           </div>
+                       </div>
+                       <div class="seller">
+                           <span>판매자</span>
+                       </div>
+                   </li>
+                   <li class="item_view">
+                       <div class="item_img">
+                           <a href=""></a>
+                           <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                       </div>
+                       <div class="item_ex">
+                           <a href="">슈펜 테크 운동화 275</a>
+                       </div>
+                       <div class="item_price">
+                           <div class="item_sell">
+                               <span class="cost">
+                                   <strong>30,000</strong>원
+                               </span>
+                           </div>
+                       </div>
+                       <div class="seller">
+                           <span>판매자</span>
+                       </div>
+                   </li>
+                   <li class="item_view">
+                       <div class="item_img">
+                           <a href=""></a>
+                           <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                       </div>
+                       <div class="item_ex">
+                           <a href="">슈펜 테크 운동화 275</a>
+                       </div>
+                       <div class="item_price">
+                           <div class="item_sell">
+                               <span class="cost">
+                                   <strong>30,000</strong>원
+                               </span>
+                           </div>
+                       </div>
+                       <div class="seller">
+                           <span>판매자</span>
+                       </div>
+                   </li>
+                   <li class="item_view">
+                       <div class="item_img">
+                           <a href=""></a>
+                           <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                       </div>
+                       <div class="item_ex">
+                           <a href="">슈펜 테크 운동화 275</a>
+                       </div>
+                       <div class="item_price">
+                           <div class="item_sell">
+                               <span class="cost">
+                                   <strong>30,000</strong>원
+                               </span>
+                           </div>
+                       </div>
+                       <div class="seller">
+                           <span>판매자</span>
+                       </div>
+                   </li>
+               </ul>
+               
+            
+               <ul class="item_list">
+                   <li class="item_view">
+                       <div class="item_img">
+                           <a href=""></a>
+                           <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                       </div>
+                       <div class="item_ex">
+                           <a href="">슈펜 테크 운동화 275</a>
+                       </div>
+                       <div class="item_price">
+                           <div class="item_sell">
+                               <span class="cost">
+                                   <strong>30,000</strong>원
+                               </span>
+                           </div>
+                       </div>
+                       <div class="seller">
+                           <span>판매자</span>
+                       </div>
+                   </li>
+                   <li class="item_view">
+                       <div class="item_img">
+                           <a href=""></a>
+                           <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                       </div>
+                       <div class="item_ex">
+                           <a href="">슈펜 테크 운동화 275</a>
+                       </div>
+                       <div class="item_price">
+                           <div class="item_sell">
+                               <span class="cost">
+                                   <strong>30,000</strong>원
+                               </span>
+                           </div>
+                       </div>
+                       <div class="seller">
+                           <span>판매자</span>
+                       </div>
+                   </li>
+                   <li class="item_view">
+                       <div class="item_img">
+                           <a href=""></a>
+                           <img src="/FRONT/resource/img/product/슈펜 테크 운동화.jpg" alt="">
+                       </div>
+                       <div class="item_ex">
+                           <a href="">슈펜 테크 운동화 275</a>
+                       </div>
+                       <div class="item_price">
+                           <div class="item_sell">
+                               <span class="cost">
+                                   <strong>30,000</strong>원
+                               </span>
+                           </div>
+                       </div>
+                       <div class="seller">
+                           <span>판매자</span>
+                       </div>
+                   </li>
+               </ul>
+               
             </div>
 
+            <div class="paging">
+                <ul>
+                    <li><a href="">이전</a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">7</a></li>
+                    <li><a href="">8</a></li>
+                    <li><a href="">9</a></li>
+                    <li><a href="">10</a></li>
+                    <li><a href="">다음</a></li>
+                </ul>
+            </div>
 
             <div class="search-wrap">
                 <input type="text" class="form-control search-box" placeholder="검색어를 입력하세요">
                 <button class="btn search-btn">검색</button>
             </div>
-
+ 
            
 
         </div>
-            
+       
         <div class="row">
             <div class="footer"></div>
         </div>
 
     </section>
+
+    
     <script>
         $(document).ready(function(){
             $('.header').load("/FRONT/views/include/header.html");
             $('.footer').load("/FRONT/views/include/footer.html");
+            $('.sidebar').load("/FRONT/views/include/side_bar.html");
         })
         
     </script>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/FRONT/resource/js/bootstrap.min.js"></script>
+    <style>
+        
+      
+        .section{
+            background-color: white;
+            height: 600px;
+            overflow: auto;
+        }
+        .sidebar{
+            background-color: yellow;
+            height: 600px;
+        }
+
+        /**/
+        .main-header { 
+             text-align: center;
+             padding: 30px;
+         }
+       
+       
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="header">
+
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="section col-xs-10">
+                <!-- ### -->
+                <!--main header-->
+                <div class="main-header">
+                    <p>장소 등록</p>
+                </div>
+
+                <!--main left-->
+                <select id="sports" name="sports">
+                    <option value="">종목(select)</option>
+                    <option value="">수영</option>
+                    <option value="">자전거</option>
+                    <option value="">달리기</option>
+                    <option value="">등산</option>
+                    <option value="">홈트</option>
+                    <option value="">필라테스/요가</option>
+                    <option value="">골프</option>
+                    <option value="">스케이트(빙상)</option>
+                </select>
+
+                <form enctype="multipart/form-data" action="" method="post">
+                    <div id="in_title">
+                        <textarea name="title" id="utitle" rows="1" cols="60" placeholder="장소명" maxlength="100" required></textarea>
+                    </div>
+                    
+                    <div class="wi_line"></div>
+                    <div id="in_content">
+                        <textarea name="content" id="ucontent" rows="8" cols="60"  placeholder="상세 설명" required></textarea>
+                    </div>
+                </form>
+
+                <!--main right-->
+                    <!--주소검색 api-->
+                    <table>
+                        <tr>
+                            <th>이름</th>
+                            <td><input type="text" name="user_name"></td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td><input type="text" id="address_kakao" name="address" readonly /></td>
+                        </tr>
+                        <tr>
+                            <th>상세 주소</th>
+                            <td><input type="text" name="address_detail" /></td>
+                        </tr>
+                        <tr>
+                            <th>위치 이미지</th>
+                    
+                        </tr>
+                    </table>
+
+                <!--main footer-->
+
+            </div>
+            
+            
+            <div class="sidebar col-xs-2"></div>
+            
+        </div>
+        <div class="row">
+            <div class="footer">
+
+            </div>
+        </div>
+    </div>
+    
+    <script defer>
+        $(document).ready(function(){
+            $('.header').load("/FRONT/views/include/header.html");
+            $('.footer').load("/FRONT/views/include/footer.html");
+            $('.sidebar').load("/FRONT/views/include/side_bar.html");
+        });
+        
+    </script>
+</body>
+</html>

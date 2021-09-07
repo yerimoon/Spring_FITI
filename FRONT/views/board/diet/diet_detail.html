@@ -13,7 +13,11 @@
 
 <style>
     
-    
+    body {
+        width: 100%;
+        margin: auto;
+    }
+
     .footer-sec .footer {
         position: absolute;
         width: 1140px;
@@ -24,7 +28,12 @@
     .header-sec {
         height: 140px;
     }
-
+    
+    .side_bar {
+        
+        top: 500px;
+        left: 1000px;
+    }
 
     .contents h2 {
             border-bottom: 1px solid rgb(0, 173, 181);
@@ -148,7 +157,7 @@
         margin-top: 30px;
         position: absolute;
         top: 1360px;
-        left: 930px;
+        left: 740px;
         width: 100%;
 
     }
@@ -264,101 +273,113 @@
         width:40px;color:#767676;
         line-height:20px
         }
+    
 </style>
 
 <body>
     
     
     
-    <div class="container">
+    <div class="container col-sm-12">
         <div class="header-sec">
             <div class="header"></div>
         </div>
-        <div class="contents">
-            <h2>식단 / 영양정보</h2>
-            <div class="gall-view">
-                <div class="tit">
-                    <p>09월 05일 글의 제목입니다.</p>
-                </div>
-                <div class="bbs-info3">
-                    <span class="inner">
-                        <div class="inner_nick_box">
-                            <p class="inner_nick">6조 </p>
-                        </div>
-                    </span>
-                    <span class="group_bbs_con">
-                        <div class="date_c">
+        <div class="row">
+            <div class="contents col-sm-10">
+                <h2>식단 / 영양정보</h2>
+                <div class="gall-view">
+                    <div class="tit">
+                        <p>09월 05일 글의 제목입니다.</p>
+                    </div>
+                    <div class="bbs-info3">
+                        <span class="inner">
+                            <div class="inner_nick_box">
+                                <p class="inner_nick">6조 </p>
+                            </div>
+                        </span>
+                        <span class="group_bbs_con">
+                            <div class="date_c">
+                                <ul>
+                                    <li class="dc01">
+                                        <span>2021.09.05</span>
+                                    </li>
+                                    <li class="view_cnt">
+                                        <span>조회수: 10</span>
+                                    </li>
+                                    <li class="reply_cnt">
+                                        <span>댓글: 10</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                    </div>
+                    <!--bbs-info3-->
+                    <div class="txt">
+                        <p>
+                             <img src="/FRONT/resource/img/food/계란말이+고구마.jpg" alt="">
+                        </p>
+    
+                        <div class="h_graph">
                             <ul>
-                                <li class="dc01">
-                                    <span>2021.09.05</span>
-                                </li>
-                                <li class="view_cnt">
-                                    <span>조회수: 10</span>
-                                </li>
-                                <li class="reply_cnt">
-                                    <span>댓글: 10</span>
-                                </li>
+                                <li><span class="g_term">1번음식</span><span class="g_bar" style="width:0%"><span>0kcal</span></span></li>
+                                <li><span class="g_term">2번음식</span><span class="g_bar" style="width:20%"><span>20kcal</span></span></li>
+                                <li><span class="g_term">3번음식</span><span class="g_bar" style="width:30%"><span>30kcal</span></span></li>
+                                <li><span class="g_term">총 칼로리</span><span class="g_bar" style="width:30%"><span>30kcal</span></span></li>
+    
                             </ul>
                         </div>
-                    </span>
-                </div>
-                <!--bbs-info3-->
-                <div class="txt">
-                    <p>
-                         <img src="/FRONT/resource/img/food/계란말이+고구마.jpg" alt="">
-                    </p>
-
-                    <div class="h_graph">
-                        <ul>
-                            <li><span class="g_term">1번음식</span><span class="g_bar" style="width:0%"><span>0kcal</span></span></li>
-                            <li><span class="g_term">2번음식</span><span class="g_bar" style="width:20%"><span>20kcal</span></span></li>
-                            <li><span class="g_term">3번음식</span><span class="g_bar" style="width:30%"><span>30kcal</span></span></li>
-                            <li><span class="g_term">총 칼로리</span><span class="g_bar" style="width:30%"><span>30kcal</span></span></li>
-
-                        </ul>
+    
+                        <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                            took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                            took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+    
+    
+                    </div>
+                    <!--txt-->
+                    <div class="click_contents">
+                        <button  class="btn btn-info">좋아요</button >
+                        <button class="btn btn-info">글쓰기</button >
+                        <button class="btn btn-info">목록</button >
+                    </div>
+                    <div class="replyList">
+                        <p class="write_comment">댓글쓰기</p>
+                        <div class="comment_write">
+                            <textarea class="" id="comment"></textarea>
+                            <button  type="button" class="btn btn-info" id="put_comment">입력</button >
+                        </div>
                     </div>
 
-                    <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                        took a galley of type and scrambled it to make a type specimen book. It has survived not only
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                        passages, and more recently with desktop publishing software like Aldus PageMaker including
-                        versions of Lorem Ipsum.</p>
-                    <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                        took a galley of type and scrambled it to make a type specimen book. It has survived not only
-                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                        passages, and more recently with desktop publishing software like Aldus PageMaker including
-                        versions of Lorem Ipsum.</p>
-
-
-                </div>
-                <!--txt-->
-                <div class="click_contents">
-                    <button  class="btn btn-info">좋아요</button >
-                    <button class="btn btn-info">글쓰기</button >
-                    <button class="btn btn-info">목록</button >
-                </div>
-                <div class="replyList">
-                    <p class="write_comment">댓글쓰기</p>
-                    <div class="comment_write">
-                        <textarea class="" id="comment"></textarea>
-                        <button  type="button" class="btn btn-info" id="put_comment">입력</button >
+                    <div id="comments" style="text-align: center;">
+                        댓글 보여줄 영역
                     </div>
-                </div>
-                <div class="prev-next">
-                    <div class="prev">
-                        <h3>이전 글 <span><a href="#">이전 글 제목</a></span></h3>
-                    </div>
-                    <div class="next">
-                        <h3>다음 글 <span><a href="#">다음 글 제목</a></span></h3>
-                    </div>
-                </div>
+  
+                    
+                       
 
+                    <div class="prev-next">
+                        <div class="prev">
+                            <h3>이전 글 <span><a href="#">이전 글 제목</a></span></h3>
+                        </div>
+                        <div class="next">
+                            <h3>다음 글 <span><a href="#">다음 글 제목</a></span></h3>
+                        </div>
+                    </div>
+    
+                </div>
+                <!--gall-view-->
             </div>
-            <!--gall-view-->
+            <div class="side_bar col-sm-2"></div>
         </div>
         <!--contents-->
         <div class="footer-sec">
@@ -380,6 +401,7 @@
         $(document).ready(function(){
         $('.header').load("/FRONT/views/include/header.html");
         $('.footer').load("/FRONT/views/include/footer.html");
+        $('.side_bar').load("/FRONT/views/include/side_bar.html");
         $('.section').load("/FRONT/views/board/user/mypage.html")
     });
 
