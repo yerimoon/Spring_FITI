@@ -21,16 +21,18 @@
         }
         .sidebar{
             background-color: yellow;
-            height: 500px;
+            position: fixed;
+            right: 15px ;
+            top: 250px;
         }
        
         .container {
           font-family: "NanumGothic";
         }
 
-        h2 {
+        #title {
           color: rgb(0, 173, 181);
-          font-size: 35px;
+          font-size: 45px;
           font-weight: bold;
         }
 
@@ -51,7 +53,15 @@
         .panel-heading > a {
             color: black;
         }
+
+        #searchbar {
+          margin-top: 20px;
+        }
         
+        #tags {
+          color:black;
+        }
+
 
     </style>
 </head>
@@ -66,32 +76,42 @@
         <div class="container">
 
             <div class="row">
-                <h2 class="font-weight-bold text-center"><b>질문게시판</b></h2>
+              <div class="col-sm-5">
+                <span id="title">질문게시판</span>
+              </div>
+
+              <div class="col-sm-7">
+                <div class="row input-group">
+                  <input type="text" class="form-control" placeholder="Search for..." id="searchbar">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="searchbar">검색</button>
+                  </span>
+              </div>
+
+
+              </div>
+
+
             </div>
 
             <br>
            
-            <div class="row input-group margin-top-5">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">검색</button>
-                </span>
-            </div>
+           
             
             <br>
 
             <div class="row panel panel-info margin-top-5">
                 <div class="panel-heading text-center">
-                    <a href="#">#운동</a>&nbsp;&nbsp;
-                    <a href="#">#인바디측정</a>&nbsp;&nbsp;
-                    <a href="#">#골프</a>&nbsp;&nbsp;
-                    <a href="#">#배드민턴</a>&nbsp;&nbsp;
-                    <a href="#">#테니스</a>&nbsp;&nbsp;
-                    <a href="#">#크로스핏</a>&nbsp;&nbsp;
-                    <a href="#">#다이어트</a>&nbsp;&nbsp;
-                    <a href="#">#영양</a>&nbsp;&nbsp;
-                    <a href="#">#필라테스</a>&nbsp;&nbsp;
-                    <a href="#">#홈트</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#운동</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#인바디측정</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#골프</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#배드민턴</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#테니스</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#크로스핏</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#다이어트</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#영양</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#필라테스</a>&nbsp;&nbsp;
+                    <a href="#" id="tags">#홈트</a>&nbsp;&nbsp;
                 </div>
                 
             </div>
@@ -202,13 +222,13 @@
         </div>
     </div>
     
-    <script>
-        $(document).ready(function(){
-            $('.header').load("/FRONT/views/include/header.html");
-            $('.footer').load("/FRONT/views/include/footer.html");
-            $('.section').load("/FRONT/views/board/user/mypage.html")
-        })
-        
-    </script>
+    <script defer>
+      $(document).ready(function(){
+          $('.header').load("/FRONT/views/include/header.html");
+          $('.footer').load("/FRONT/views/include/footer.html");
+          $('.sidebar').load("/FRONT/views/include/side_bar.html");
+      });
+      
+  </script>
 </body>
 </html>

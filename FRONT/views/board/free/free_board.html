@@ -21,16 +21,22 @@
         }
         .sidebar{
             background-color: yellow;
-            height: 500px;
+            position: fixed;
+            right: 15px ;
+            top: 250px;
         }
        
         .container {
           font-family: "NanumGothic";
         }
 
-        h2 {
+        #title {
           color: rgb(0, 173, 181);
-          font-size: 35px;
+          font-size: 45px;
+          font-weight: bold;
+        }
+
+        #all {
           font-weight: bold;
         }
 
@@ -56,32 +62,38 @@
 <body>
     
     <div class="container-fluid h-100">
+
         <div class="row">
             <div class="header"></div>
         </div>
         
-        <div class="container text-center">
+   
+        <div class="row">
+                
+              <div class="col-sm-5">
+                <span id="title">자유게시판</span>
+              </div>
 
-            <div class="row">
-                <h2>자유게시판</h2>
-            </div>
-
-            <div id="btn-list" class="row" align="right">
-                <div class="btn-group text-center" role="group" aria-label="Basic outlined example">
-                    <button type="button" class="btn btn-info btn-active"><b>전체</b></button>
+              <div class="col-sm-7">
+                  <div id="btn-list" class="row" align="right">
+                    <div class="btn-group text-center" role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-info btn-active" id="all">전체</button>
                     <button type="button" class="btn btn-info">자유글</button>
                     <button type="button" class="btn btn-info">소식/정보</button>
                     <button type="button" class="btn btn-info">홍보</button>
                     <button type="button" class="btn btn-info">꿀팁</button>
                     <button type="button" class="btn btn-info">기타</button>&nbsp;&nbsp;&nbsp;
-                </div>
+                  </div>
                 
                   <input type="text" placeholder="Search">
                   
                   <button type="button" class="btn" aria-label="Left Align">
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                   </button>
-            </div>
+
+                  </div>
+              </div>
+        </div>
 
             <div class="row margin-top-5">
                 <table class="table table-hover table-responsive">
@@ -185,15 +197,17 @@
         <div class="row">
             <div class="footer"></div>
         </div>
+
+        <div class="sidebar"></div>
     </div>
     
-    <script>
-        $(document).ready(function(){
-            $('.header').load("/FRONT/views/include/header.html");
-            $('.footer').load("/FRONT/views/include/footer.html");
-            $('.section').load("/FRONT/views/board/user/mypage.html")
-        })
-        
-    </script>
+    <script defer>
+      $(document).ready(function(){
+          $('.header').load("/FRONT/views/include/header.html");
+          $('.footer').load("/FRONT/views/include/footer.html");
+          $('.sidebar').load("/FRONT/views/include/side_bar.html");
+      });
+      
+  </script>
 </body>
 </html>
