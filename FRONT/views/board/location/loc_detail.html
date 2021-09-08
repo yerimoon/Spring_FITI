@@ -8,54 +8,255 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/FRONT/resource/js/bootstrap.min.js"></script>
     <style>
-        
-      
-        .footer{
-            background-color: red;
-            height: 50px;
-        }
-        .section{
-            background-color: yellowgreen;
-            height: 500px;
+        .side_bar {
+        top: 500px;
+        left: 1000px;
+    }
 
-        }
-        .sidebar{
-            background-color: yellow;
-            position: fixed;
-            right: 15px ;
-            top: 250px;
+    .contents h2 {
+            border-bottom: 1px solid rgb(0, 173, 181);
+            margin-top: 90px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(0,173,181);
+    }
+
+    .loc-detail {
+        position: relative;
+        height: 2000px;
+    }
+
+    .gall-view .tit {
+        position: relative;
+        color: #434343;
+        font-size: 20px;
+        padding: 20px 5px 20px 0;
+        border-bottom: 1px solid #aaa8a8;
+        line-height: 1.4em;
+        text-align: left;
+        padding: 0;
+    }
+
+    .gall-view .tit p {
+        display: block;
+        width: 88%;
+        margin-top: 100px;
+        margin-bottom: 5px;
+
+    }
+
+    .bbs-info3 {
+
+        position: relative;
+        width: 100%;
+        padding: 6px 0;
+        border-bottom: 2px solid #aaa8a8;
+        margin-bottom: 20px;
+        margin-top: 70px;
+        height: 40px;
+    }
+
+    .bbs-info3 .inner {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        width: 20px;
+        height: 42px;
+        text-align: left;
+    }
+
+
+    .bbs-info3 .inner_nick_box {
+        position: relative;
+        top: -20px;
+        width: 110px;
+        margin-left: 5px;
+    }
+
+    .bbs-info3 .inner_nick_box .inner_nick {
+        overflow: hidden;
+        width: 88%;
+        text-overflow: ellipsis;
+        text-align: left;
+        padding-top: 12px;
+    }
+
+    .group_bbs_con {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        margin: 5px 0 0 50px;
+        min-height: 42px;
+    }
+
+    .date_c {
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        display: inline-block;
+        margin-top: -20px;
+    }
+
+    .date_c li {
+        float: left;
+        color: #a1a0a0;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: normal;
+        list-style: none;
+    }
+
+    .date_c li span {
+        display: inline-block;
+        padding-left: 18px;
+        margin-right: 12px;
+    }
+
+    .gall-view .txt {
+        line-height: 1.6em;
+        color: #585858;
+        font-size: 15px;
+        height: 1300px;
+        border-bottom: 2px solid #5d5d5d;
+    }
+
+    .txt p {
+        text-align: center;
+
+    }
+
+    .txt p img {
+        margin-top: 20px;
+    }
+
+    .click_contents {
+        margin-top: 30px;
+        position: absolute;
+        top: 1360px;
+        left: 740px;
+        width: 100%;
+
+    }
+
+    .replyList {
+        padding-top: 0px;
+        margin-top: 150px;
+        text-align: left;
+
+        background: #f9f9f9;
+        border: 1px solid #ececec;
+        padding: 15px;
+
+    }
+
+    .replyList p {
+        position: absolute;
+        top: 1360px;
+        left: 20px;
+
+    }
+
+    .replyList .write_comment {
+        position: absolute;
+        top: 1550px;
+        font-weight: bold;
+    }
+
+    .comment_write {
+        text-align: center;
+    }
+
+    #comment {
+        width: 80%;
+        height: 80px;
+    }
+
+    #put_comment {
+        float: right;
+        width: 100px;
+        height: 85px;
+    }
+
+    .prev-next {
+        width: 800px;
+        margin-left: 120px;
+        margin-top: 50px;
+        line-height: 50px;
+        border-top: 1px solid #5d5d5d;
+    }
+
+    .prev-next .prev {
+        border-bottom: 1px solid #5d5d5d;
+        padding-left: 20px;
+    }
+    
+    .prev-next .next {
+        border-bottom: 1px solid #5d5d5d;
+        padding-left: 20px;
+
+    }
+
+    .prev h3 span {
+        margin-left: 100px;
+    }
+    .next h3 span {
+        margin-left: 100px;
+    }
+
+    .h_graph ul {
+        text-align: left;
+        margin:50px 50px 50px 50px;
+        padding:1px 0 0 0;
+        border:1px solid #ddd;
+        border-top:0;
+        border-right:0;
+        font-size:11px;
+        font-family:Tahoma, Geneva, sans-serif;
+        list-style:none
+    }
+    
+    .h_graph li {
+        position:relative;
+        margin:10px 0;
+        vertical-align:top;
+        white-space:nowrap
+    }
+
+    .h_graph .g_term {
+        position:absolute;
+        top:0;
+        left:-50px;
+        width:40px;
+        font-weight:bold;
+        color:#767676;
+        line-height:20px;
+        text-align:right
+    }
+
+    .h_graph .g_bar {
+        display:inline-block;
+        position:relative;
+        height:20px;
+        border:1px solid #ccc;
+        border-left:0;
+        background:#e9e9e9
+    }
+
+    .h_graph .g_bar span {
+        position:absolute;
+        top:0;
+        right:-50px;
+        width:40px;color:#767676;
+        line-height:20px
         }
        
-        .container {
-          font-family: "NanumGothic";
-        }
-
         #title {
           color: rgb(0, 173, 181);
           font-size: 45px;
           font-weight: bold;
         }
-
-        #all {
-          font-weight: bold;
-        }
-
-        input {
-          padding: 5px;
-          border: 1px solid lightgray;
-          border-radius: 10px;
-          width: 200px;
-        }
-
-        .page-link {
-          color:rgb(0, 173, 181);
-        }
-        #btn-list {
-          margin-top: 15px;
-          margin-bottom: 25px;
-        }
-       
-       
 
     </style>
 </head>
@@ -73,9 +274,9 @@
               <span id="title">장소 상세</span>
             </div>
             
-            <div class="loc-detail">
-              <div class="title">
-                <p>동진 휘스니스 헬스하기 좋네요</p>
+            <div class="gall-view">
+              <div class="tit">
+                <p>당산 아메리카요가원 좋아요</p>
               </div>
 
               <div class="bbs-info3">
@@ -84,6 +285,7 @@
                       <p class="inner_nick">글쓴이</p>
                   </div>
                 </span>
+                
                 <span class="group_bbs_con">
                   <div class="date_c">
                       <ul>
@@ -103,7 +305,7 @@
               
               <div class="txt">
                 <p>
-                  <img src="/FRONT/resource/img/location/site01.jpg" alt="">
+                  <img src="/FRONT/resource/img/location/site05.jpg" alt="">
                 </p>
                 <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                   Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
@@ -151,7 +353,7 @@
                   <h3>다음 글 <span><a href="#">다음 글 제목</a></span></h3>
               </div>
             </div>
-
+ 
             
 
 

@@ -73,12 +73,17 @@
                 <div class="col-sm-5">
                     <span id="title">장소 찾기</span>
                 </div>
+               
     
 
                 <div id="btn-list" class="row" align="left">
                     <!--지역 select-->
-                    <form name="form1">
-                        <select name="h_area1" onChange="cat1_change(this.value,h_area2)" >
+                    <!-- 
+                        select에 bootstrap 디자인 입히기
+                        http://paulrose.com/bootstrap-select-sass/
+                    -->
+                    <form name="loc-select">
+                        <select class="selectpicker" data-style="btn-info" onChange="cat1_change(this.value,h_area2)" >
                             <option>시/도(select)</option>
                             <option value='1'>서울특별시</option>
                             <option value='2'>부산광역시</option>
@@ -199,7 +204,7 @@
                             }
                         }
                 
-                            </script>
+                        </script>
                     </form>
                 </div>
 
@@ -207,15 +212,18 @@
                                   
                     <!-- 종목 -->
                     <div class="btn-group text-center " role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-info btn-active"><b>전체</b></button>
+                        <button type="button" class="btn btn-info btn-active id="all">전체</button>
                         <button type="button" class="btn btn-info">수영</button>
+                        <button type="button" class="btn btn-info">배드민턴</button>
+                        <button type="button" class="btn btn-info">스쿼시</button>
                         <button type="button" class="btn btn-info">자전거</button>
                         <button type="button" class="btn btn-info">달리기</button>
                         <button type="button" class="btn btn-info">등산</button>
-                        <button type="button" class="btn btn-info">홈트</button>
-                        <button type="button" class="btn btn-info">필라테스/요가</button>
+                        <button type="button" class="btn btn-info">홈트짐트</button>
+                        <button type="button" class="btn btn-info">필라테스</button>
                         <button type="button" class="btn btn-info">골프</button>
-                        <button type="button" class="btn btn-info">스케이트(빙상)</button>&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-info">스케이트</button>
+                        <button type="button" class="btn btn-info">기타</button>&nbsp;&nbsp;&nbsp;
                     </div>
 
                     <input type="text" placeholder="Search">
