@@ -13,16 +13,24 @@
 
 <style>
 
-    html {
+ 
+    .container {
         width: 1160px;
-        
+        position: absolute;
+        left: 300px;
+        padding: 0;
     }
-    
+
     .side_bar {
         position: fixed;
         top: 500px;
-        left: 1200px;
+        left: 1550px;
     }
+    .row {
+        margin: 0px;
+    }
+
+
 
     .contents h2 {
         border-bottom: 1px solid rgb(0, 173, 181);
@@ -144,8 +152,8 @@
     .click_contents {
         margin-top: 30px;
         position: absolute;
-        top: 1360px;
-        left: 680px;
+        top: 1460px;
+        left: 810px;
         width: 100%;
 
     }
@@ -153,8 +161,6 @@
     .replyList {
         padding-top: 0px;
         margin-top: 150px;
-        text-align: left;
-
         background: #f9f9f9;
         border: 1px solid #ececec;
         padding: 15px;
@@ -195,6 +201,7 @@
         margin-top: 50px;
         line-height: 50px;
         border-top: 1px solid #5d5d5d;
+        text-align: center;
     }
 
     .prev-next .prev {
@@ -268,6 +275,8 @@
         padding: 15px;
         border: 1px solid #ddd;
         position: relative;
+        text-align: center;
+        
     }
 
     .reply-wrap .reply-image {
@@ -276,8 +285,9 @@
         top: 15px;
     }
 
-    .reply-wrap .reply-content {
-        padding-left: 60px;
+    .reply-content {
+        padding-left: 70px;
+        text-align: left;
     }
 
     .reply-content textarea {
@@ -312,10 +322,15 @@
         margin-top: 20px;
     }
 
+
     .reply-content > p {
         padding-top: 10px;
         margin-bottom: 5px;
     } 
+
+    .footer-sec {
+        width: 1160px;
+    }
     
     
 </style>
@@ -329,7 +344,7 @@
             <div class="header"></div>
         </div>
         <div class="row">
-            <div class="contents col-sm-10">
+            <div class="contents col-sm-12">
                 <h2>식단 / 영양정보</h2>
                 <div class="gall-view">
                     <div class="tit">
