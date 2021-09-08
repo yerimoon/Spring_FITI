@@ -3,176 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>course_board</title>
- 
-    <!--reset.css (css 초기화)-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <title>Document</title>
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/FRONT/resource/js/bootstrap.min.js"></script>
 
-
     <style>
         
+        .footer{
+            background-color: red;
+            height: 50px;
+        }
+        .section{
+            background-color: yellowgreen;
+            height: 500px;
 
-        .title {
-            color: rgb(0, 173, 181);
-            font-weight: bold;
-            font-size: 30px;
+        }
+        .sidebar{
+            background-color: yellow;
+            height: 500px;
         }
        
-        .menu {                      
-            height: 50px;
-            background-color: rgb(0, 173, 181);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-            overflow: hidden;
+        .container {
+          font-family: "NanumGothic";
         }
 
-        .search {
-            display: inline-block;
+        /* h2 {
+          color: rgb(0, 173, 181);
+          font-size: 35px;
+          font-weight: bold;
+        } */
+
+        .titlebox h2 {
+        /* border-bottom: 1px solid rgb(0, 173, 181); */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(0, 173, 181);
+        text-align: left;
         }
 
-        .search_btn {
-            float: right;
+        input {
+          padding: 5px;
+          border: 1px solid lightgray;
+          border-radius: 10px;
+          width: 200px;
         }
 
-        .course {
-            
-            height: 300px;
-            border: 2px solid #5a5a5a;
-            margin: 15px 0;
-            padding: 20px 4px;
+        .page-link {
+          color:rgb(0, 173, 181);
+        }
+        #btn-list {
+          margin-top: 15px;
+          margin-bottom: 25px;
+        }
+
+
+
+
+
+
+        .vid {
+            margin: 15px 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .vid:hover{
+            border: 4px solid rgb(0, 173, 181);
             box-sizing: border-box;
-            
         }
+
+
+        /* .course {      
+            box-sizing: border-box;        
+        } */
 
         .subject {
             height: 70px;
+            margin: 10px;
         }
 
+        .auth {
+            text-align: left;
+            font-size: 15px;
+            padding: 0 13px;
+            overflow: hidden;
+        }
+
+        .auth span {
+            float: right;
+            font-size: 14px;
+            padding-left: 22px;
+        }
+
+        .glyphicon-comment {
+            color: skyblue;
+        }
+
+        .glyphicon-eye-open {
+            color: purple;
+        }
+
+        .glyphicon b {
+            color: #000;
+            padding-left: 8px;
+        }
+      
 
     </style>
 </head>
 
-
 <body>
     
-    <section>
-
-        <h1 class="title col-md-12">운동 강의</h1>
-        <div class="search_bar col-md-12">
-            <div class="menu">
-                <ul>
-                    <li class="search"><a href="">전체</a></li>
-                    <li class="search"><a href="">수영</a></li>
-                    <li class="search"><a href="">배드민턴</a></li>
-                    <li class="search"><a href="">스쿼시</a></li>
-                </ul>    
-                <div class="search_btn">
-                    <input>
-                    <input type="button" value="검색">
-                </div>
-            </div>
-
-        </div>
-
-        <div class="video">
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">          
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid01.jpg" width="280px" alt="vid01"></a>
-                    <p class="subject"><a href="#">층간 소음 걱정 없이 체중 감량 보장! 딱 5분 운동!</a></p>
-                    <p><a href="#">야옹이</a></p>
-                </div>
-            </div>
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid02.jpg" width="280px" alt="vid02"></a>
-                    <p class="subject"><a href="#">강한 어깨와 삼두를 위한 맨몸운동 루틴 (feat. 90도 물구나무)</a></p>
-                    <p><a href="#">관리자</a></p>
-                </div>
-            </div>
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid03.jpg" width="280px" alt="vid03"></a>
-                    <p class="subject"><a href="#">※50분 올인원 운동※ 체중감량에 최적화된 루틴 (No 층간소음)</a></p>
-                    <p><a href="#">야옹이</a></p>
-                </div>    
-            </div>
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid04.jpg" width="280px" alt="vid04"></a>
-                    <p class="subject"><a href="#">[포핸드] 스윙스피드가 조금만 빨라져도 상대가 당황하기 시작합니다</a></p>
-                    <p><a href="#">멍멍이</a></p>
-                </div>
-            </div>
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid05.jpg" width="280px" alt="vid05"></a>
-                    <p class="subject"><a href="#">[탁구레슨]백핸드 드라이브 쉽게 배워 보세요!!</a></p>
-                    <p><a href="#">탁구왕</a></p>
-                </div>
-            </div>
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid06.jpg" width="280px" alt="vid06"></a>
-                    <p class="subject"><a href="#">[달인콕tv 배드민턴 레슨] 상대를 속이는 기술4탄 (훼이크 드롭 3가지방법)</a></p>
-                    <p><a href="#">관리자</a></p>
-                </div>    
-            </div>
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid07.jpg" width="280px" alt="vid07"></a>
-                    <p class="subject"><a href="#">스쿼시 그립잡기</a></p>
-                    <p><a href="#">스쿼시쌤</a></p>
-                </div>    
-            </div>
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid08.jpg" width="280px" alt="vid08"></a>
-                    <p class="subject"><a href="#">하쌤수영/하은주수영/ 부드러운 자유형 꿀팁</a></p>
-                    <p><a href="#">하은주</a></p>
-                </div>    
-            </div>
-            
-            <div class="vid col-lg-4 col-md-6 col-xs-12">
-                <div class="course">
-                    <a href="#"><img src="/FRONT/resource/img/course/vid09.jpg" width="280px" alt="vid09"></a>
-                    <p class="subject"><a href="#">[[ 김정훈 탁구레슨 ]] no.23 펜홀더 쇼트. 1부</a></p>
-                    <p><a href="#">탁구왕</a></p>
-                </div>    
-            </div>
-        
+    <div class="container-fluid h-100">
+        <div class="row">
+            <div class="header"></div>
         </div>
         
+        <div class="container text-center">
+
+            <!-- <div class="row">
+                <h2 class="font-weight-bold text-center">운동 강의</h2>
+            </div> -->
+
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="titlebox">
+                        <h2>운동 강의</h2>
+                    </div>
+                </div>
+            </div>           
+            <div id="btn-list" class="row" align="right">
+                <div class="btn-group text-center " role="group" aria-label="Basic outlined example">
+                    <button type="button" class="btn btn-info btn-active"><b>전체</b></button>
+                    <button type="button" class="btn btn-info">수영</button>
+                    <button type="button" class="btn btn-info">배드민턴</button>
+                    <button type="button" class="btn btn-info">스쿼시</button>
+                    <button type="button" class="btn btn-info">자전거</button>
+                    <button type="button" class="btn btn-info">달리기</button>
+                    <button type="button" class="btn btn-info">등산</button>
+                    <button type="button" class="btn btn-info">홈트짐트</button>
+                    <button type="button" class="btn btn-info">필라테스</button>
+                    <button type="button" class="btn btn-info">골프</button>
+                    <button type="button" class="btn btn-info">스케이트</button>
+                    <button type="button" class="btn btn-info">기타</button>&nbsp;&nbsp;&nbsp;
+                </div>
+                
+                  <input type="text" placeholder="Search">
+                  
+                  <button type="button" class="btn" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                  </button>
+            </div>
+
+            <div class="row margin-top-5">
+                <!-- <table class="table table-hover table-responsive"> -->
+                <table class="table">
+                    <!-- <thead class="bg-info">
+                        <tr>       
+                            <th scope="col" class="text-center">제목</th>
+                            <th scope="col" class="text-center">글쓴이</th>
+                            <th scope="col" class="text-center">날짜</th>                      
+                        </tr>
+                    </thead> -->
+                    <tbody>
+                        <tr class="course">                       
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid01.jpg" width="280px" alt="vid01"></a>
+                                    <p class="subject"><a href="#">층간 소음 걱정 없이 체중 감량 보장! 딱 5분 운동!</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+
+                                </div>
+                            </th>
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid02.jpg" width="280px" alt="vid02"></a>
+                                    <p class="subject"><a href="#">강한 어깨와 삼두를 위한 맨몸운동 루틴 (feat. 90도 물구나무)</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+                                </div>   
+                            </th>
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid03.jpg" width="280px" alt="vid03"></a>
+                                    <p class="subject"><a href="#">※50분 올인원 운동※ 체중감량에 최적화된 루틴 (No 층간소음)</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+                                </div>     
+                            </th>                                         
+                        </tr> 
+
+                        <tr>    
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid04.jpg" width="280px" alt="vid04"></a>
+                                    <p class="subject"><a href="#">[포핸드] 스윙스피드가 조금만 빨라져도 상대가 당황하기 시작합니다</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+                                </div>
+                            </th>
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid05.jpg" width="280px" alt="vid05"></a>
+                                    <p class="subject"><a href="#">[탁구레슨]백핸드 드라이브 쉽게 배워 보세요!!</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+                                </div>
+                            </th>
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid06.jpg" width="280px" alt="vid06"></a>
+                                    <p class="subject"><a href="#">[달인콕tv 배드민턴 레슨] 상대를 속이는 기술4탄 (훼이크 드롭 3가지방법)</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+                                </div>
+                            </th>    
+                        </tr>
+                        
+                        <tr>    
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid07.jpg" width="280px" alt="vid07"></a>
+                                    <p class="subject"><a href="#">스쿼시 그립잡기</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+                                </div>
+                            </th>
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid08.jpg" width="280px" alt="vid08"></a>
+                                    <p class="subject"><a href="#">하쌤수영/하은주수영/ 부드러운 자유형 꿀팁</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+                                </div>
+                            </th>
+                            <th scope="col" class="text-center">
+                                <div class=vid>
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid09.jpg" width="280px" alt="vid09"></a>
+                                    <p class="subject"><a href="#">[[ 김정훈 탁구레슨 ]] no.23 펜홀더 쇼트. 1부</a></p>
+                                    <p class="auth">관리자                                    
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
+                                    </p>
+                                </div>
+                            </th>      
+                       </tr>                                 
+                    </tbody>
+                  </table>
+            </div>
+
+            <!-- <div class="row" align="right">
+              <button type="button" id="write" class="btn btn-outline-primary float-right"><b>글쓰기</b></button>
+             </div> -->
+
+
+            <div class="row text-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+            </div> 
 
         <div class="row">
-            <div class="col">
-                <p><strong></strong></p>
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </div>
+            <div class="footer"></div>
         </div>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $('.header').load("/FRONT/views/include/header.html");
+            $('.footer').load("/FRONT/views/include/footer.html");
+            $('.section').load("/FRONT/views/board/user/mypage.html")
+
+
+        })
         
-        
-        
-        
-    </section>
-                          
+    </script>
 </body>
 </html>
