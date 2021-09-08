@@ -9,14 +9,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <style>
+      
         .container{
-            text-align: center;
-            padding: auto;
-            margin: auto;
-            
+            width: 1160px;
+            height: 1200px;
 
         }
       
+        .sidebar{
+            position: fixed;
+            right: 15px ;
+            top: 500px;
+
+        }
+        .titlebox h2 {
+        border-bottom: 1px solid rgb(0, 173, 181);
+        margin-top: 90px;
+        margin-bottom: 80px;
+        padding-bottom: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        color: rgb(0, 173, 181);
+    }
+
       
         #products{
             position: relative;
@@ -82,28 +97,37 @@
     <div class="row">
         <div class="header"></div>
     </div>
-    <div class="row">
-        
-        <div class="section col-xs-10"></div>
-        
-        
-        <div class="sidebar col-xs-2"></div>
-        
-    </div>
+    
 
     <section>
         
-       
+        <div class="row">
+
+            <div class="sidebar col-xs-2"></div>
+            
+        </div>
             
      
         
         <div class="container">
+
+            
+
+            <div class="titlebox">
+                <h2>장터게시판</h2>
+            </div>
+            
             
             <div class="row">
-              
                 <div id="regist">
                     <button class="btn">등록하기</button>
                 </div>
+            </div>
+
+            <div class="row">
+
+                <div class="sidebar col-xs-2"></div>
+                
             </div>
        
             
@@ -269,22 +293,19 @@
                
             </div>
 
-            <div class="paging">
-                <ul>
-                    <li><a href="">이전</a></li>
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                    <li><a href="">6</a></li>
-                    <li><a href="">7</a></li>
-                    <li><a href="">8</a></li>
-                    <li><a href="">9</a></li>
-                    <li><a href="">10</a></li>
-                    <li><a href="">다음</a></li>
-                </ul>
-            </div>
+            <div class="row text-center">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">이전</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">5</a></li>
+                      <li class="page-item"><a class="page-link" href="#">다음</a></li>
+                    </ul>
+                  </nav>
+            </div> 
 
             <div class="search-wrap">
                 <input type="text" class="form-control search-box" placeholder="검색어를 입력하세요">
