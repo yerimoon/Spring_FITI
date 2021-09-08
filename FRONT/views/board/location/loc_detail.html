@@ -10,14 +10,49 @@
     <style>
         
       
+        .footer{
+            background-color: red;
+            height: 50px;
+        }
         .section{
-            background-color: white;
-            height: 600px;
-            overflow: auto;
+            background-color: yellowgreen;
+            height: 500px;
+
         }
         .sidebar{
             background-color: yellow;
-            height: 600px;
+            position: fixed;
+            right: 15px ;
+            top: 250px;
+        }
+       
+        .container {
+          font-family: "NanumGothic";
+        }
+
+        #title {
+          color: rgb(0, 173, 181);
+          font-size: 45px;
+          font-weight: bold;
+        }
+
+        #all {
+          font-weight: bold;
+        }
+
+        input {
+          padding: 5px;
+          border: 1px solid lightgray;
+          border-radius: 10px;
+          width: 200px;
+        }
+
+        .page-link {
+          color:rgb(0, 173, 181);
+        }
+        #btn-list {
+          margin-top: 15px;
+          margin-bottom: 25px;
         }
        
        
@@ -29,28 +64,105 @@
     
     <div class="container-fluid h-100">
         <div class="row">
-            <div class="header">
-
-            </div>
+            <div class="header"></div>
         </div>
+        
         <div class="row">
-            
-            <div class="section col-xs-10">
-                <!-- ### -->
-               
-
-
+                
+            <div class="col-sm-5">
+              <span id="title">장소 상세</span>
             </div>
             
+            <div class="loc-detail">
+              <div class="title">
+                <p>동진 휘스니스 헬스하기 좋네요</p>
+              </div>
+
+              <div class="bbs-info3">
+                <span class="inner">
+                  <div class="inner_nick_box">
+                      <p class="inner_nick">글쓴이</p>
+                  </div>
+                </span>
+                <span class="group_bbs_con">
+                  <div class="date_c">
+                      <ul>
+                          <li class="dc01">
+                              <span>2021.09.05</span>
+                          </li>
+                          <li class="view_cnt">
+                              <span>조회수: 10</span>
+                          </li>
+                          <li class="reply_cnt">
+                              <span>댓글: 10</span>
+                          </li>
+                      </ul>
+                  </div>
+                </span>
+              </div>
+              
+              <div class="txt">
+                <p>
+                  <img src="/FRONT/resource/img/location/site01.jpg" alt="">
+                </p>
+                <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                  Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                  took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                  five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software like Aldus PageMaker including
+                  versions of Lorem Ipsum.</p>
+              </div>
+            </div>
             
-            <div class="sidebar col-xs-2"></div>
+            <div class="click_contents">
+              <button  class="btn btn-info">좋아요</button >
+              <button class="btn btn-info">글쓰기</button >
+              <button class="btn btn-info">목록</button >
+            </div>
+
+            <div class="replyList">
+              <p class="write_comment">댓글쓰기</p>
+              <div class="comment_write">
+                  <textarea class="" id="comment"></textarea>
+                  <button  type="button" class="btn btn-info" id="put_comment">입력</button >
+              </div>
+            </div>
+
+            <div class="prev-next">
+              <div class="prev">
+                  <h3>이전 글 <span><a href="#">이전 글 제목</a></span></h3>
+              </div>
+              <div class="next">
+                  <h3>다음 글 <span><a href="#">다음 글 제목</a></span></h3>
+              </div>
+            </div>
+
+
+            <div id="comments" style="text-align: center;">
+                댓글 보여줄 영역
+            </div>
+
+            <div class="prev-next">
+              <div class="prev">
+                  <h3>이전 글 <span><a href="#">이전 글 제목</a></span></h3>
+              </div>
+              <div class="next">
+                  <h3>다음 글 <span><a href="#">다음 글 제목</a></span></h3>
+              </div>
+            </div>
+
             
+
+
+
+              
         </div>
+
         <div class="row">
-            <div class="footer">
-
-            </div>
+            <div class="footer"></div>
         </div>
+
     </div>
     
     <script defer>
