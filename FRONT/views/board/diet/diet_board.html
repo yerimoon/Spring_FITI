@@ -21,17 +21,15 @@
             position: relative;
         }
 
-
-
         .row>h2 {
             width: 100%;
             margin-top: 90px;
-            
             margin-bottom: 20px;
             padding: 20px 0px 20px 10px;
             font-size: 40px;
             font-weight: bold;
-            background: #d9edf7;
+            color: rgb(0, 173, 181);
+            border-bottom: 1px solid rgb(0, 173, 181);
         }
 
         .table {
@@ -40,7 +38,7 @@
         }
 
         .table a img {
-            width: 250px;
+            width: 360px;
             height: 260px;
             padding: 5px;
 
@@ -96,13 +94,13 @@
 
         #write {
             position: absolute;
-            top: 1380px;
-            left: 1000px;
+            top: 1383px;
+            left: 850px;
         }
         .side_bar {
             position: fixed;
             top: 500px;
-            left: 1200px;
+            left: 1550px;
         }
     </style>
 
@@ -111,6 +109,7 @@
 <body>
 
     <!--헤더-->
+    
     <div class="header-sec">
         <div class="header"></div>
     </div>
@@ -247,9 +246,9 @@
 
         </div>
 
-        
+        <div class="footer-sec">
             <div class="footer"></div>
-        
+        </div>
     </div>
 
 
@@ -262,12 +261,13 @@
 </html>
 
 <script>
+    
     $(document).ready(function () {
         $('.header').load("/FRONT/views/include/header.html");
         $('.footer').load("/FRONT/views/include/footer.html");
         $('.side_bar').load("/FRONT/views/include/side_bar.html");
         $('.section').load("/FRONT/views/board/user/mypage.html");
     });
-
+    
  
 </script>
