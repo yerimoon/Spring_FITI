@@ -17,20 +17,17 @@
         }
       
         .sidebar{
-            position: fixed;
+            position: absolute;
             right: 15px ;
-            top: 500px;
+            top: 300px;
 
         }
-        .titlebox h2 {
-        border-bottom: 1px solid rgb(0, 173, 181);
-        margin-top: 90px;
-        margin-bottom: 80px;
-        padding-bottom: 20px;
-        font-size: 40px;
-        font-weight: bold;
-        color: rgb(0, 173, 181);
-    }
+        #title {
+          color: rgb(0, 173, 181);
+          font-size: 45px;
+          font-weight: bold;
+        }
+    
 
       
         #products{
@@ -109,29 +106,37 @@
             
      
         
+        
         <div class="container">
 
             
 
-            <div class="titlebox">
-                <h2>장터게시판</h2>
-            </div>
+            <div class="col-sm-5">
+                <span id="title">장터게시판</span>
+              </div>
             
             
             <div class="row">
+                <div class="search-wrap">
+                    <input type="text" class="form-controll search-box" placeholder="Search">
+                  
+                    <button type="button" class="btn" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </div>
+
                 <div id="regist">
                     <button class="btn">등록하기</button>
                 </div>
             </div>
 
-            <div class="row">
-
-                <div class="sidebar col-xs-2"></div>
-                
-            </div>
+           
        
             
             <div id="products" class="col-md-10">
+
+               
+
                <ul class="item_list">
                    <li class="item_view">
                        <div class="item_img">
