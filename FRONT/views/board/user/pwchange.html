@@ -6,22 +6,55 @@
     <title>Document</title>
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.css">
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap-theme.css">
+    <style>
+
+        h3{
+            text-align: center;
+        }
+        .empty-space{
+            height:100px;
+        }
+
+        .passwordForm{
+            margin-top: 100px;
+        }
+    
+    </style>
 </head>
 <body>
-    <h1>비밀번호 변경 페이지</h1>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td>비밀번호</td>
-                <td><input type="password" name="" id=""></td>
-            </tr>
-            <tr>
-                <td>비밀번호 확인</td>
-                <td><input type="password" name="" id=""></td>
-            </tr>
-        </table>
-        <button>비밀번호 변경</button>
-    </form>
+    <div class="container passwordForm">
+        <div class="row">
+            <h3>비밀번호 변경</h3>
+        </div>
+        <div class="empty-space"></div>
+        <form class="form-horizontal">
+            
+            <div class="form-group">
+              <label for="input-password" class="col-sm-2 control-label">비밀번호</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="input-password" placeholder="비밀번호">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="input-password-check" class="col-sm-2 control-label">비밀번호확인</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" id="input-password-check" placeholder="비밀번호확인">
+              </div>
+            </div>
+            <div class="empty-space"></div>
+            <div class="row">
+                <div class="col-sm-offset-6 col-sm-2">
+                    <button type="submit" class="btn btn-primary">변경하기</button>
+                </div>
+                <div class="col-sm-2">
+                    <button type="button" class="btn btn-defalut">취소하기</button>
+                </div>
+                
+
+            </div>
+          </form>
+          
+    </div>
     
     <script src="/FRONT/resource/js/jquery.min.js"></script>
 
