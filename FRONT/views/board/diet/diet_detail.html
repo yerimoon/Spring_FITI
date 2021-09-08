@@ -13,22 +13,33 @@
 
 <style>
 
-
-    
-    .side_bar {
-            position: fixed;
-            top: 500px;
-            left: 1200px;
+ 
+    .container {
+        width: 1160px;
+        position: absolute;
+        left: 300px;
+        padding: 0;
     }
 
+    .side_bar {
+        position: fixed;
+        top: 500px;
+        left: 1550px;
+    }
+    .row {
+        margin: 0px;
+    }
+
+
+
     .contents h2 {
-            border-bottom: 1px solid rgb(0, 173, 181);
-            margin-top: 90px;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            font-size: 40px;
-            font-weight: bold;
-            color: rgb(0,173,181);
+        border-bottom: 1px solid rgb(0, 173, 181);
+        margin-top: 90px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        color: rgb(0,173,181);
     }
 
     .gall-view {
@@ -56,7 +67,6 @@
     }
 
     .bbs-info3 {
-
         position: relative;
         width: 100%;
         padding: 6px 0;
@@ -142,8 +152,8 @@
     .click_contents {
         margin-top: 30px;
         position: absolute;
-        top: 1360px;
-        left: 680px;
+        top: 1460px;
+        left: 810px;
         width: 100%;
 
     }
@@ -151,8 +161,6 @@
     .replyList {
         padding-top: 0px;
         margin-top: 150px;
-        text-align: left;
-
         background: #f9f9f9;
         border: 1px solid #ececec;
         padding: 15px;
@@ -193,6 +201,7 @@
         margin-top: 50px;
         line-height: 50px;
         border-top: 1px solid #5d5d5d;
+        text-align: center;
     }
 
     .prev-next .prev {
@@ -259,6 +268,70 @@
         width:40px;color:#767676;
         line-height:20px
         }
+
+            
+    .reply-wrap {
+        background: #f5f5f5;
+        padding: 15px;
+        border: 1px solid #ddd;
+        position: relative;
+        text-align: center;
+        
+    }
+
+    .reply-wrap .reply-image {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+    }
+
+    .reply-content {
+        padding-left: 70px;
+        text-align: left;
+    }
+
+    .reply-content textarea {
+        resize: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .reply-input > .form-control {
+        width: 200px;
+        margin-bottom: 5px;
+    }
+
+    .reply-input {
+        float: left;
+    }
+
+    .reply-group button {
+        float: right;
+    }
+
+    .reply-group small {
+        margin-left: 10px;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .reply-group a {
+        text-decoration: none;
+        color: #777;
+        float: right;
+        margin-top: 20px;
+    }
+
+
+    .reply-content > p {
+        padding-top: 10px;
+        margin-bottom: 5px;
+    } 
+
+    .footer-sec {
+        width: 1160px;
+    }
+    
     
 </style>
 
@@ -271,7 +344,7 @@
             <div class="header"></div>
         </div>
         <div class="row">
-            <div class="contents col-sm-10">
+            <div class="contents col-sm-12">
                 <h2>식단 / 영양정보</h2>
                 <div class="gall-view">
                     <div class="tit">
@@ -349,8 +422,19 @@
 
 
 
-                    <div id="comments" style="text-align: center;">
-                        댓글 보여줄 영역
+                    <div class="reply-wrap">
+                        <div class="reply-image">
+                            <img src="/FRONT/resource/img/food/profile-reply.png" alt="prof">
+                        </div>
+                        <div class="reply-content">
+                            <div class="reply-group">
+                                <strong class="left">honggildong</strong>
+                                <small class="left">2021/12/12</small>
+                                <a href="#" class="right"><span class="glyphicon glyphicon-pencil"></span>수정</a>
+                                <a href="#" class="right"><span class="glyphicon glyphicon-remove"></span>삭제</a>
+                            </div>
+                            <p>이곳은 댓글자리</p>
+                        </div>
                     </div>
 
   
