@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>diet_write</title>
+    <title>bbs_write</title>
     <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/FRONT/resource/js/bootstrap.min.js"></script>
@@ -64,13 +64,14 @@
                     <form action="#" id="boardWrite" method="POST" enctype="multipart/form-data">
                         <table>
                             <tr>
-                                <td>게시판선택</td>
-                                <td>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">게시판 카테고리<span class="caret"></span></a>
-                                   
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#">자유게시판(자유글)</a></li>
+                                <td>게시판</td>
+                                <td><div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                      게시판 선택
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                      <li><a href="#">자유게시판</a></li>
                                       <li><a href="#">자유게시판(소식정보)</a></li>
                                       <li><a href="#">자유게시판(홍보)</a></li>
                                       <li><a href="#">자유게시판(꿀팁)</a></li>
@@ -79,9 +80,9 @@
                                       <li role="separator" class="divider"></li>
                                       <li><a href="#">공지사항</a></li>
                                     </ul>
-                                    </li> 
-                                </td>
+                                  </div></td>
                             </tr>
+                            
                             <tr>
                                 <td>작성자</td>
                                 <td><input type=text name=name size=20> </td>
@@ -91,7 +92,6 @@
                                 <td>제목</td>
                                 <td><input type=text name=title size="60"></td>
                             </tr>
-
                             <tr>
                                 <td>내용</td>
                                 <td><textarea name="content" cols="75" rows="15"></textarea></td>
