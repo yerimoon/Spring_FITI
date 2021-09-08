@@ -16,7 +16,8 @@
 
     .container {
         width: 1160px;
-        height: 1200px;
+        position: absolute;
+        left: 300px;
     }
 
     .titlebox h2 {
@@ -40,32 +41,34 @@
     }
 
     .titlefoot {
-        float: right;
+        text-align: center;
         margin: 20px;
     }
 
     .side_bar {
-        position: fixed;
-        top: 400px;
-        left: 1320px;
+            position: fixed;
+            top: 500px;
+            left: 1550px;
     }
 
-    .footer-sec {
-
+    .header {
+        margin-left: 100px;
     }
 
-
+    #boardWrite > table {
+        width: 1000px;
+    }
 </style>
 
 <body>
 
-    
         <div class="container">
             <div class="header-sec">
                 <div class="header"></div>
             </div>
+
             <div class="row">
-                <div class="col-sm-10">
+                <div class="col-sm-12">
                     <div class="titlebox">
                         <h2>글 작성하기</h2>
                     </div>
@@ -100,10 +103,11 @@
                         <button class="btn btn-info" id="listBtn">목록</button>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="side_bar">
                     <div class="side_bar"></div>
                 </div>
             </div>
+
             <div class="footer-sec">
                 <div class="footer"></div>
             </div>
