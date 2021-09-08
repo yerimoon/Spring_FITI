@@ -8,10 +8,9 @@
     <!--reset.css (css 초기화)-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <!-- <link rel="stylesheet" href="/FRONT/resource/css/reset.min.css"> --> <!--파일이없어져서 일단 링크로 대체했습니다.-->
-    <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="/FRONT/resource/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/FRONT/resource/js/bootstrap.min.js"></script>
-
+    <script src="/FRONT/resource/js/bootstrap.min.js"></script> -->
 
     <style>
 
@@ -219,20 +218,20 @@
                         <!-- sub_menu 시작 -->
                         <ul id="sub_menu1" class="sub_menu">
                             <li class="sub2"><a href="#">친구찾기</a></li>
-                            <li class="sub2"><a href="#">장소찾기</a></li>
+                            <li class="sub2"><a href="/FRONT/views/board/location/loc_board.html">장소찾기</a></li>
                         </ul>
 
                         <ul id="sub_menu2" class="sub_menu">
-                            <li class="sub2"><a href="#">운동 강의</a></li>
-                            <li class="sub2"><a href="#">식단 / 영양 정보</a></li>
+                            <li class="sub2"><a href="/FRONT/views/board/course/course_board.html">운동 강의</a></li>
+                            <li class="sub2"><a href="/FRONT/views/board/diet/diet_board.html">식단 / 영양 정보</a></li>
                             <li class="sub2"><a href="#">제품 후기</a></li>
                             <li class="sub2"><a href="#">칼로리 계산기</a></li>
                         </ul>
                         
                         <ul id="sub_menu3" class="sub_menu">
-                            <li class="sub2"><a href="#">공지사항</a></li>
-                            <li class="sub2"><a href="#">자유게시판</a></li>
-                            <li class="sub2"><a href="#">질문게시판</a></li>
+                            <li class="sub2"><a href="/FRONT/views/board/notice/notice_board.html">공지사항</a></li>
+                            <li class="sub2"><a href="/FRONT/views/board/free/free_board.html">자유게시판</a></li>
+                            <li class="sub2"><a href="/FRONT/views/board/qna/qna_board.html">질문게시판</a></li>
                         </ul>
 
                         <ul id="sub_menu4" class="sub_menu">
@@ -315,10 +314,10 @@
                     <ul class="dropdown-menu" role="menu">
                     <li><a href="#"><span class="glyphicon glyphicon-map-marker" aria-hidden="true">&nbsp;대흥동</span></a></li> <!-- 로그인 하고 위치정보 동의했을때 -->
                     <li><a href="/FRONT/views/board/user/mypage.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true">&nbsp;마이페이지</span></a></li> <!-- 로그인 했을경우 -->
-                    <li><a href="/FRONT/views/board/user/mypage.html"><span class="glyphicon glyphicon-log-in" aria-hidden="true">&nbsp;로그인</span></a></li> <!-- 로그인 안했을경우 -->
+                    <li><a data-toggle="modal" data-target="#modal-login"><span class="glyphicon glyphicon-log-in" aria-hidden="true">&nbsp;로그인</span></a></li> <!-- 로그인 안했을경우 -->
                     <li class="divider"></li>
                     <li><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true">&nbsp;로그아웃</span></a></li> <!-- 로그인 했을경우 -->
-                    <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;회원가입</span></a></li> <!-- 로그인 안했을경우 -->
+                    <li><a data-toggle="modal" data-target="#modal-join"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;회원가입</span></a></li> <!-- 로그인 안했을경우 -->
                     </ul>
                 </div>
 
