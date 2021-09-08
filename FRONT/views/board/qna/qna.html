@@ -21,8 +21,11 @@
         }
         .sidebar{
             background-color: yellow;
-            height: 500px;
+            position: fixed;
+            right: 15px ;
+            top: 250px;
         }
+      
        
         .container {
           font-family: "NanumGothic";
@@ -61,7 +64,8 @@
           font-weight: bold;
           color:rgb(0, 173, 181);
         }
-      
+
+        
 
     </style>
 </head>
@@ -205,15 +209,16 @@
         <div class="row">
             <div class="footer"></div>
         </div>
+        <div class="sidebar"></div>
     </div>
     
-    <script>
-        $(document).ready(function(){
-            $('.header').load("/FRONT/views/include/header.html");
-            $('.footer').load("/FRONT/views/include/footer.html");
-            $('.section').load("/FRONT/views/board/user/mypage.html")
-        })
-        
-    </script>
+    <script defer>
+      $(document).ready(function(){
+          $('.header').load("/FRONT/views/include/header.html");
+          $('.footer').load("/FRONT/views/include/footer.html");
+          $('.sidebar').load("/FRONT/views/include/side_bar.html");
+      });
+      
+  </script>
 </body>
 </html>
