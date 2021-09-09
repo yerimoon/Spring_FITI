@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-sm-5">
                     <div class="titlebox">
-                        <h2>게시글 작성</h2>
+                        <h2>물품 등록하기</h2>
                     </div>
                 </div>
             </div>
@@ -56,24 +56,15 @@
             <form action="#" id="boardWrite" method="POST" enctype="multipart/form-data">
                 <table>
                     <tr>
-                        <td>게시판</td>
+                        <td>카테고리</td>
                         <td>
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    게시판 선택
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                    <li><a href="#">자유게시판</a></li>
-                                    <li><a href="#">자유게시판(소식정보)</a></li>
-                                    <li><a href="#">자유게시판(홍보)</a></li>
-                                    <li><a href="#">자유게시판(꿀팁)</a></li>
-                                    <li role="separator" class="divider"></li>
-                                    <li><a href="#">질문게시판</a></li>
-
-                                </ul>
-                            </div>
+                            <select id="sports" name="sports">
+                                <option value="">카테고리 선택</option>
+                                <option value="">사요</option>
+                                <option value="">팔아요</option>
+                                <option value="">나눠요</option>
+                                
+                            </select>
                         </td>
                     </tr>
 
@@ -92,14 +83,24 @@
                         <td><textarea name="content" cols="75" rows="15"></textarea></td>
                     </tr>
 
-                    
+                    <tr>
+                        <!--
+                            다음 주소 api : 주소를 선택하면 지도도 함께 보여주기
+                            https://postcode.map.daum.net/guide#sample
+                        -->
+                        <td>주소api</td>
+                        <td></td>
+                    </tr>
 
-                    
+                
                     <tr>
                         <td>사진올리기 </td>
                         <td><input type="file" name="fileName" size="10" maxlength="10"></td>
                     </tr>
-                    
+                    <tr>
+                        <td>가격 </td>
+                        <td><input type=text name=title size="60"></td>
+                    </tr>
                     <tr class="text-right">
                         <td colspan="2">
                             <br>
@@ -107,7 +108,7 @@
                             <button class="btn btn-default">취소하기</button>
                             <br><br><br>
                         </td>
-
+                        
                     </tr>
                 </table>
 
