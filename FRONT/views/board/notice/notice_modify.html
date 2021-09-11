@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-sm-5">
                     <div class="titlebox">
-                        <h2>질문 등록</h2>
+                        <h2>공지사항 수정</h2>
                     </div>
                 </div>
             </div>
@@ -55,9 +55,11 @@
             <!--main left-->
             <form action="#" id="boardWrite" method="POST" enctype="multipart/form-data">
                 <table>
+                    
+
                     <tr>
                         <td>작성자</td>
-                        <td><input type=text name=name size=20> </td>
+                        <td><input type=text name=name size=20 readonly> </td>
                     </tr>
 
                     <tr>
@@ -70,15 +72,17 @@
                         <td><textarea name="content" cols="75" rows="15"></textarea></td>
                     </tr>
 
-
+                   
                     <tr>
                         <td>사진올리기 </td>
                         <td><input type="file" name="fileName" size="10" maxlength="10"></td>
                     </tr>
+                    
                     <tr class="text-right">
                         <td colspan="2">
                             <br>
-                            <button class="btn btn-primary">등록하기</button>
+                            <button class="btn btn-primary">수정하기</button>
+                            <button class="btn btn-primary">삭제하기</button>
                             <button class="btn btn-default">취소하기</button>
                             <br><br><br>
                         </td>
