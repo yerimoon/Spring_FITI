@@ -60,15 +60,14 @@
         }
 
         #carousel-example-generic{  /* 케러셀(이미지 슬라이드) 높이 고정 및 배경색 조정*/
-            height:600px;
+            height:1000px;
             background-color: rgba(0, 0, 0, 0.8);
         }
         
         
 
         .test {
-            height: 600px;
-            background-color: blue;
+            height: 1000px;
             overflow: auto;
         }
 
@@ -87,7 +86,7 @@
         </div>
 
         <div class="container-fluid">
-            <div class="col-md-6 col-sm-12 test">
+            <div class="col-md-8 col-sm-12 test">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="titlebox">
@@ -222,8 +221,21 @@
                 </div>
 
             </div>
-            <div class="col-md-6 col-sm-12 test">
+            <div class="col-md-4 col-sm-12 test">
+                <div class="container">
+                    <div class="row">
+                        <form action="">
+                            <div class="input-group input-group-lg" >
+                                
+                                <input type="text" class="form-control" placeholder="댓글을 작성해주세요" aria-describedby="basic-input">
+                                <span class="input-group-btn" id="basic-input">
+                                    <button class="btn btn-default"><span class="glyphicon glyphicon-send"></span></button>
+                                </span>
+                              </div>
+                        </form>
+                    </div>
 
+                </div>
             </div>
         </div>
 
@@ -240,9 +252,12 @@
         $(document).ready(function () {
             $('.header').load("/FRONT/views/include/header.html");
             $('.footer').load("/FRONT/views/include/footer.html");
-
+            $('.test:last-child .input-group').css("width", $('.test:last-child').width()*0.9);
         });
-
+        $(window).resize(function() {
+            $('.test:last-child .input-group').css("width", $('.test:last-child').width()*0.9);
+        });
+        
     </script>
 </body>
 
