@@ -60,24 +60,36 @@
 
 
         .vid {
-            margin: 15px 5px;
-            padding: 10px;
+            margin: 25px 5px;
+            padding: 5px;
             border: 1px solid #ccc;
+            /* background: rgb(0, 173, 181); */
+            
         }
 
-        /* .vid:hover{
-            border: 2px solid rgb(0, 173, 181);
-            box-sizing: border-box;
-        } */
 
 
-        /* .course {      
-            box-sizing: border-box;        
-        } */
+        .vid .video {
+            /* border: 1px solid #fff; */
+            background: #fff;
+            padding: 10px;
+        }
+
 
         .subject {
             height: 70px;
-            margin: 10px 30px;
+            margin: 20px 30px;
+        }
+
+        .category {
+            display: block;
+            text-align: left;
+            margin: 5px 0;
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc; 
+            font-size: 13px;
+            font-weight: 500;
+            color: #5a5a5a;
         }
 
         .auth {
@@ -85,6 +97,7 @@
             font-size: 15px;
             padding: 0 13px;
             overflow: hidden;
+            margin-top: 30px;
         }
 
         .auth span {
@@ -105,6 +118,8 @@
             color: #000;
             padding-left: 8px;
         }
+
+
       
 
     </style>
@@ -190,100 +205,117 @@
                 <tbody>
                     <tr class="course">                       
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid01.jpg" width="280px" alt="vid01"></a>
-                                <p class="subject"><a href="#">층간 소음 걱정 없이 체중 감량 보장! 딱 5분 운동!</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
-
+                            <div class="vid inactive">                               
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid01.jpg" width="280px" alt="vid01"></a>                                 
+                                    <p class="subject"><span class="category">홈트짐트</span><a href="#">층간 소음 걱정 없이 체중 감량 보장! 딱 5분 운동!</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
                             </div>
                         </td>
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid02.jpg" width="280px" alt="vid02"></a>
-                                <p class="subject"><a href="#">강한 어깨와 삼두를 위한 맨몸운동 루틴 (feat. 90도 물구나무)</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
+                            <div class="vid inactive">
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid02.jpg" width="280px" alt="vid02"></a>
+                                    <p class="subject"><span class="category">홈트짐트</span><a href="#">강한 어깨와 삼두를 위한 맨몸운동 루틴 (feat. 90도 물구나무)</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
                             </div>   
                         </td>
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid03.jpg" width="280px" alt="vid03"></a>
-                                <p class="subject"><a href="#">※50분 올인원 운동※ 체중감량에 최적화된 루틴 (No 층간소음)</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
-                            </div>     
+                            <div class="vid inactive">
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid03.jpg" width="280px" alt="vid03"></a>
+                                    <p class="subject"><span class="category">홈트짐트</span><a href="#">※50분 올인원 운동※ 체중감량에 최적화된 루틴 (No 층간소음)</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
+                            </div>   
                         </td>                                         
                     </tr> 
 
                     <tr>    
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid04.jpg" width="280px" alt="vid04"></a>
-                                <p class="subject"><a href="#">[포핸드] 스윙스피드가 조금만 빨라져도 상대가 당황하기 시작합니다</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
+                            <div class="vid inactive">
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid04.jpg" width="280px" alt="vid04"></a>
+                                    <p class="subject"><span class="category">테니스</span><a href="#">[포핸드] 스윙스피드가 조금만 빨라져도 상대가 당황하기 시작합니다</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
                             </div>
                         </td>
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid05.jpg" width="280px" alt="vid05"></a>
-                                <p class="subject"><a href="#">[탁구레슨]백핸드 드라이브 쉽게 배워 보세요!!</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
+                            <div class="vid inactive">
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid05.jpg" width="280px" alt="vid05"></a>
+                                    <p class="subject"><span class="category">탁구</span><a href="#">[탁구레슨]백핸드 드라이브 쉽게 배워 보세요!!</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
                             </div>
                         </td>
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid06.jpg" width="280px" alt="vid06"></a>
-                                <p class="subject"><a href="#">[달인콕tv 배드민턴 레슨] 상대를 속이는 기술4탄 (훼이크 드롭 3가지방법)</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
+                            <div class="vid inactive">
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid06.jpg" width="280px" alt="vid06"></a>
+                                    <p class="subject"><span class="category">배드민턴</span><a href="#">[달인콕tv 배드민턴 레슨] 상대를 속이는 기술4탄 (훼이크 드롭 3가지방법)</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
                             </div>
                         </td>    
                     </tr>
                     
                     <tr>    
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid07.jpg" width="280px" alt="vid07"></a>
-                                <p class="subject"><a href="#">스쿼시 그립잡기</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
+                            <div class="vid inactive">
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid07.jpg" width="280px" alt="vid07"></a>
+                                    <p class="subject"><span class="category">스쿼시</span><a href="#">스쿼시 그립잡기</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
                             </div>
                         </td>
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid08.jpg" width="280px" alt="vid08"></a>
-                                <p class="subject"><a href="#">하쌤수영/하은주수영/ 부드러운 자유형 꿀팁</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
+                            <div class="vid inactive">
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid08.jpg" width="280px" alt="vid08"></a>
+                                    <p class="subject"><span class="category">수영</span><a href="#">하쌤수영/하은주수영/ 부드러운 자유형 꿀팁</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
                             </div>
                         </td>
                         <td scope="col" class="text-center">
-                            <div class=vid>
-                                <a href="#"><img src="/FRONT/resource/img/course/vid09.jpg" width="280px" alt="vid09"></a>
-                                <p class="subject"><a href="#">[[ 김정훈 탁구레슨 ]] no.23 펜홀더 쇼트. 1부</a></p>
-                                <p class="auth">관리자                                    
-                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>                                       
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>           
-                                </p>
+                            <div class="vid inactive">
+                                <div class="video">
+                                    <a href="#"><img src="/FRONT/resource/img/course/vid09.jpg" width="280px" alt="vid09"></a>
+                                    <p class="subject"><span class="category">탁구</span><a href="#">[[ 김정훈 탁구레슨 ]] no.23 펜홀더 쇼트. 1부</a></p>
+                                    <p class="auth">관리자
+                                        <span class="glyphicon glyphicon-comment" aria-hidden="true"><b>2</b></span>
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"><b>100</b></span>
+                                    </p>
+                                </div>
                             </div>
                         </td>      
                    </tr>                                 
@@ -319,10 +351,22 @@
     
     <script defer>
       $(document).ready(function(){
-          $('.header').load("/FRONT/views/include/header.html");
-          $('.footer').load("/FRONT/views/include/footer.html");
-          $('.sidebar').load("/FRONT/views/include/side_bar.html");
-      });
+            $('.header').load("/FRONT/views/include/header.html");
+            $('.footer').load("/FRONT/views/include/footer.html");
+            $('.sidebar').load("/FRONT/views/include/side_bar.html");
+            
+            $('.vid').hover(function() {   
+                $(this).css('background-color', 'rgb(0, 173, 181)');
+                
+            });
+
+            $('.vid').mouseleave(function() {   
+                $(this).css('background-color', '#fff');
+                
+            });
+
+      
+        });
       
   </script>
 </body>
