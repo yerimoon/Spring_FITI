@@ -72,8 +72,9 @@
             overflow: auto;
         }
 
-        .test:last-child>.container .row {
+        .test:last-child .row {
             margin-top: 20px;
+            margin-left: 20px.;
         }
 
         .reply {
@@ -248,80 +249,22 @@
 
             </div>
             <div class="col-md-4 col-sm-12 test">
+                
                 <div class="row">
                     <span class="reply reply-count">댓글 : ???개</span>
                 </div>
                 <div class="row">
-                    <form action="">
+                    <form id="reply-form">
                         <div class="input-group input-group-lg">
 
                             <input type="text" class="form-control" placeholder="댓글을 작성해주세요"
                                 aria-describedby="basic-input">
                             <span class="input-group-btn" id="basic-input">
-                                <button class="btn btn-default"><span class="glyphicon glyphicon-send"></span></button>
+                                <button id="reply-btn" type="button" class="btn btn-default"><span
+                                        class="glyphicon glyphicon-send"></span></button>
                             </span>
                         </div>
                     </form>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reply reply-box">
-                        <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
-                        <span class="reply-content">댓글 내용입니다.</span>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="reply reply-box">
@@ -343,14 +286,71 @@
     </div>
 
     <script defer>
+        function sleep(ms) {
+            const wakeUpTime = Date.now() + ms;
+            while (Date.now() < wakeUpTime) { }
+        }
+        function replyAppendTest() {
+            for (let i = 0; i <= 10; i++) {
+                $('.test:last-child').append(`
+                    <div class="row">
+                        <div class="reply reply-box">
+                            <span class="reply-writer">작성자</span> <small>1시간 전</small><br><br>
+                            <span class="reply-content">댓글 내용입니다.</span>
+                        </div>
+                    </div>
+                `);
+            }
+        }
         $(document).ready(function () {
             $('.header').load("/FRONT/views/include/header.html");
             $('.footer').load("/FRONT/views/include/footer.html");
             $('.test:last-child .input-group').css("width", $('.test:last-child').width() * 0.9);
+            replyAppendTest();
+
         });
         $(window).resize(function () {
             $('.test:last-child .input-group').css("width", $('.test:last-child').width() * 0.9);
         });
+        $('.test:last-child').scroll(function () {
+            /*
+                document height -> 모든 row들의 높이 합
+                문서 전체의 높이를 의미합니다.
+                window height -> div.test의 높이
+                화면의 높이를 의미합니다.
+                scroll top
+                스크롤의 top이 위치하고 있는 높이를 의미합니다
+                
+            */
+            let replyTotalHeight = 0;
+            let count=0;
+            $('.test:last-child >.row').each(function () {
+                replyTotalHeight = replyTotalHeight + $(this).height()
+                count++;
+            });
+            if ($('.test:last-child').scrollTop() + $('.test:last-child').height() >= replyTotalHeight) {
+                // 로딩이미지 보여주기
+                // $('.test:last-child').append(`
+                //     <div id="loadingImg" class="row">
+                //         <img src="/FRONT/resource/img/load.gif" alt="">
+                //     </div>
+                // `);
+                // $('#loadingImg').remove();
+                replyAppendTest();
+            }
+            console.log(count);
+            
+
+
+
+            // console.log($('.test:last-child').scrollTop()+","+$('.test:last-child').height()+","+)
+        });
+        // $(window).scroll(function(){
+        //     if($(window).scrollTop()+$(window).height()+1 >= $(document).height()){
+        //         console.log('스크롤 하단 감지');
+        //     }
+        // });
+
 
     </script>
 </body>
