@@ -236,6 +236,9 @@
                 <div class="row margin-top-5">
                     <table class="table table-hover table-responsive">
                         <thead class="bg-info">
+                            <a href="/FRONT/views/board/location/loc_detail.html">
+                            
+                            </a>
                             <tr>
                                 <th scope="col" class="text-center">번호</th>
                                 <th scope="col" class="text-center">장소명</th>
@@ -243,10 +246,10 @@
                                 <th scope="col" class="text-center">글쓴이</th>
                                 <th scope="col" class="text-center">날짜</th>
                                 <th scope="col" class="text-center">조회</th>
-                              </tr>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr onclick="location.href='/FRONT/views/board/location/loc_detail.html'">
                                 <th scope="col" class="text-center">1</th>
                                 <th scope="col">[테니스] VTG 여의도실내테니스장</th>
                                 <th scope="col">서울 영등포구 여의나루로 42 여의도종합상가 4층</th>
@@ -342,7 +345,7 @@
                 </div>
                     
                 <div class="row" align="right">
-                    <button type="button" id="write" class="btn btn-outline-primary float-right"><b>새 장소 등록</b></button>
+                    <button type="button" id="write" class="btn btn-outline-primary float-right"  onclick="location.href='/FRONT/views/board/location/loc_write.html' "><b>새 장소 등록</b></button>
                 </div>
 
                 <div class="row text-center">
