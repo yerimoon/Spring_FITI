@@ -1,3 +1,6 @@
+<%@ page languages="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -207,7 +210,7 @@
                         <tr>
                           <th scope="col" class="text-center">23</th>
                           <th scope="col">근육이 정말 안느네요. 단백질 더 먹어야 할까요?</th>
-                           <th scope="col" class="text-center">며르치</th>
+                          <th scope="col" class="text-center">며르치</th>
                           <th scope="col" class="text-center">2021-09-02</th>
                           <th scope="col" class="text-center">153</th>
                         </tr>
