@@ -3,25 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.spring</groupId>
-<<<<<<< HEAD
-	<artifactId>wefit</artifactId>
-	<name>SpringWeFit</name>
-=======
 	<artifactId>myweb</artifactId>
 	<name>MyWeb</name>
->>>>>>> c4b0c3f7612ef73c8df96816a5864453928e8638
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	
 	<!-- 자바버전, 스프링 버전 변경 -->
 	<properties>
-<<<<<<< HEAD
-		<java-version>1.6</java-version>
-		<org.springframework-version>3.1.1.RELEASE</org.springframework-version>
-		<org.aspectj-version>1.6.10</org.aspectj-version>
-		<org.slf4j-version>1.6.6</org.slf4j-version>
-	</properties>
-=======
 	<!-- 자바버전 -->
 		<java-version>1.8</java-version>
 		<!-- 스프링버전 -->
@@ -31,7 +19,6 @@
 	</properties>
 	
 	<!-- 의존성 라이브러리들을 모아놓는 공간 -->
->>>>>>> c4b0c3f7612ef73c8df96816a5864453928e8638
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -51,8 +38,6 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-<<<<<<< HEAD
-=======
 		
 		<!-- 스프링에서 제공하는 jdbc기능을 쓰려면 반드시 필요spring-jdbc -->
 		<dependency>
@@ -134,7 +119,6 @@
 	</dependency>
 	
 		
->>>>>>> c4b0c3f7612ef73c8df96816a5864453928e8638
 				
 		<!-- AspectJ -->
 		<dependency>
@@ -213,11 +197,7 @@
 			<version>1.2</version>
 		</dependency>
 	
-<<<<<<< HEAD
-		<!-- Test -->
-=======
 		<!-- Test 버전을 4.12로변경 -->
->>>>>>> c4b0c3f7612ef73c8df96816a5864453928e8638
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -225,13 +205,10 @@
 			<scope>test</scope>
 		</dependency>        
 	</dependencies>
-<<<<<<< HEAD
-=======
 	
 	
 		
 	
->>>>>>> c4b0c3f7612ef73c8df96816a5864453928e8638
     <build>
         <plugins>
             <plugin>
@@ -248,15 +225,6 @@
                     <downloadJavadocs>true</downloadJavadocs>
                 </configuration>
             </plugin>
-<<<<<<< HEAD
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-=======
             <!-- 메이븐 컴파일러 버전 3.5.1로 변경, 자바버전도 1.8 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -265,7 +233,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
->>>>>>> c4b0c3f7612ef73c8df96816a5864453928e8638
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
