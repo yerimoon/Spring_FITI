@@ -48,6 +48,7 @@
 	<!-- 위에 지정한 encodingFilter이름을 모든 패턴에 적용 -->
 	<!-- ㅠㅠ 동기화 되나요? -->
 	<!-- 이번에야 말로 되나요? -->
+	<!-- 3번째 확인입니다. -->
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
