@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
@@ -35,7 +39,12 @@
 
 		<!-- 마이바티스 같은 경우는 mapper 구현체를 xml로 대체하니까 해당 구현체 xml의 경로를 알려줘야 한다. -->
 		<property name="mapperLocations"
-			value="classpath:/mappers/*.xml" />
+			value="classpath:/mappers/*.xml" /> 	
+			
 	</bean>
-
+	
+	<!-- 위의 구현체 xml을 빈으로 등록하기 위해서는 타입이 필요하니까 인터페이스를 자동으로 스캔해서 빈으로 등록하기 위한 설정 -->
+	<!-- 스캔 명령은 빈 바깥에! -->
+	<mybatis-spring:scan base-package="com.spring.wefit.test"/>
+	
 </beans>
