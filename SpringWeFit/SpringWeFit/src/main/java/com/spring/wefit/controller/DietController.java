@@ -49,7 +49,7 @@ public class DietController {
 		System.out.println("/board/dietContent: GET");
 		System.out.println("요청된 글 번호: " + dbNum);
 		model.addAttribute("dietList", service.getContent(dbNum));
-		return "";
+		return "/board/diet/diet_detail";
 	}
 	
 	
