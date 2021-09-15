@@ -33,6 +33,9 @@ import lombok.ToString;
     CONSTRAINT PK_PlaceBoard PRIMARY KEY (pbNum)
 );
 
+ALTER TABLE PlaceBoard 
+ADD pbAddrDetail VARCHAR(300) NOT NULL;
+
  */
 
 
@@ -57,12 +60,12 @@ public class PlaceBoardVO {
 	private String pbRealImage5;
 	private String pbCategory;
 	private String pbAddrBasic;
+	private String pbAddrDetail;
 	private double pbLatitude;
 	private double pbLongitude;
 	private int pbLookCount;
 	private int pbImageCount;
 	private Timestamp pbRegDate;
-	
-	//private boolean isNewMark;
+//	private boolean isNewMark;
 
 }

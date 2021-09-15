@@ -20,10 +20,10 @@ public interface IPlaceBoardMapper {
 	PlaceBoardVO getContent(int pbNum);
 
 	//수정
-//	void update(PlaceBoardVO vo);
-
+	void update(PlaceBoardVO vo);
+		
 	//삭제
-//	void delete(int pbNum);
+	void delete(int pbNum);
 	
 
 }

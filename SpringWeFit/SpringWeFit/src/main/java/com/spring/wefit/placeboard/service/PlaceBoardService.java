@@ -9,6 +9,7 @@ import com.spring.wefit.command.PlaceBoardVO;
 import com.spring.wefit.placeboard.mapper.IPlaceBoardMapper;
 import com.spring.wefit.util.PageVO;
 
+
 @Service
 public class PlaceBoardService implements IPlaceBoardService{
 
@@ -52,25 +53,16 @@ public class PlaceBoardService implements IPlaceBoardService{
 
 	@Override
 	public void update(PlaceBoardVO vo) {
-		// TODO Auto-generated method stub
+		mapper.update(vo);
 		
 	}
 
 	@Override
 	public void delete(int pbNum) {
-		// TODO Auto-generated method stub
+		mapper.delete(pbNum);
 		
 	}
 
-//	@Override
-//	public void update(PlaceBoardVO vo) {
-//		mapper.update(vo);
-//	}
 
-//	@Override
-//	public void delete(int pbNum) {
-//		mapper.delete(pbNum);
-//
-//	}
 	
 }

@@ -16,15 +16,16 @@ import com.spring.wefit.util.PageCreator;
 import com.spring.wefit.util.PageVO;
 
 @Controller
-@RequestMapping("/loc_board")
+@RequestMapping("/location")
 public class PlaceBoardController {
 
 	@Autowired 
 	private IPlaceBoardService service;
 	
-	//목록 화면
+	//장소 목록 화면
 	@GetMapping("/loc_board")
 	public String placeList(PageVO vo, Model model) {
+		
 		PageCreator pc = new PageCreator();
 		pc.setPaging(vo);
 		pc.setArticleTotalCount(service.getTotal(vo));
@@ -32,23 +33,23 @@ public class PlaceBoardController {
 		model.addAttribute("boardList", service.getList(vo));
 		model.addAttribute("pc", pc);
 				
-		return "loc_board/loc_board";
+		return "board/location/loc_board";
 	}
 		
 	//글쓰기 화면 처리
 	@GetMapping("/loc_write")
 	public void placeRegist() {}
-		
-//	//글 등록 처리
-//	@PostMapping("/registForm")
-//	public String registForm(PlaceBoardVO vo, RedirectAttributes ra) {
-//		service.regist(vo);
-//			
-//		//등록 성공 여부를 1회용으로 전달하기 위한 ra객체의 메서드
-//		ra.addFlashAttribute("msg", "정상 등록 처리되었습니다.");
-//			
-//		return "redirect:/placeBoard/placeList"; //등록 후에 글 목록 요청으로 리다이렉트
-//	}
+	
+	//글 등록 처리
+	@PostMapping("/registForm")
+	public String registForm(PlaceBoardVO vo, RedirectAttributes ra) {
+		service.regist(vo);
+			
+		//등록 성공 여부를 1회용으로 전달하기 위한 ra객체의 메서드
+		ra.addFlashAttribute("msg", "정상 등록 처리되었습니다.");
+			
+		return "redirect:/location/loc_board"; //등록 후에 글 목록 요청으로 리다이렉트
+	}
 		
 	//글 상세보기 처리
 	@GetMapping("/loc_detail")
@@ -63,24 +64,24 @@ public class PlaceBoardController {
 		model.addAttribute("article", service.getContent(pbNum));
 	}
 		
-//	//글 수정 처리
-//	@PostMapping("/freeUpdate")
-//	public String freeUpdate(PlaceBoardVO vo, RedirectAttributes ra) {
-//		service.update(vo);
-//		ra.addFlashAttribute("msg", "updateSuccess");
-//			
-//		return "redirect:/freeBoard/freeDetail?bno=" + vo.getBno();
-//	}
-		
-//	@PostMapping("/freeDelete")
-//	public String freeDelete(PlaceBoardVO vo, RedirectAttributes ra) {
-//		service.delete(vo.getBno());
-//			
-//		ra.addFlashAttribute("msg", "게시글이 정상 삭제되었습니다.");
-//			
-//		return "redirect:/freeBoard/freeList";
-//	}
-		
+	//글 수정 처리
+	@PostMapping("/placeUpdate")
+	public String placeUpdate(PlaceBoardVO vo, RedirectAttributes ra) {
+		service.update(vo);
+		ra.addFlashAttribute("msg", "updateSuccess");
+			
+		return "redirect:/location/loc_detail?pbNum=" + vo.getPbNum();
+	}
+	
+	//글 삭제 처리
+	@PostMapping("/placeDelete")
+	public String placeDelete(PlaceBoardVO vo, RedirectAttributes ra) {
+		service.delete(vo.getPbNum());
+			
+		ra.addFlashAttribute("msg", "게시글이 정상 삭제되었습니다.");
+			
+		return "redirect:/location/loc_board";
+	}	
 		
 	
 	
