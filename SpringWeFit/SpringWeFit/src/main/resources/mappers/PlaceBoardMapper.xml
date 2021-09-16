@@ -4,9 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper
-	namespace="com.spring.springwefit.placeboard.mapper.IPlaceBoardMapper">
+	namespace="com.spring.wefit.placeboard.mapper.IPlaceBoardMapper">
 
-
+	<!--  
 	<sql id="search">
 		<if test="condition == 'pbTitle'">
 			WHERE pbTitle LIKE '%'||#{keyword}||'%'
@@ -22,16 +22,27 @@
 			OR pbContent LIKE '%'||#{keyword}||'%'
 		</if>
 	</sql>
+	-->
 
 
 	<insert id="regist">
-		INSERT INTO PlaceBoard(pbNum, mNum, pbTitle, pbCategory, 
-								pbAddrBasic, pbLatitude, pbLongitude, pbLookCount, pbImageCount, pbRegDate)
-		VALUES(placeboard_seq.NEXTVAL, #{pbNum}, #{mNum}, #{pbTitle}, #{pbCategory}, #{pbAddrBasic}, 
-										#{pbLatitude}, #{pbLongitude}, #{pbLookCount}, #{pbImageCount}, #{pbRegDate})		
+		INSERT INTO PlaceBoard
+		(
+		pbNum, mNum, pbTitle, pbCategory, 
+		pbAddrBasic, pbLatitude, pbLongitude, 
+		pbLookCount, pbImageCount, pbRegDate
+		)
+		VALUES
+		(
+		placeboard_seq.NEXTVAL, 
+		#{pbNum}, #{mNum}, #{pbTitle}, 
+		#{pbCategory}, #{pbAddrBasic}, 
+		#{pbLatitude}, #{pbLongitude}, 
+		#{pbLookCount}, #{pbImageCount}, #{pbRegDate}
+		)		
 	</insert>
 
-
+	<!--
 	<select id="getList"
 		resultType="com.spring.springwefit.command.PlaceBoardVO">
 		SELECT * FROM
@@ -47,7 +58,13 @@
 		WHERE rn > (#{pageNum} - 1) * #{countPerPage}
 		AND rn <= #{pageNum} * #{countPerPage}
 		]]>
+	</select> -->
+	
+	<select id="getList" resultType="com.spring.wefit.command.PlaceBoardVO">
+		  	SELECT * FROM PlaceBoard
+		  	ORDER BY pbNum DESC 	
 	</select>
+		  
 
 
 
@@ -61,18 +78,26 @@
 
 
 	<select id="getContent"
-		resultType="com.spring.springwefit.command.PlaceBoardVO">
+		resultType="com.spring.wefit.command.PlaceBoardVO">
 		SELECT * FROM PlaceBoard
 		WHERE pbNum = #{pbNum}
 	</select>
 
 	<update id="update">
 		UPDATE PlaceBoard
-		SET pbTitle=#{pbTitle},
-		pbContent=#{pbContent}
+		SET 
+		pbTitle = #{pbTitle},
+		pbContent = #{pbContent},
+		pbImage1 = #{pbImage1}, pbImage2 = #{pbImage2}, 
+		pbImage3 = #{pbImage3}, pbImage4= #{pbImage4}, 
+		pbImage5 = #{pbImage5},
+		pbRealImage1 = #{pbRealImage1}, pbRealImage2 = #{pbRealImage2}, 
+		pbRealImage3 = #{pbRealImage3}, pbRealImage4 = #{pbRealImage4}, 
+		pbRealImage5 = #{pbRealImage5}
 		WHERE pbNum=#{pbNum}
 	</update>
 
+  	
 	<delete id="delete">
 		DELETE FROM PlaceBoard
 		WHERE pbNum=#{pbNum}

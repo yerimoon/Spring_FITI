@@ -7,23 +7,22 @@ import com.spring.wefit.util.PageVO;
 
 public interface IPlaceBoardMapper {
 
-	//글 등록
+	//장소 글 등록
 	void regist(PlaceBoardVO vo);
 
-	//글 목록
-	List<PlaceBoardVO> getList(PageVO vo);
+	//장소 글 목록
+	List<PlaceBoardVO> getList();
 
-	//총 게시물 수
+	//장소 총 게시물 수
 	int getTotal(PageVO vo);
 
-	//상세보기
+	//장소 글 상세보기
 	PlaceBoardVO getContent(int pbNum);
-
-	//수정
+	
+	//장소 글 수정
 	void update(PlaceBoardVO vo);
-		
-	//삭제
+	
+	//장소 글 삭제
 	void delete(int pbNum);
 	
-
 }

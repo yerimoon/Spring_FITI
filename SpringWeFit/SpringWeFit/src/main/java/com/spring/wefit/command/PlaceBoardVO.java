@@ -36,6 +36,14 @@ import lombok.ToString;
 ALTER TABLE PlaceBoard 
 ADD pbAddrDetail VARCHAR(300) NOT NULL;
 
+CREATE SEQUENCE placeBoard_seq 
+    START WITH 1 
+    INCREMENT BY 1 
+    MAXVALUE 10000000 
+    NOCYCLE 
+    NOCACHE;
+    
+
  */
 
 
