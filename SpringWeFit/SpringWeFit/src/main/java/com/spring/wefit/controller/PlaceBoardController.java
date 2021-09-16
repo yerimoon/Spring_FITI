@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.MultipartRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.wefit.command.PlaceBoardVO;
@@ -45,15 +47,18 @@ public class PlaceBoardController {
 
 	//글 등록 처리
 	@PostMapping("/placeWrite")
-	public String placeWrite(PlaceBoardVO vo, RedirectAttributes ra) {
+	public String placeWrite(MultipartHttpServletRequest request,  PlaceBoardVO vo, RedirectAttributes ra) {
 		System.out.println("/placeBoard/placeWrite: POST");
+		System.out.println("제목: " + request.getParameter("pbTitle"));
+		System.out.println("내용: " + request.getParameter("pbContent"));
+		System.out.println(vo);
 		service.regist(vo);
 		ra.addFlashAttribute("msg", "정상 등록 처리되었습니다.");
 			
 		return "redirect:/board/location/loc_board"; //등록 후에 글 목록 요청으로 리다이렉트
 	}
 
-	
+
 	//글 상세보기 처리
 	@GetMapping("/placeDetail")
 	public String placeContent(@RequestParam int pbNum, Model model) {

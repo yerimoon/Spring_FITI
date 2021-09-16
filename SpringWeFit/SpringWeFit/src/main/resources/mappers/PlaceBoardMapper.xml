@@ -3,14 +3,33 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper
-	namespace="com.spring.wefit.placeboard.mapper.IPlaceBoardMapper">
+<mapper namespace="com.spring.wefit.placeboard.mapper.IPlaceBoardMapper">
 
-	<resultMap type="com.spring.wefit.command.PlaceBoardVO" id="boardMap">
-		<result property="memberNum" column="MNUM"/>
-	</resultMap>
+	<select id="getList" resultType="com.spring.wefit.command.PlaceBoardVO">
+		  	SELECT * FROM PlaceBoard
+		  	ORDER BY pbNum DESC 	
+	</select>
 
-	<!--  
+
+	<insert id="regist">
+		INSERT INTO PlaceBoard
+		(
+		pbNum, memberNum, pbTitle, pbCategory, 
+		pbAddrBasic, pbAddrDetail, pbLatitude, pbLongitude, 
+		pbLookCount, pbImageCount, pbRegDate
+		)
+		VALUES
+		(
+		placeboard_seq.NEXTVAL, 
+		#{memberNum}, #{pbTitle}, 
+		#{pbCategory}, #{pbAddrBasic}, #{pbAddrDetail}, 
+		#{pbLatitude}, #{pbLongitude}, 
+		#{pbLookCount}, #{pbImageCount}, #{pbRegDate}
+		)		
+	</insert>
+	
+	
+  <!--  
 	<sql id="search">
 		<if test="condition == 'pbTitle'">
 			WHERE pbTitle LIKE '%'||#{keyword}||'%'
@@ -18,37 +37,22 @@
 		<if test="condition == 'pbContent'">
 			WHERE pbContent LIKE '%'||#{keyword}||'%'
 		</if>
-		<if test="condition == 'mNum'">
-			WHERE mNum LIKE '%'||#{keyword}||'%'
+		<if test="condition == 'memberNum'">
+			WHERE memberNum LIKE '%'||#{keyword}||'%'
 		</if>
 		<if test="condition == 'titleContent'">
 			WHERE pbTitle LIKE '%'||#{keyword}||'%'
 			OR pbContent LIKE '%'||#{keyword}||'%'
 		</if>
 	</sql>
-	-->
+  -->
+	
 
 
-	<insert id="regist">
-		INSERT INTO PlaceBoard
-		(
-		pbNum, mNum, pbTitle, pbCategory, 
-		pbAddrBasic, pbLatitude, pbLongitude, 
-		pbLookCount, pbImageCount, pbRegDate
-		)
-		VALUES
-		(
-		placeboard_seq.NEXTVAL, 
-		#{pbNum}, #{memberNum}, #{pbTitle}, 
-		#{pbCategory}, #{pbAddrBasic}, 
-		#{pbLatitude}, #{pbLongitude}, 
-		#{pbLookCount}, #{pbImageCount}, #{pbRegDate}
-		)		
-	</insert>
 
 	<!--
 	<select id="getList"
-		resultType="com.spring.springwefit.command.PlaceBoardVO">
+		resultType="com.spring.wefit.command.PlaceBoardVO">
 		SELECT * FROM
 			(
 			SELECT ROWNUM as rn, tbl.* FROM
@@ -64,10 +68,6 @@
 		]]>
 	</select> -->
 	
-	<select id="getList" resultMap="boardMap">
-		  	SELECT * FROM PlaceBoard
-		  	ORDER BY pbNum DESC 	
-	</select>
 		  
 
 
