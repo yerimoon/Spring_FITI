@@ -6,6 +6,10 @@
 <mapper
 	namespace="com.spring.wefit.placeboard.mapper.IPlaceBoardMapper">
 
+	<resultMap type="com.spring.wefit.command.PlaceBoardVO" id="boardMap">
+		<result property="memberNum" column="MNUM"/>
+	</resultMap>
+
 	<!--  
 	<sql id="search">
 		<if test="condition == 'pbTitle'">
@@ -35,7 +39,7 @@
 		VALUES
 		(
 		placeboard_seq.NEXTVAL, 
-		#{pbNum}, #{mNum}, #{pbTitle}, 
+		#{pbNum}, #{memberNum}, #{pbTitle}, 
 		#{pbCategory}, #{pbAddrBasic}, 
 		#{pbLatitude}, #{pbLongitude}, 
 		#{pbLookCount}, #{pbImageCount}, #{pbRegDate}
@@ -60,7 +64,7 @@
 		]]>
 	</select> -->
 	
-	<select id="getList" resultType="com.spring.wefit.command.PlaceBoardVO">
+	<select id="getList" resultMap="boardMap">
 		  	SELECT * FROM PlaceBoard
 		  	ORDER BY pbNum DESC 	
 	</select>
@@ -71,7 +75,7 @@
 	<select id="getTotal" resultType="int">
 		SELECT COUNT(*)
 		FROM PlaceBoard
-		<include refid="search" />
+		<!-- <include refid="search" /> -->
 	</select>
 
 
@@ -96,7 +100,6 @@
 		pbRealImage5 = #{pbRealImage5}
 		WHERE pbNum=#{pbNum}
 	</update>
-
   	
 	<delete id="delete">
 		DELETE FROM PlaceBoard

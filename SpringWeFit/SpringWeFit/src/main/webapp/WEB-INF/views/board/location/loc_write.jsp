@@ -106,8 +106,8 @@
                     <tr class="text-right">
                         <td colspan="2">
                             <br>
-                            <button type="button" class="btn btn-primary" >등록하기</button>
-                            <button type="button" class="btn btn-default"  onclick="location.href='/FRONT/views/board/location/loc_board.html' ">취소하기</button>
+                            <button class="btn btn-primary" id="writeBtn" type="submit">등록하기</button>
+                            <button class="btn btn-default" id="listBtn" type="button"  onclick="location.href='<c:url value='/placeBoard/placeList' />' ">취소하기</button>
                             <br><br><br>
                         </td>
                         
@@ -126,6 +126,46 @@
 
     </div>
 
+
+	<script>
+    	const writeBtn = document.getElementById('writeBtn';)
+    	writeBtn.onclick = function() {
+    			if(document.writeForm.sports.value === ''){
+    				alert('종목은 필수 항목 입니다.');
+    				document.writeForm.sports.focus();
+    				return;
+    			} else if(document.writeForm.name.value === '') {
+					alert('작성자는 필수 항목 입니다.');
+					document.writeForm.name.focus();
+					return;
+				} else if(document.writeForm.title.value === '') {
+					alert('제목은 필수 항목 입니다.');
+	  				document.writeForm.title.focus();
+	  				return;
+	  			/*
+				} else if(document.writeForm.addrbasic.value === '') {
+					alert('주소는 필수 항목 입니다.');
+	  				document.writeForm.title.focus();
+	  				return;
+				} else if(document.writeForm.addrdetail.value === '') {
+					alert('상세주소는 필수 항목 입니다.');
+	  				document.writeForm.title.focus();
+	  				return;
+	  				*/
+				} else {
+					document.writeForm.submit();
+				}
+		}
+    	
+  		$('#listBtn').click(function() {
+			if(confirm('목록으로 돌아가시겠습니까?')) {
+				location.href='<c:url value="/placeBoard/placeList" />';
+			} else {
+				return;
+			}
+		});
+    </script>
+    
    
 </body>
 

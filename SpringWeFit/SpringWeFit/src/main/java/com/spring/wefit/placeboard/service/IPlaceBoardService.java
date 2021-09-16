@@ -25,7 +25,6 @@ public interface IPlaceBoardService {
 	//식단 글 삭제
 	void delete(int pbNum);
 
-	Object getList();
 	
 	
 

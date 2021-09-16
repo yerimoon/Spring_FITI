@@ -53,7 +53,7 @@ CREATE SEQUENCE placeBoard_seq
 public class PlaceBoardVO {
 	
 	private int pbNum;
-	private String mNum;
+	private String memberNum;
 	private String pbTitle;
 	private String pbContent;
 	private String pbImage1;
