@@ -11,7 +11,7 @@ public interface IPlaceBoardMapper {
 	void regist(PlaceBoardVO vo);
 
 	//장소 글 목록
-	List<PlaceBoardVO> getList();
+	List<PlaceBoardVO> getList(PageVO vo);
 
 	//장소 총 게시물 수
 	int getTotal(PageVO vo);
@@ -24,5 +24,8 @@ public interface IPlaceBoardMapper {
 	
 	//장소 글 삭제
 	void delete(int pbNum);
+	
+	
+	
 	
 }

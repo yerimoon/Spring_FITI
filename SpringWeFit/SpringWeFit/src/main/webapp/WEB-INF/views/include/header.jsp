@@ -83,7 +83,7 @@
                 <ul class="nav navbar-nav">
                     <!-- Link 메뉴 (class가 active가 포함되어 있기 때문에 선택된 메뉴 뜻) -->
                     <li>
-                        <a href="<c:url value='/board/location/loc_board' />">함께 운동해요 <span
+                        <a href="<c:url value='/placeBoard/placeList' />">함께 운동해요 <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <!-- Link 메뉴 -->

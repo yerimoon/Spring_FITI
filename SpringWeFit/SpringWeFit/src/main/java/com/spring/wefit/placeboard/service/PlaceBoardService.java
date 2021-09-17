@@ -24,8 +24,8 @@ public class PlaceBoardService implements IPlaceBoardService{
 
 	@Override
 	public List<PlaceBoardVO> getList(PageVO vo) {
-		
-		return mapper.getList();
+		List<PlaceBoardVO> list = mapper.getList(vo);
+		return list;
 	}
 
 	@Override
@@ -48,11 +48,7 @@ public class PlaceBoardService implements IPlaceBoardService{
 		mapper.delete(pbNum);
 	}
 
-	@Override
-	public Object getList() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 
 	
