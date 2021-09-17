@@ -242,6 +242,7 @@
                             </a>
                             <tr>
                                 <th scope="col" class="text-center">번호</th>
+                                <th scope="col" class="text-center">종목명</th>
                                 <th scope="col" class="text-center">장소명</th>
                                 <th scope="col" class="text-center">주소</th>
                                 <th scope="col" class="text-center">글쓴이</th>
@@ -254,6 +255,7 @@
                         		<tr>
                         		
 	                                <td>${vo.pbNum}</td>
+	                                <td>${vo.pbCategory}</td>
 	                                <td>
 	                                	<a href="<c:url value='/placeBoard/placeDetail?pbNum=${vo.pbNum}&pageNum=${pc.paging.pageNum}&keyword=${pc.paging.keyword}&condition=${pc.paging.condition}' />">${vo.pbTitle}</a>
 	                                	&nbsp;&nbsp;&nbsp;

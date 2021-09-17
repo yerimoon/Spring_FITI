@@ -47,15 +47,15 @@ public class PlaceBoardController {
 
 	//글 등록 처리
 	@PostMapping("/placeWrite")
-	public String placeWrite(MultipartHttpServletRequest request,  PlaceBoardVO vo, RedirectAttributes ra) {
+	public String placeWrite(MultipartHttpServletRequest request, PlaceBoardVO vo, RedirectAttributes ra) {
 		System.out.println("/placeBoard/placeWrite: POST");
 		System.out.println("제목: " + request.getParameter("pbTitle"));
 		System.out.println("내용: " + request.getParameter("pbContent"));
-		System.out.println(vo);
+		System.out.println("카테고리: " + request.getParameter("pbCategory"));
 		service.regist(vo);
 		ra.addFlashAttribute("msg", "정상 등록 처리되었습니다.");
 			
-		return "redirect:/board/location/loc_board"; //등록 후에 글 목록 요청으로 리다이렉트
+		return "redirect:/placeBoard/placeList"; //등록 후에 글 목록 요청으로 리다이렉트
 	}
 
 

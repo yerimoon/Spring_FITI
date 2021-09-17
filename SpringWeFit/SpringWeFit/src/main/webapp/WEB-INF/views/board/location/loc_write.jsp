@@ -59,19 +59,19 @@
                     <tr>
                         <td>종목</td>
                         <td>
-                            <select id="sports" name="sports">
+                            <select id="sports" name="pbCategory">
                                 <option value='category'>종목선택</option>
-                                <option>수영</option>
-                                <option>배드민턴</option>
-                                <option>스쿼시</option>
-                                <option>자전거</option>
-                                <option>달리기</option>
-                                <option>등산</option>
-                                <option>홈트짐트</option>
-                                <option>필라테스</option>
-                                <option>골프</option>
-                                <option>스케이트</option>
-                                <option>기타</option>
+                                <option value=''>수영</option>
+                                <option value=''>배드민턴</option>
+                                <option value=''>스쿼시</option>
+                                <option value=''>자전거</option>
+                                <option value=''>달리기</option>
+                                <option value=''>등산</option>
+                                <option value=''>홈트짐트</option>
+                                <option value=''>필라테스</option>
+                                <option value=''>골프</option>
+                                <option value=''>스케이트</option>
+                                <option value=''>기타</option>
                             </select>
                         </td>
                     </tr>
@@ -93,14 +93,13 @@
 
                     <tr>
                         <!--
-                            다음 주소 api : 주소를 선택하면 지도도 함께 보여주기
+                            	다음 주소 api : 주소를 선택하면 지도도 함께 보여주기
                             https://postcode.map.daum.net/guide#sample
                         -->
                         <td>주소api</td>
                         <td></td>
                     </tr>
-
-                    
+                  
                     <tr>
                         <td>사진올리기 </td>
                         <td><input type="file" multiple="multiple" name="fileName" size="10" maxlength="10"></td>
@@ -110,7 +109,7 @@
                         <td colspan="2">
                             <br>
                             <button class="btn" id="writeBtn" type="button">등록하기</button>
-                            <button class="btn" id="listBtn" type="button"  onclick="location.href='<c:url value='/placeBoard/placeList' />' ">취소하기</button>
+                            <button class="btn" id="listBtn" type="button">취소하기</button>
                             <br><br><br>
                         </td>
                         
@@ -145,16 +144,6 @@
 					alert('제목은 필수 항목 입니다.');
 	  				document.writeForm.title.focus();
 	  				return;
-	  			/*
-				} else if(document.writeForm.addrbasic.value === '') {
-					alert('주소는 필수 항목 입니다.');
-	  				document.writeForm.title.focus();
-	  				return;
-				} else if(document.writeForm.addrdetail.value === '') {
-					alert('상세주소는 필수 항목 입니다.');
-	  				document.writeForm.title.focus();
-	  				return;
-	  				*/
 				} else {
 					document.writeForm.submit();
 				}
