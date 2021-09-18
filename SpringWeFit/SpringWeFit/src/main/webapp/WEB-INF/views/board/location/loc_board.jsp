@@ -237,7 +237,7 @@
                 <div class="row margin-top-5">
                     <table class="table table-hover table-responsive">
                         <thead class="bg-info">
-                            <a href="/FRONT/views/board/location/loc_detail.html">
+                            <a href="<c:url value='/placeBoard/placeDetail?pbNum=${vo.pbNum}' />"> 
                             
                             </a>
                             <tr>

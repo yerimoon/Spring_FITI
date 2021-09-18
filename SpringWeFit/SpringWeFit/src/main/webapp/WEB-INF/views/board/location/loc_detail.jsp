@@ -107,13 +107,13 @@
         <div class="container-fluid">
             <div class="col-md-8 col-sm-12 test">
                 <div class="row">
-                    <button class="btn btn-primary pull-right" onclick="location.href='<c:url value='/location/placeModify' />' ">수정하기</button>
-                    <button class="btn btn-primary pull-right" onclick="location.href='<c:url value='/location/placeList' />' ">목록으로</button>
+                    <button class="btn btn-primary pull-right" onclick="location.href='<c:url value="/placeBoard/placeModify?pbNum=${article.pbNum}" />'">수정하기</button>
+                    <button class="btn btn-primary pull-right" onclick="location.href='<c:url value="/placeBoard/placeList" />'">목록으로</button>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="titlebox">
-                            <h2>기~~~~~~~~~~~~~~~~~~~~~~~~~다란 제목입니다?? 조금더 긴 제목을 써야하는데 뭐라써야할지 모르겠어요</h2>
+                            <h2>${vo.pbTitle}</h2>
                         </div>
                     </div>
                 </div>

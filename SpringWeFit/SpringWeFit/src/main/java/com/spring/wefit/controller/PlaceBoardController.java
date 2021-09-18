@@ -51,7 +51,7 @@ public class PlaceBoardController {
 		System.out.println("/placeBoard/placeWrite: POST");
 		System.out.println("제목: " + request.getParameter("pbTitle"));
 		System.out.println("내용: " + request.getParameter("pbContent"));
-		System.out.println("카테고리: " + request.getParameter("pbCategory"));
+		
 		service.regist(vo);
 		ra.addFlashAttribute("msg", "정상 등록 처리되었습니다.");
 			
@@ -62,10 +62,15 @@ public class PlaceBoardController {
 	//글 상세보기 처리
 	@GetMapping("/placeDetail")
 	public String placeContent(@RequestParam int pbNum, Model model) {
+		
+		service.upHit(pbNum);
+		
 		System.out.println("/placeBoard/placeContent: GET");
 		System.out.println("요청된 글 번호: " + pbNum);
 		
 		model.addAttribute("placeList", service.getContent(pbNum));
+		System.out.println(service.getContent(pbNum).getPbLookCount());
+		
 		return "board/location/loc_detail";
 	}
 		

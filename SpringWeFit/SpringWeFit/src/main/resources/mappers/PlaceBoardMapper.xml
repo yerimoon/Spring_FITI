@@ -36,6 +36,21 @@
 	</insert>
 	
 	
+	<select id="getContent"
+		resultType="com.spring.wefit.command.PlaceBoardVO">
+		SELECT * FROM PlaceBoard
+		WHERE pbNum = #{pbNum}
+	</select>
+
+
+	<update id="upHit">
+   		UPDATE PlaceBoard
+   		SET pbLookCount = pbLookCount + 1
+  		WHERE pbNum=#{pbNum}
+	</update>
+	
+	
+	
   <!--  
 	<sql id="search">
 		<if test="condition == 'pbTitle'">
@@ -88,11 +103,6 @@
 
 
 
-	<select id="getContent"
-		resultType="com.spring.wefit.command.PlaceBoardVO">
-		SELECT * FROM PlaceBoard
-		WHERE pbNum = #{pbNum}
-	</select>
 
 	<update id="update">
 		UPDATE PlaceBoard

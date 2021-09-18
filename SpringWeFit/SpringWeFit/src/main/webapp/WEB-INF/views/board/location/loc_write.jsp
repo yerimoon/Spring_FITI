@@ -59,7 +59,7 @@
                     <tr>
                         <td>종목</td>
                         <td>
-                            <select id="sports" name="pbCategory">
+                            <select id="pbCategory" name="pbCategory">
                                 <option value='category'>종목선택</option>
                                 <option value=''>수영</option>
                                 <option value=''>배드민턴</option>
@@ -145,7 +145,7 @@
 	  				document.writeForm.title.focus();
 	  				return;
 				} else {
-					document.writeForm.submit();
+					$('#writeForm').submit(); 
 				}
 		};
     	
